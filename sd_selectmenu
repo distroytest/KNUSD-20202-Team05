@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-15T14:07:15.133Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="mvjC8khfnx6T_SArpUnY" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-15T14:07:29.254Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="uSvPBpm997_km4kONro5" version="13.8.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="2912" dy="1154" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -70,9 +70,6 @@
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-39" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="-470" y="80" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="drp8Cpy-0v28dtapdvpI-42" value="Salad" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-160" y="500" width="770" height="290" as="geometry" />
