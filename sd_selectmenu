@@ -1,33 +1,33 @@
-<mxfile host="app.diagrams.net" modified="2020-10-15T14:22:00.870Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="mUp-jG8vZV1i6eEVGFfD" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-15T15:03:44.873Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="Nswx_NNV_yPwVly3kfTS" version="13.8.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="3036" dy="1033" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3152" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="drp8Cpy-0v28dtapdvpI-17" value="sd Select Menu Use Case" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-210" y="30" width="860" height="1200" as="geometry" />
+        <mxCell id="drp8Cpy-0v28dtapdvpI-17" value="sd Select Menu Use Case" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-330" y="30" width="980" height="1200" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-18" value="sandwich" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-18" value="sandwich" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-160" y="100" width="770" height="350" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-25" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-25" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-80" y="40" width="20" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-43" value="SelectSalad()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-43" value="SelectSalad()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="10" y="510" as="sourcePoint" />
             <mxPoint x="90" y="510" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-70" value="SelectWrap()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-70" value="SelectWrap()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="10" y="800" as="sourcePoint" />
             <mxPoint x="90" y="800" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-71" value="SelectSetOrNot()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-71" value="SelectSetOrNot()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26" edge="1">
           <mxGeometry x="0.039" width="80" relative="1" as="geometry">
             <mxPoint x="10" y="840" as="sourcePoint" />
             <mxPoint x="90" y="840" as="targetPoint" />
@@ -37,29 +37,29 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-74" value="SelectDrinkSide()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-74" value="SelectDrinkSide()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="drp8Cpy-0v28dtapdvpI-25" target="drp8Cpy-0v28dtapdvpI-26" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="10" y="980" as="sourcePoint" />
             <mxPoint x="90" y="980" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-80" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="drp8Cpy-0v28dtapdvpI-25">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-80" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="drp8Cpy-0v28dtapdvpI-25" vertex="1">
           <mxGeometry x="5" y="70" width="10" height="1050" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-26" value="MenuDisplay" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-26" value="MenuDisplay" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="150" y="40" width="100" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-81" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-81" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="drp8Cpy-0v28dtapdvpI-26" vertex="1">
           <mxGeometry x="45" y="70" width="10" height="1050" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-27" value="Cart" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-27" value="Cart" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="480" y="40" width="100" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-82" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="drp8Cpy-0v28dtapdvpI-27">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-82" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="drp8Cpy-0v28dtapdvpI-27" vertex="1">
           <mxGeometry x="45" y="290" width="10" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-28" value="SelectSandwich()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" target="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-28" value="SelectSandwich()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" target="drp8Cpy-0v28dtapdvpI-26" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="120" as="sourcePoint" />
             <mxPoint x="10" y="120" as="targetPoint" />
@@ -71,10 +71,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-42" value="Salad" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-42" value="Salad" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-160" y="500" width="770" height="290" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-49" value="SelectBreadLength()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-49" value="SelectBreadLength()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="150" as="sourcePoint" />
             <mxPoint x="199.5" y="150" as="targetPoint" />
@@ -84,166 +84,187 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-50" value="SelectBread()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-50" value="SelectBread()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="180" as="sourcePoint" />
             <mxPoint x="199.5" y="180" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-55" value="SelectCheese()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-55" value="SelectCheese()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="210" as="sourcePoint" />
             <mxPoint x="199.5" y="210" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-56" value="SelectVegetable()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-56" value="SelectVegetable()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="240" as="sourcePoint" />
             <mxPoint x="199.5" y="240" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-57" value="SelectSauce()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-57" value="SelectSauce()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="270" as="sourcePoint" />
             <mxPoint x="199.5" y="270" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-58" value="SelectOptional()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-58" value="SelectOptional()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="300" as="sourcePoint" />
             <mxPoint x="199.5" y="300" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-59" value="SelectSetOrNot()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-59" value="SelectSetOrNot()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="330" as="sourcePoint" />
             <mxPoint x="199.5" y="330" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-60" value="Sandwich" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-60" value="Sandwich" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="1" edge="1">
           <mxGeometry x="0.0351" relative="1" as="geometry">
             <mxPoint x="200.5" y="380" as="sourcePoint" />
             <mxPoint x="-70" y="380" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-61" value="AddToCart(Sandwich)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-61" value="AddToCart(Sandwich)" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0288" width="80" relative="1" as="geometry">
             <mxPoint x="200" y="360" as="sourcePoint" />
             <mxPoint x="529.5" y="360" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-62" value="SelectCheese()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-62" value="SelectCheese()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="580" as="sourcePoint" />
             <mxPoint x="199.5" y="580" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-63" value="SelectVegetable()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-63" value="SelectVegetable()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="610" as="sourcePoint" />
             <mxPoint x="199.5" y="610" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-64" value="SelectSauce()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-64" value="SelectSauce()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="640" as="sourcePoint" />
             <mxPoint x="199.5" y="640" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-65" value="SelectOptional()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-65" value="SelectOptional()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="670" as="sourcePoint" />
             <mxPoint x="199.5" y="670" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-66" value="SelectSetOrNot()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-66" value="SelectSetOrNot()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="700" as="sourcePoint" />
             <mxPoint x="199.5" y="700" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-67" value="Salad" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-67" value="Salad" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="1" edge="1">
           <mxGeometry x="0.0388" relative="1" as="geometry">
             <mxPoint x="200.5" y="750" as="sourcePoint" />
             <mxPoint x="-70" y="750" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-68" value="AddToCart(Salad)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-68" value="AddToCart(Salad)" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" edge="1">
           <mxGeometry x="-0.0288" width="80" relative="1" as="geometry">
             <mxPoint x="200" y="730" as="sourcePoint" />
             <mxPoint x="529.5" y="730" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-72" value="Wrap" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-72" value="Wrap" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-160" y="810" width="770" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-73" value="Drink" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-140" y="1040" width="370" height="70" as="geometry" />
+        <mxCell id="drp8Cpy-0v28dtapdvpI-73" value="Drink" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-130" y="1040" width="370" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-75" value="SelectOz()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" target="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-75" value="SelectOz()" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" target="drp8Cpy-0v28dtapdvpI-26" edge="1">
           <mxGeometry x="-0.0353" width="80" relative="1" as="geometry">
             <mxPoint x="-70" y="1070" as="sourcePoint" />
             <mxPoint x="10" y="1070" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-76" value="AddToCart(DrinkSide)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" target="drp8Cpy-0v28dtapdvpI-27">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-76" value="AddToCart(DrinkSide)" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" target="drp8Cpy-0v28dtapdvpI-27" edge="1">
           <mxGeometry x="-0.0288" width="80" relative="1" as="geometry">
             <mxPoint x="200" y="1130" as="sourcePoint" />
             <mxPoint x="280" y="1130" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-78" value="AddToCart(Wrap)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" target="drp8Cpy-0v28dtapdvpI-27">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-78" value="AddToCart(Wrap)" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" target="drp8Cpy-0v28dtapdvpI-27" edge="1">
           <mxGeometry x="-0.0288" width="80" relative="1" as="geometry">
             <mxPoint x="200" y="910" as="sourcePoint" />
             <mxPoint x="280" y="910" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-79" value="Drink/Side" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-79" value="Drink/Side" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-160" y="980" width="770" height="195" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-83" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-83" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
           <mxGeometry x="525" y="710" width="10" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-84" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-84" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
           <mxGeometry x="525" y="880" width="10" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-85" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-85" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
           <mxGeometry x="525" y="1100" width="10" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-86" value="Orderer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-86" value="Orderer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-90" y="80" width="40" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-87" value="Wrap" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1" source="drp8Cpy-0v28dtapdvpI-26">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-87" value="Wrap" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="1" source="drp8Cpy-0v28dtapdvpI-26" edge="1">
           <mxGeometry x="-0.0019" relative="1" as="geometry">
             <mxPoint x="20" y="930" as="sourcePoint" />
             <mxPoint x="-60" y="930" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="drp8Cpy-0v28dtapdvpI-88" value="Drink/Side" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1" target="drp8Cpy-0v28dtapdvpI-25">
+        <mxCell id="drp8Cpy-0v28dtapdvpI-88" value="Drink/Side" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="1" target="drp8Cpy-0v28dtapdvpI-25" edge="1">
           <mxGeometry x="-0.0013" relative="1" as="geometry">
             <mxPoint x="190" y="1140" as="sourcePoint" />
             <mxPoint x="110" y="1140" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="mhOByy71t3OUQZ8eCRKN-1" value="[If orderer wants to order sandwich]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="150" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mhOByy71t3OUQZ8eCRKN-2" value="[If orderer wants to order salad]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="560" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mhOByy71t3OUQZ8eCRKN-3" value="[If orderer wants to order wrap]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="865" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mhOByy71t3OUQZ8eCRKN-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.154;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mhOByy71t3OUQZ8eCRKN-4" target="drp8Cpy-0v28dtapdvpI-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mhOByy71t3OUQZ8eCRKN-4" value="[If orderer wants to order drink or sidemenu]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="1000" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mhOByy71t3OUQZ8eCRKN-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mhOByy71t3OUQZ8eCRKN-6" target="drp8Cpy-0v28dtapdvpI-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mhOByy71t3OUQZ8eCRKN-6" value="[If selected menu is drink]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="1065" width="80" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
