@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-10-15T14:52:57.471Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="9xsIkt0UF2sWZPexJqnv" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-15T14:54:14.701Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="dlGpVWocLWTlhyKwv5wm" version="13.8.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="3152" dy="1154" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3152" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -75,7 +75,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8bF1790MiZEt0CITywCF-14" value="[If order wants to cancle order]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="8bF1790MiZEt0CITywCF-14" value="[If orderer wants to cancle order]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-270" y="170" width="180" height="20" as="geometry" />
         </mxCell>
         <mxCell id="8bF1790MiZEt0CITywCF-15" value="[If orderer wants to add selected menu]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -88,7 +88,7 @@
           <mxGeometry x="-260" y="530" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="8bF1790MiZEt0CITywCF-20" value="sd manage cart use case" style="shape=umlFrame;whiteSpace=wrap;html=1;width=60;height=30;" vertex="1" parent="1">
-          <mxGeometry x="-350" y="50" width="850" height="660" as="geometry" />
+          <mxGeometry x="-350" y="50" width="870" height="660" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
