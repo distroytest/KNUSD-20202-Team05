@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2020-10-15T14:07:29.254Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="uSvPBpm997_km4kONro5" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-15T14:22:00.870Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="mUp-jG8vZV1i6eEVGFfD" version="13.8.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="2912" dy="1154" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3036" dy="1033" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="drp8Cpy-0v28dtapdvpI-17" value="sd Select Menu Use Case" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-260" y="30" width="990" height="1200" as="geometry" />
+          <mxGeometry x="-210" y="30" width="860" height="1200" as="geometry" />
         </mxCell>
         <mxCell id="drp8Cpy-0v28dtapdvpI-18" value="sandwich" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-160" y="100" width="770" height="350" as="geometry" />
@@ -227,6 +227,23 @@
         </mxCell>
         <mxCell id="drp8Cpy-0v28dtapdvpI-85" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
           <mxGeometry x="525" y="1100" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="drp8Cpy-0v28dtapdvpI-86" value="Orderer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="80" width="40" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="drp8Cpy-0v28dtapdvpI-87" value="Wrap" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1" source="drp8Cpy-0v28dtapdvpI-26">
+          <mxGeometry x="-0.0019" relative="1" as="geometry">
+            <mxPoint x="20" y="930" as="sourcePoint" />
+            <mxPoint x="-60" y="930" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="drp8Cpy-0v28dtapdvpI-88" value="Drink/Side" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1" target="drp8Cpy-0v28dtapdvpI-25">
+          <mxGeometry x="-0.0013" relative="1" as="geometry">
+            <mxPoint x="190" y="1140" as="sourcePoint" />
+            <mxPoint x="110" y="1140" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
