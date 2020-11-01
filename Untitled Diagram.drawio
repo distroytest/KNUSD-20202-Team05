@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2020-11-01T09:14:31.730Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="-ieZCEkPuDxVR-uOg8KU" version="13.8.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-01T09:42:42.246Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="mDgpjz5n4xrghkvtRpdH" version="13.8.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2889" dy="2323" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="lpFeTA6tP_sNxCTCWh59-0" value="package" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=30;tabHeight=40;tabPosition=left;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-490" y="-240" width="2150" height="1580" as="geometry" />
+        <mxCell id="lpFeTA6tP_sNxCTCWh59-0" value="package" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=30;tabHeight=40;tabPosition=left;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-26" y="-240" width="1680" height="1570" as="geometry" />
         </mxCell>
         <mxCell id="yuEU6Taa_u60sKVBq3v5-282" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=100;tabHeight=30;tabPosition=left;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="450" y="-130" width="1170" height="1420" as="geometry" />
@@ -690,8 +690,8 @@
         <mxCell id="yuEU6Taa_u60sKVBq3v5-283" value="주문 결제 패키지" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="470" y="-130" width="80" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="lpFeTA6tP_sNxCTCWh59-1" value="키오스크 시스템 패키지" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-453" y="-230" width="80" height="26" as="geometry" />
+        <mxCell id="lpFeTA6tP_sNxCTCWh59-1" value="키오스크 시스템 패키지" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="10" y="-230" width="80" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
