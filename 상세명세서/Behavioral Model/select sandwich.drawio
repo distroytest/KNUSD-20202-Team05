@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-11T13:59:25.592Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="FiWFNIMOPFWhW465FVwl" version="13.9.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-11T14:01:55.944Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="W40JDaucM4bZXFZyjQI-" version="13.9.3" type="github">
   <diagram id="_Vj3maF3Iv_SxYzH1CFh" name="Page-1">
     <mxGraphModel dx="2889" dy="2323" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -293,6 +293,9 @@
         </mxCell>
         <mxCell id="hAGynyKhxMLSOPA2V5pt-65" value="20. 샌드위치 구성()&amp;nbsp;▶" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="220" y="-20" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hAGynyKhxMLSOPA2V5pt-66" value="샌드위치 주문" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=40;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="-30" width="1720" height="820" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
