@@ -1,1 +1,124 @@
-<mxfile host="app.diagrams.net" modified="2020-11-14T08:41:53.555Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" version="13.9.8" etag="wn0VZrNm7jcJyQpIuBkc" type="github"><diagram id="BJ5v8_FKJPO-plDOmgp5">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-14T09:00:15.098Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="d-Qwr1iaJGoKwqkUA8gx" version="13.9.8" type="github">
+  <diagram id="BJ5v8_FKJPO-plDOmgp5" name="Page-1">
+    <mxGraphModel dx="2302" dy="1154" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-1" value="aCustomer : Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="290" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-2" value=": CartController" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="295" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-3" value=": Order" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="295" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-4" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m9C6VXGxorWDMZNHDQZ_-1" target="m9C6VXGxorWDMZNHDQZ_-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="319.5" as="sourcePoint" />
+            <mxPoint x="340" y="319.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-7" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m9C6VXGxorWDMZNHDQZ_-2" target="m9C6VXGxorWDMZNHDQZ_-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="320" as="sourcePoint" />
+            <mxPoint x="640" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="320" />
+              <mxPoint x="610" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-8" value="aCustomer : Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="440" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-9" value=": CartController" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="445" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-10" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m9C6VXGxorWDMZNHDQZ_-8" target="m9C6VXGxorWDMZNHDQZ_-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="469.5" as="sourcePoint" />
+            <mxPoint x="340" y="469.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-11" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m9C6VXGxorWDMZNHDQZ_-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="470" as="sourcePoint" />
+            <mxPoint x="670" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="470" />
+              <mxPoint x="610" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-12" value="aCustomer : Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="154" y="610" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-13" value=": CartController" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="615" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-14" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m9C6VXGxorWDMZNHDQZ_-12" target="m9C6VXGxorWDMZNHDQZ_-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="184" y="639.5" as="sourcePoint" />
+            <mxPoint x="344" y="639.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-15" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m9C6VXGxorWDMZNHDQZ_-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="494" y="640" as="sourcePoint" />
+            <mxPoint x="674" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="614" y="640" />
+              <mxPoint x="614" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-17" value=": Order" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="615" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-18" value=": Order" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="445" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-19" value="1. 아이템 삭제&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;▶&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="184" y="290" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-20" value="1. 수량 추가&amp;nbsp;&lt;span style=&quot;font-family: , sans-serif ; font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;▶&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="184" y="440" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-21" value="1. 수량 감소&amp;nbsp;&lt;span style=&quot;font-family: , sans-serif ; font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;▶&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="184" y="615" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-22" value="2. 삭제 아이템 요청( 아이템)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="325" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-24" value="&lt;span style=&quot;font-family: , sans-serif ; font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;◀&lt;/span&gt;2. 추가 아이템 요청( 아이템)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="475" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-25" value="&lt;span style=&quot;font-family: , sans-serif ; font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;◀&lt;/span&gt;2. 감소 아이템 요청( 아이템)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="645" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-26" value="3. 삭제( 아이템)&amp;nbsp;&lt;span style=&quot;font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;▶&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="295" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-27" value="3. 수량 추가( 아이템)&amp;nbsp;&lt;span style=&quot;font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;▶&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="440" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-28" value="3. 수량 감소( 아이템)&amp;nbsp;&lt;span style=&quot;font-size: 15px ; background-color: rgb(255 , 255 , 255)&quot;&gt;▶&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="610" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-29" value="삭제" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="245" width="760" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-30" value="수량 추가" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="410" width="760" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-31" value="수량 감소" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="580" width="760" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="m9C6VXGxorWDMZNHDQZ_-32" value="장바구니 관리" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="44" y="180" width="826" height="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
