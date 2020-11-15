@@ -1,1 +1,51 @@
-<mxfile host="app.diagrams.net" modified="2020-11-15T17:28:02.898Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" version="13.9.8" etag="RB9kqjuxCHlQV7QImeMU" type="github"><diagram id="NmqKWssjPDx15Nkbc5sD">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-15T17:32:09.635Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="icVbMlQz8f89dK89Qiia" version="13.9.8" type="github">
+  <diagram id="NmqKWssjPDx15Nkbc5sD" name="Page-1">
+    <mxGraphModel dx="2062" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-ynPaNI8eGE4RfpZx3eB-1" target="-ynPaNI8eGE4RfpZx3eB-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-1" value="" style="ellipse;fillColor=#000000;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="90" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-ynPaNI8eGE4RfpZx3eB-2" target="-ynPaNI8eGE4RfpZx3eB-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-2" value="ID PW 입력" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="205" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-ynPaNI8eGE4RfpZx3eB-4" target="-ynPaNI8eGE4RfpZx3eB-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-4" value="로그인 승인" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="205" y="380" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-ynPaNI8eGE4RfpZx3eB-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-ynPaNI8eGE4RfpZx3eB-5" target="-ynPaNI8eGE4RfpZx3eB-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-5" value="" style="rhombus;" vertex="1" parent="1">
+          <mxGeometry x="260" y="280" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-8" value="&lt;b&gt;[ incorrect ]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="270" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-10" value="&lt;b&gt;[ correct ]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="247.5" y="330" width="62.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-ynPaNI8eGE4RfpZx3eB-11" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="260" y="470" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
