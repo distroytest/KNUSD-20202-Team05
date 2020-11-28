@@ -4,6 +4,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -12,21 +13,25 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 
 public class Frame extends JFrame{
 	Menu menu = new Menu();
 	Container contentPane = getContentPane();
-	JPanel topPanel = new JPanel();
-	JPanel sortPanel = new JPanel();
+	JPanel orderPanel = new JPanel();
 	JPanel menuPanel = new JPanel();
 	JPanel cartPanel = new JPanel();
-	
+	JPanel loginPanel = new JPanel();	
 	JPanel sandwichPanel = new JPanel();
 	JPanel saladPanel = new JPanel();
 	JPanel wrapPanel = new JPanel();
 	JPanel sidePanel = new JPanel();
 	JPanel drinkPanel = new JPanel();
+	
+	JTextField txtID = new JTextField(10);
+	JPasswordField txtPW = new JPasswordField(10);
 	
 	public Frame() {
 		setTitle("SUBWAY KIOSK");
@@ -35,13 +40,34 @@ public class Frame extends JFrame{
 		setResizable(false);
 		
 		contentPane.setLayout(null);
-		contentPane.setBackground(new Color(117, 228, 126));
 		
+		JPanel IDPWPanel = new JPanel();
+		JPanel topPanel = new JPanel();
+		JPanel topPanel1 = new JPanel();	
+		JPanel sortPanel = new JPanel();
 		
+		orderPanel.setLayout(null);
+		orderPanel.setSize(1500,1000);
+		orderPanel.setBackground(new Color(117,228,126));
+		loginPanel.setLayout(null);
+		loginPanel.setSize(1500,1000);
+		loginPanel.setBackground(new Color(117,228,126));
+		
+		txtID.setFont(new Font("¸¼Àº °íµñ",Font.PLAIN,30));
+		txtPW.setFont(new Font("¸¼Àº °íµñ",Font.PLAIN,30));
+		
+		IDPWPanel.setSize(400, 180);
+		IDPWPanel.setLocation(550,320);
+		IDPWPanel.setBackground(Color.WHITE);
+		IDPWPanel.setLayout(new GridLayout(2, 1, 0, 5));
+		
+		JLabel idLabel = new JLabel("ID");
+		JLabel pwLabel = new JLabel("PW");
 		JLabel sortLabel = new JLabel("ºÐ·ù");
 		JLabel menuLabel = new JLabel("¸Þ´º");
 		JLabel cartLabel = new JLabel("Àå¹Ù±¸´Ï");
 		JLabel topLabel = new JLabel("SUBWAY");
+		JLabel topLabel1 = new JLabel("SUBWAY");
 		JButton loginButton = new JButton("·Î±×ÀÎ");
 		JButton orderButton = new JButton("ÁÖ¹®");
 		JButton cancelButton = new JButton("Ãë¼Ò");
@@ -50,12 +76,21 @@ public class Frame extends JFrame{
 		JButton wrap = new JButton("·¦");
 		JButton side = new JButton("»çÀÌµå");
 		JButton drink = new JButton("À½·á");
+		JButton loginButton1 = new JButton("·Î±×ÀÎ");
+		JButton backButton = new JButton("µÚ·Î°¡±â");
 		
+		idLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
+		pwLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
 		sortLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,40));
 		menuLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,40));
 		cartLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,40));
 		topLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
+		topLabel1.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
 		
+		idLabel.setSize(100,100);
+		idLabel.setLocation(400,300);
+		pwLabel.setSize(100,100);
+		pwLabel.setLocation(400,400);
 		sortLabel.setSize(200,100);
 		menuLabel.setSize(780,100);
 		cartLabel.setSize(300,100);
@@ -80,6 +115,15 @@ public class Frame extends JFrame{
 		cancelButton.setLocation(1280,780);
 		cancelButton.setBackground(Color.white);
 		cancelButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,30));
+		loginButton1.setFocusable(false);
+		loginButton1.setSize(180,180);
+		loginButton1.setBackground(Color.WHITE);
+		loginButton1.setLocation(955,320);
+		loginButton1.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,30));
+		backButton.setFocusable(false);
+		backButton.setSize(100,40);
+		backButton.setBackground(Color.WHITE);
+		backButton.setLocation(1320,30);
 		
 		sandwich.setFocusable(false);
 		sandwich.setSize(150, 70);
@@ -108,20 +152,24 @@ public class Frame extends JFrame{
 		drink.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
 		
 		topPanel.setBackground(Color.WHITE);
+		topPanel1.setBackground(Color.WHITE);
 		sortPanel.setBackground(Color.WHITE);
 		menuPanel.setBackground(Color.WHITE);
 		cartPanel.setBackground(Color.WHITE);
 		topPanel.setLocation(60, 100);
+		topPanel1.setLocation(60, 100);
 		sortPanel.setLocation(60,330);
 		menuPanel.setLocation(300,330);
 		cartPanel.setLocation(1120,330);
 		topPanel.setSize(1360,100);
+		topPanel1.setSize(1360,100);
 		sortPanel.setSize(200,550);
 		menuPanel.setSize(780,550);
 		cartPanel.setSize(300,430);
 		menuPanel.setLayout(new BorderLayout());
 		
 		topPanel.add(topLabel);
+		topPanel1.add(topLabel1);
 		
 		sortPanel.setLayout(null);
 		sortPanel.add(sandwich);
@@ -134,17 +182,34 @@ public class Frame extends JFrame{
 		wrap.addMouseListener(new wrapMouseListener());
 		side.addMouseListener(new sideMouseListener());
 		drink.addMouseListener(new drinkMouseListener());
+		loginButton.addMouseListener(new loginMouseListener());
+		backButton.addMouseListener(new backMouseListener());
+		loginButton1.addMouseListener(new loginMouseListener1());
 		
-		contentPane.add(topPanel);
-		contentPane.add(sortPanel);
-		contentPane.add(menuPanel);
-		contentPane.add(cartPanel);
-		contentPane.add(loginButton);
-		contentPane.add(sortLabel);
-		contentPane.add(menuLabel);
-		contentPane.add(cartLabel);
-		contentPane.add(orderButton);
-		contentPane.add(cancelButton);
+		orderPanel.add(topPanel);
+		orderPanel.add(sortPanel);
+		orderPanel.add(menuPanel);
+		orderPanel.add(cartPanel);
+		orderPanel.add(loginButton);
+		orderPanel.add(sortLabel);
+		orderPanel.add(menuLabel);
+		orderPanel.add(cartLabel);
+		orderPanel.add(orderButton);
+		orderPanel.add(cancelButton);
+		
+		IDPWPanel.add(txtID);
+		IDPWPanel.add(txtPW);
+		
+		loginPanel.add(idLabel);
+		loginPanel.add(pwLabel);
+		loginPanel.add(loginButton1);
+		loginPanel.add(backButton);
+		loginPanel.add(IDPWPanel);
+		loginPanel.add(topPanel1);
+		
+		contentPane.add(orderPanel);
+		contentPane.add(loginPanel);
+		loginPanel.setVisible(false);
 		
 		setVisible(true);	
 	}
@@ -329,6 +394,86 @@ public class Frame extends JFrame{
 			scroll.getVerticalScrollBar().setUnitIncrement(10);
 			menuPanel.add(scroll,BorderLayout.CENTER);
 			setVisible(true);
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+		}
+		
+	}
+	
+	class loginMouseListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			orderPanel.setVisible(false);
+			loginPanel.setVisible(true);
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+		}
+		
+	}
+	
+	class backMouseListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			txtID.setText("");
+			txtPW.setText("");
+			loginPanel.setVisible(false);
+			orderPanel.setVisible(true);
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+		}
+		
+	}
+	
+	class loginMouseListener1 implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			txtID.setText("");
+			txtPW.setText("");
 		}
 
 		@Override
