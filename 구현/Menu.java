@@ -20,7 +20,7 @@ public class Menu {
 	Menuinfo swHam = new Menuinfo("햄", 4700, new ImageIcon("img/swham.jpg"));
 	Menuinfo swTuna = new Menuinfo("참치", 4800, new ImageIcon("img/swtuna.jpg"));
 	
-	Menuinfo drinkSprite = new Menuinfo("스프라이트", 1800, new ImageIcon("img/drinksprite.jpg"));
+	Menuinfo drinkSprite = new Menuinfo("스프라이트", 1800, new ImageIcon("img/drinksoda.jpg"));
 	Menuinfo drinkSoda16oz = new Menuinfo("탄산음료 16oz", 1500, new ImageIcon("img/drinksoda16.jpg"));
 	Menuinfo drinkSoda22oz = new Menuinfo("탄산음료 22oz", 1700, new ImageIcon("img/drinksoda22.jpg"));
 	Menuinfo drinkCokeCola = new Menuinfo("코카콜라", 1800, new ImageIcon("img/drinkcoke.jpg"));
