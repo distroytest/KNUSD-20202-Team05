@@ -7,7 +7,6 @@ public class Sauce {
 	public Sauce() {
 		this.sauce = new ArrayList<>();
 		
-		Sauceinfo yuja = new Sauceinfo("유자 폰즈", new ImageIcon("img/sauceyuja.jpg"));
 		Sauceinfo ranch = new Sauceinfo("랜치드레싱", new ImageIcon("img/sauceranch.jpg"));
 		Sauceinfo mayonnaise = new Sauceinfo("마요네즈", new ImageIcon("img/saucemayo.jpg"));
 		Sauceinfo sweetonion = new Sauceinfo("스위트 어니언", new ImageIcon("img/saucesweetonion.jpg"));
@@ -24,8 +23,6 @@ public class Sauce {
 		Sauceinfo smokebbq = new Sauceinfo("스모크 바비큐", new ImageIcon("img/saucesmokebbq.jpg"));
 		Sauceinfo selectno = new Sauceinfo("선택안함", new ImageIcon("img/selectno.jpg"));
 		
-		
-		this.sauce.add(yuja);
 		this.sauce.add(ranch);
 		this.sauce.add(mayonnaise);
 		this.sauce.add(sweetonion);

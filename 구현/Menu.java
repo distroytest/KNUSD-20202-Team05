@@ -31,7 +31,7 @@ public class Menu {
 	Menuinfo sideDoubleChocochip = new Menuinfo("더블 초코칩 쿠키", 1000, new ImageIcon("img/sidedoublechoco.jpg"));
 	Menuinfo sideRaspberryCheeseCake = new Menuinfo("라즈베리 치즈케익 쿠키", 1000, new ImageIcon("img/sideraspberry.jpg"));
 	Menuinfo sideOatmealRisin = new Menuinfo("오트밀 레이즌 쿠키", 1000, new ImageIcon("img/sideoatmeal.jpg"));
-	Menuinfo sideWhiteChocoMacadamia = new Menuinfo("화이트초코 마카다미아 쿠키", 1000, new ImageIcon("img/sidewhitechoco.jpg"));
+	Menuinfo sideWhiteChocoMacadamia = new Menuinfo("화이트초코 마카다미아 쿠키", 1000, new ImageIcon("img/sidewhitechoco.jpg "));
 	
 	this.sandwich = new ArrayList<>();
 	this.salad = new ArrayList<>();

@@ -7,15 +7,15 @@ public class Topping {
 	public Topping() {
 		this.topping = new ArrayList<>();
 		
-		Toppinginfo tomato = new Toppinginfo("토마토", new ImageIcon("img/toptomato"));
-		Toppinginfo cucumber = new Toppinginfo("오이", new ImageIcon("img/topcucumber"));
-		Toppinginfo jelapeno = new Toppinginfo("할라피뇨", new ImageIcon("img/topjelapeno"));
-		Toppinginfo lettuce = new Toppinginfo("양상추", new ImageIcon("img/toplettuce"));
-		Toppinginfo olive = new Toppinginfo("올리브", new ImageIcon("img/toptolive"));
-		Toppinginfo onion = new Toppinginfo("양파", new ImageIcon("img/toponion"));
-		Toppinginfo pickle = new Toppinginfo("피클", new ImageIcon("img/toppickle"));
-		Toppinginfo pimang = new Toppinginfo("피망", new ImageIcon("img/toppickle"));
-		Toppinginfo selectno = new Toppinginfo("선택안함", new ImageIcon("img/selectno"));
+		Toppinginfo tomato = new Toppinginfo("토마토", new ImageIcon("img/toptomato.jpg"));
+		Toppinginfo cucumber = new Toppinginfo("오이", new ImageIcon("img/topcucumber.jpg"));
+		Toppinginfo jelapeno = new Toppinginfo("할라피뇨", new ImageIcon("img/topjelapeno.jpg"));
+		Toppinginfo lettuce = new Toppinginfo("양상추", new ImageIcon("img/toplettuce.jpg"));
+		Toppinginfo olive = new Toppinginfo("올리브", new ImageIcon("img/topolive.jpg"));
+		Toppinginfo onion = new Toppinginfo("양파", new ImageIcon("img/toponion.jpg"));
+		Toppinginfo pickle = new Toppinginfo("피클", new ImageIcon("img/toppickle.jpg"));
+		Toppinginfo pimang = new Toppinginfo("피망", new ImageIcon("img/toppimang.jpg"));
+		Toppinginfo selectno = new Toppinginfo("선택안함", new ImageIcon("img/selectno.jpg"));
 		
 		this.topping.add(tomato);
 		this.topping.add(cucumber);
