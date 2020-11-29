@@ -1,15 +1,21 @@
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Cheese {
-	String name;
-	ImageIcon pic;
+	ArrayList<Cheeseinfo> cheese;
 	
-	public Cheese(String name, ImageIcon pic) {
-		this.name = name;
-		this.pic = pic;
+	public Cheese() {
+		this.cheese = new ArrayList<>();
+		
+		Cheeseinfo american = new Cheeseinfo("아메리칸 치즈", new ImageIcon("img/cheeseamerican.jpg"));
+		Cheeseinfo shredded = new Cheeseinfo("슈레디드 치즈", new ImageIcon("img/cheeseshredded.jpg"));
+		Cheeseinfo mozzarella = new Cheeseinfo("모차렐라 치즈", new ImageIcon("img/cheesemozzarella.jpg"));
+		Cheeseinfo selectno = new Cheeseinfo("선택없음", new ImageIcon("img/selectno.jpg"));
+		
+		this.cheese.add(american);
+		this.cheese.add(shredded);
+		this.cheese.add(mozzarella);
+		this.cheese.add(selectno);
 	}
-	Cheese american = new Cheese("아메리칸 치즈", new ImageIcon("img/cheeseamerican.jpg"));
-	Cheese shredded = new Cheese("슈레디드 치즈", new ImageIcon("img/cheeseshredded.jpg"));
-	Cheese mozzarella = new Cheese("모차렐라 치즈", new ImageIcon("img/cheesemozzarella.jpg"));
-	Cheese selectno = new Cheese("선택없음", new ImageIcon("img/selectno.jpg"));
+	
 }

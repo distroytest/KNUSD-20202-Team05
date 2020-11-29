@@ -1,20 +1,31 @@
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Topping {
-	String name;
-	ImageIcon pic;
+	ArrayList<Toppinginfo> topping;
 	
-	public Topping(String name, ImageIcon pic) {
-		this.name = name;
-		this.pic = pic;
+	public Topping() {
+		this.topping = new ArrayList<>();
+		
+		Toppinginfo tomato = new Toppinginfo("토마토", new ImageIcon("img/toptomato"));
+		Toppinginfo cucumber = new Toppinginfo("오이", new ImageIcon("img/topcucumber"));
+		Toppinginfo jelapeno = new Toppinginfo("할라피뇨", new ImageIcon("img/topjelapeno"));
+		Toppinginfo lettuce = new Toppinginfo("양상추", new ImageIcon("img/toplettuce"));
+		Toppinginfo olive = new Toppinginfo("올리브", new ImageIcon("img/toptolive"));
+		Toppinginfo onion = new Toppinginfo("양파", new ImageIcon("img/toponion"));
+		Toppinginfo pickle = new Toppinginfo("피클", new ImageIcon("img/toppickle"));
+		Toppinginfo pimang = new Toppinginfo("피망", new ImageIcon("img/toppickle"));
+		Toppinginfo selectno = new Toppinginfo("선택안함", new ImageIcon("img/selectno"));
+		
+		this.topping.add(tomato);
+		this.topping.add(cucumber);
+		this.topping.add(jelapeno);
+		this.topping.add(lettuce);
+		this.topping.add(olive);
+		this.topping.add(onion);
+		this.topping.add(pickle);
+		this.topping.add(pimang);
+		this.topping.add(selectno);
 	}
-	Topping tomato = new Topping("토마토", new ImageIcon("img/toptomato"));
-	Topping cucumber = new Topping("오이", new ImageIcon("img/topcucumber"));
-	Topping jelapeno = new Topping("할라피뇨", new ImageIcon("img/topjelapeno"));
-	Topping lettuce = new Topping("양상추", new ImageIcon("img/toplettuce"));
-	Topping olive = new Topping("올리브", new ImageIcon("img/toptolive"));
-	Topping onion = new Topping("양파", new ImageIcon("img/toponion"));
-	Topping pickle = new Topping("피클", new ImageIcon("img/toppickle"));
-	Topping pimang = new Topping("피망", new ImageIcon("img/toppickle"));
-	Topping selectno = new Topping("선택안함", new ImageIcon("img/selectno"));
+	
 }

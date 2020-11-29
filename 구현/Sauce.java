@@ -1,27 +1,47 @@
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Sauce {
-	String name;
-	ImageIcon pic;
+	ArrayList<Sauceinfo> sauce;
 	
-	public Sauce(String name, ImageIcon pic) {
-		this.name = name;
-		this.pic = pic;
+	public Sauce() {
+		this.sauce = new ArrayList<>();
+		
+		Sauceinfo yuja = new Sauceinfo("유자 폰즈", new ImageIcon("img/sauceyuja.jpg"));
+		Sauceinfo ranch = new Sauceinfo("랜치드레싱", new ImageIcon("img/sauceranch.jpg"));
+		Sauceinfo mayonnaise = new Sauceinfo("마요네즈", new ImageIcon("img/saucemayo.jpg"));
+		Sauceinfo sweetonion = new Sauceinfo("스위트 어니언", new ImageIcon("img/saucesweetonion.jpg"));
+		Sauceinfo honeymustard = new Sauceinfo("허니 머스타드", new ImageIcon("img/saucehoneymustard.jpg"));
+		Sauceinfo sweetchilli = new Sauceinfo("스위트 칠리", new ImageIcon("img/saucesweetchilli.jpg"));
+		Sauceinfo hotchilli = new Sauceinfo("핫 칠리", new ImageIcon("img/saucehotchilli.jpg"));
+		Sauceinfo chipotle = new Sauceinfo("사우스 웨스트", new ImageIcon("img/saucesouthwest.jpg"));
+		Sauceinfo yellowmustard = new Sauceinfo("머스타드", new ImageIcon("img/sauceyellowmustard.jpg"));
+		Sauceinfo horseradish = new Sauceinfo("홀스래디쉬", new ImageIcon("img/saucehorseradish.jpg"));
+		Sauceinfo oliveoil = new Sauceinfo("올리브 오일", new ImageIcon("img/sauceoliveoil.jpg"));
+		Sauceinfo redwinevinaigrette = new Sauceinfo("레드와인식초", new ImageIcon("img/sauceredwine.jpg"));
+		Sauceinfo salt = new Sauceinfo("소금", new ImageIcon("img/saucesalt.jpg"));
+		Sauceinfo blackpepper = new Sauceinfo("후추", new ImageIcon("img/sauceblackpepper.jpg"));
+		Sauceinfo smokebbq = new Sauceinfo("스모크 바비큐", new ImageIcon("img/saucesmokebbq.jpg"));
+		Sauceinfo selectno = new Sauceinfo("선택안함", new ImageIcon("img/selectno.jpg"));
+		
+		
+		this.sauce.add(yuja);
+		this.sauce.add(ranch);
+		this.sauce.add(mayonnaise);
+		this.sauce.add(sweetonion);
+		this.sauce.add(honeymustard);
+		this.sauce.add(sweetchilli);
+		this.sauce.add(hotchilli);
+		this.sauce.add(chipotle);
+		this.sauce.add(yellowmustard);
+		this.sauce.add(horseradish);
+		this.sauce.add(oliveoil);
+		this.sauce.add(redwinevinaigrette);
+		this.sauce.add(salt);
+		this.sauce.add(blackpepper);
+		this.sauce.add(smokebbq);
+		this.sauce.add(selectno);
+		
 	}
-	Sauce yuja = new Sauce("유자 폰즈", new ImageIcon("img/sauceyuja.jpg"));
-	Sauce ranch = new Sauce("랜치드레싱", new ImageIcon("img/sauceranch.jpg"));
-	Sauce mayonnaise = new Sauce("마요네즈", new ImageIcon("img/saucemayo.jpg"));
-	Sauce sweetonion = new Sauce("스위트 어니언", new ImageIcon("img/saucesweetonion.jpg"));
-	Sauce honeymustard = new Sauce("허니 머스타드", new ImageIcon("img/saucehoneymustard.jpg"));
-	Sauce sweetchilli = new Sauce("스위트 칠리", new ImageIcon("img/saucesweetchilli.jpg"));
-	Sauce hotchilli = new Sauce("핫 칠리", new ImageIcon("img/saucehotchilli.jpg"));
-	Sauce chipotle = new Sauce("사우스 웨스트", new ImageIcon("img/saucesouthwest.jpg"));
-	Sauce yellowmustard = new Sauce("머스타드", new ImageIcon("img/sauceyellowmustard.jpg"));
-	Sauce horseradish = new Sauce("홀스래디쉬", new ImageIcon("img/saucehorseradish.jpg"));
-	Sauce oliveoil = new Sauce("올리브 오일", new ImageIcon("img/sauceoliveoil.jpg"));
-	Sauce redwinevinaigrette = new Sauce("레드와인식초", new ImageIcon("img/sauceredwine.jpg"));
-	Sauce salt = new Sauce("소금", new ImageIcon("img/saucesalt.jpg"));
-	Sauce blackpepper = new Sauce("후추", new ImageIcon("img/sauceblackpepper.jpg"));
-	Sauce smokebbq = new Sauce("스모크 바비큐", new ImageIcon("img/saucesmokebbq.jpg"));
-	Sauce selectno = new Sauce("선택안함", new ImageIcon("img/selectno.jpg"));
+	
 }
