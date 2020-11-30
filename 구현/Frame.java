@@ -12,6 +12,7 @@ import java.util.Arrays;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
@@ -19,6 +20,15 @@ import javax.swing.JTextField;
 
 public class Frame extends JFrame{
 	Menu menu = new Menu();
+	//---------------------------------------------------------------------------------------------------
+	// 빵 치즈 토핑 소스 추가
+	Bread bread = new Bread();
+	Cheese cheese = new Cheese();
+	Topping topping = new Topping();
+	Sauce sauce = new Sauce();
+	//------------------------------------------------------------------------------------------------------
+	
+	
 	Container contentPane = getContentPane();
 	JPanel orderPanel = new JPanel();
 	JPanel menuPanel = new JPanel();
@@ -30,6 +40,34 @@ public class Frame extends JFrame{
 	JPanel sidePanel = new JPanel();
 	JPanel drinkPanel = new JPanel();
 	
+	JPanel IDPWPanel = new JPanel();
+	JPanel topPanel = new JPanel();
+	JPanel topPanel1 = new JPanel();	
+	JPanel sortPanel = new JPanel();			// sortPanel은 리스너에서 참조를 못해서 생성자 함수에서 빼냈음
+	JPanel sortPanel2 = new JPanel();
+
+	//----------------------------------------------------------------------------------------------------------
+	// 빵, 치즈, 토핑, 소스 패널 추가
+	
+	JPanel breadPanel = new JPanel();
+	JPanel cheesePanel = new JPanel();
+	JPanel toppingPanel = new JPanel();
+	JPanel saucePanel = new JPanel();
+	
+	//-------------------------------------------------------------------------------------------------------
+	//관리자 패널 추가
+	JPanel managerPanel = new JPanel();
+	JPanel topPanel2 = new JPanel();
+	JPanel sortPanel3 = new JPanel(); //초기
+	JPanel sortPanel4 = new JPanel(); //메뉴관리 클릭
+	JPanel sortPanel5 = new JPanel(); //매출현황 클릭
+	JPanel sortPanel6 = new JPanel(); //추가,삭제,수정 클릭
+	JPanel managePanel = new JPanel();
+	JPanel addPanel = new JPanel();
+	JPanel refinePanel = new JPanel();
+	JPanel deletePanel = new JPanel();
+	JPanel salesPanel = new JPanel();
+	//-------------------------------------------------------------------------------------------------------
 	JTextField txtID = new JTextField(10);
 	JPasswordField txtPW = new JPasswordField(10);
 	
@@ -40,11 +78,6 @@ public class Frame extends JFrame{
 		setResizable(false);
 		
 		contentPane.setLayout(null);
-		
-		JPanel IDPWPanel = new JPanel();
-		JPanel topPanel = new JPanel();
-		JPanel topPanel1 = new JPanel();	
-		JPanel sortPanel = new JPanel();
 		
 		orderPanel.setLayout(null);
 		orderPanel.setSize(1500,1000);
@@ -78,6 +111,37 @@ public class Frame extends JFrame{
 		JButton drink = new JButton("음료");
 		JButton loginButton1 = new JButton("로그인");
 		JButton backButton = new JButton("뒤로가기");
+		
+		//-------------------------------------------------------------------------------------------------
+		// 2번째 소트패널에 붙일 빵, 치즈, 토핑, 소스 버튼
+		JButton bread = new JButton("빵");
+		JButton cheese = new JButton("치즈");
+		JButton topping = new JButton("토핑");
+		JButton sauce = new JButton("소스");
+		
+		
+		bread.setFocusable(false);
+		bread.setSize(150, 70);
+		bread.setLocation(25,20);
+		bread.setBackground(new Color(246, 241, 123));
+		bread.setFont(new Font("맑은 고딕",Font.BOLD,20));
+		cheese.setFocusable(false);
+		cheese.setSize(150, 70);
+		cheese.setLocation(25,126);
+		cheese.setBackground(new Color(246, 241, 123));
+		cheese.setFont(new Font("맑은 고딕",Font.BOLD,20));
+		topping.setFocusable(false);
+		topping.setSize(150, 70);
+		topping.setLocation(25,232);
+		topping.setBackground(new Color(246, 241, 123));
+		topping.setFont(new Font("맑은 고딕",Font.BOLD,20));
+		sauce.setFocusable(false);
+		sauce.setSize(150, 70);
+		sauce.setLocation(25,338);
+		sauce.setBackground(new Color(246, 241, 123));
+		sauce.setFont(new Font("맑은 고딕",Font.BOLD,20));
+		//--------------------------------------------------------------------------------------------------
+		
 		
 		idLabel.setFont(new Font("맑은 고딕",Font.BOLD,60));
 		pwLabel.setFont(new Font("맑은 고딕",Font.BOLD,60));
@@ -186,6 +250,25 @@ public class Frame extends JFrame{
 		backButton.addMouseListener(new backMouseListener());
 		loginButton1.addMouseListener(new loginMouseListener1());
 		
+		//------------------------두번째 소트 패널 --------------------------------------------------
+		// 빵, 치즈, 토핑, 소스 버튼에 리스너 추가 	
+		bread.addMouseListener(new breadMouseListener());
+		cheese.addMouseListener(new cheeseMouseListener());
+		topping.addMouseListener(new toppingMouseListener());
+		sauce.addMouseListener(new sauceMouseListener());
+		
+		sortPanel2.setBackground(Color.WHITE);
+		sortPanel2.setLocation(60,330);
+		sortPanel2.setSize(200,550);
+		sortPanel2.setLayout(null);
+		
+		sortPanel2.add(bread);
+		sortPanel2.add(cheese);
+		sortPanel2.add(topping);
+		sortPanel2.add(sauce);
+		//---------------------------------------------------------------------------
+		
+		
 		orderPanel.add(topPanel);
 		orderPanel.add(sortPanel);
 		orderPanel.add(menuPanel);
@@ -196,6 +279,11 @@ public class Frame extends JFrame{
 		orderPanel.add(cartLabel);
 		orderPanel.add(orderButton);
 		orderPanel.add(cancelButton);
+		
+		
+		///-------------------두번째 소트 패널을 오더패널에 붙임  -----------------------------------------------------------
+		orderPanel.add(sortPanel2);
+		///---------------------------------------------------------------------------------
 		
 		IDPWPanel.add(txtID);
 		IDPWPanel.add(txtPW);
@@ -210,6 +298,96 @@ public class Frame extends JFrame{
 		contentPane.add(orderPanel);
 		contentPane.add(loginPanel);
 		loginPanel.setVisible(false);
+		
+		//------------------  초기화면 샌드위치로 초기화---------------------------------------------------------
+		menuPanel.removeAll();
+		sandwichPanel.removeAll();
+		int i = 0;
+		sandwichPanel.setBackground(Color.white);
+		sandwichPanel.setLayout(new WrapLayout(WrapLayout.LEFT,25,25));
+		for(i=0;i<menu.sandwich.size();i++) {
+			JButton button = new JButton(menu.sandwich.get(i).pic);
+			button.setBackground(Color.BLACK);
+			button.setFocusable(false);
+			button.setPreferredSize(new Dimension(220,220));
+			
+			//
+			button.addMouseListener(new sandwichClickedMouseListener());
+			//
+			
+			sandwichPanel.add(button);
+		}
+		JScrollPane scroll = new JScrollPane(sandwichPanel);
+		scroll.getVerticalScrollBar().setUnitIncrement(10);
+		menuPanel.add(scroll,BorderLayout.CENTER);
+		
+		
+		//-------------------------관리자 화면----------------------------------------------------------------
+		JLabel topLabel2 = new JLabel("SUBWAY");
+		JLabel sortLabel1 = new JLabel("분류");
+		JLabel manageLabel = new JLabel("관리");
+		
+		JButton logoutButton = new JButton("로그아웃");
+		JButton manageButton = new JButton("메뉴관리");
+		JButton salesButton = new JButton("매출현황");
+		JButton addButton = new JButton();
+		JButton refineButton = new JButton();
+		JButton deleteButton = new JButton();
+		
+		sortLabel1.setSize(200,100);
+		sortLabel1.setLocation(60,210);
+		sortLabel1.setHorizontalAlignment(JLabel.CENTER);
+		sortLabel1.setFont(new Font("맑은 고딕",Font.BOLD,40));
+		manageLabel.setSize(1120,100);
+		manageLabel.setLocation(300,210);
+		manageLabel.setHorizontalAlignment(JLabel.CENTER);
+		manageLabel.setFont(new Font("맑은 고딕",Font.BOLD,40));
+		topLabel2.setFont(new Font("맑은 고딕",Font.BOLD,60));
+		
+		logoutButton.setFocusable(false);
+		logoutButton.setSize(100,40);
+		logoutButton.setLocation(1320, 30);
+		logoutButton.setBackground(Color.WHITE);
+		logoutButton.addMouseListener(new logoutMouseListener());
+		manageButton.setFocusable(false);
+		manageButton.setSize(150, 70);
+		manageButton.setLocation(25,85);
+		manageButton.setBackground(new Color(246, 241, 123));
+		manageButton.setFont(new Font("맑은 고딕",Font.BOLD,20));
+		salesButton.setFocusable(false);
+		salesButton.setSize(150, 70);
+		salesButton.setLocation(25,320);
+		salesButton.setBackground(new Color(246, 241, 123));
+		salesButton.setFont(new Font("맑은 고딕",Font.BOLD,20));
+		
+		topPanel2.setSize(1360,100);
+		topPanel2.setLocation(60, 100);
+		topPanel2.setBackground(Color.WHITE);
+		topPanel2.add(topLabel2);
+		sortPanel3.setSize(200,550);
+		sortPanel3.setLocation(60,330);
+		sortPanel3.setBackground(Color.WHITE);
+		sortPanel3.add(manageButton);
+		sortPanel3.add(salesButton);
+		sortPanel3.setLayout(null);
+		managePanel.setSize(1120,550);
+		managePanel.setLocation(300,330);
+		managePanel.setBackground(Color.WHITE);
+		
+		managerPanel.setLayout(null);
+		managerPanel.setSize(1500,1000);
+		managerPanel.setBackground(new Color(117,228,126));
+		
+		managerPanel.add(logoutButton);
+		managerPanel.add(topPanel2);
+		managerPanel.add(sortLabel1);
+		managerPanel.add(manageLabel);
+		managerPanel.add(sortPanel3);
+		managerPanel.add(managePanel);
+		
+		contentPane.add(managerPanel);
+		managerPanel.setVisible(false);
+		//--------------------------------------------------------------------------------------------------------
 		
 		setVisible(true);	
 	}
@@ -228,6 +406,11 @@ public class Frame extends JFrame{
 				button.setBackground(Color.BLACK);
 				button.setFocusable(false);
 				button.setPreferredSize(new Dimension(220,220));
+				
+				//
+				button.addMouseListener(new sandwichClickedMouseListener());
+				//
+				
 				sandwichPanel.add(button);
 			}
 			JScrollPane scroll = new JScrollPane(sandwichPanel);
@@ -472,6 +655,13 @@ public class Frame extends JFrame{
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
+			if(LoginModel.id.equals(txtID.getText()) && LoginModel.pw.equals(txtPW.getText())) {
+				loginPanel.setVisible(false);
+				managerPanel.setVisible(true);
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "로그인 실패");
+			}
 			txtID.setText("");
 			txtPW.setText("");
 		}
@@ -493,7 +683,290 @@ public class Frame extends JFrame{
 		}
 		
 	}
+	
+//--------------------------------------------------------------------------------------------------------------------------------------
+// 추가로 작성한 마우스 리스너
+	class sandwichClickedMouseListener implements MouseListener{			// 샌드위치 패널의 버튼이 클릭됐을 때 리스너
+																			// clicked를 덧붙임
+		@Override															// 아래는 기존 버튼 함수들과 동일한 리스너, 아마 기존 버튼에 sortPanel2.setVisible(false)를 추가해야 할지도?
+		public void mouseClicked(MouseEvent e) {
+			sortPanel.setVisible(false);
+			sortPanel2.setVisible(true);
+			menuPanel.removeAll();
+			breadPanel.removeAll();
+			int i = 0;
+			breadPanel.setBackground(Color.white);
+			breadPanel.setLayout(new WrapLayout(WrapLayout.LEFT,25,25));
+			for(i=0;i<bread.bread.size();i++) {
+				JButton button = new JButton(bread.bread.get(i).pic);
+				button.setBackground(Color.BLACK);
+				button.setFocusable(false);
+				button.setPreferredSize(new Dimension(220,220));
+				breadPanel.add(button);
+			}
+			JScrollPane scroll = new JScrollPane(breadPanel);
+			scroll.getVerticalScrollBar().setUnitIncrement(10);
+			menuPanel.add(scroll,BorderLayout.CENTER);
+			setVisible(true);
+		}
 
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		
+		
+	}
+	
+	class breadMouseListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			sortPanel.setVisible(false);
+			sortPanel2.setVisible(true);
+			menuPanel.removeAll();
+			breadPanel.removeAll();
+			int i = 0;
+			breadPanel.setBackground(Color.white);
+			breadPanel.setLayout(new WrapLayout(WrapLayout.LEFT,25,25));
+			for(i=0;i<bread.bread.size();i++) {
+				JButton button = new JButton(bread.bread.get(i).pic);
+				button.setBackground(Color.BLACK);
+				button.setFocusable(false);
+				button.setPreferredSize(new Dimension(220,220));
+				breadPanel.add(button);
+			}
+			JScrollPane scroll = new JScrollPane(breadPanel);
+			scroll.getVerticalScrollBar().setUnitIncrement(10);
+			menuPanel.add(scroll,BorderLayout.CENTER);
+			setVisible(true);
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
+	class cheeseMouseListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			sortPanel.setVisible(false);
+			sortPanel2.setVisible(true);
+			menuPanel.removeAll();
+			cheesePanel.removeAll();
+			int i = 0;
+			cheesePanel.setBackground(Color.white);
+			cheesePanel.setLayout(new WrapLayout(WrapLayout.LEFT,25,25));
+			for(i=0;i<cheese.cheese.size();i++) {
+				JButton button = new JButton(cheese.cheese.get(i).pic);
+				button.setBackground(Color.BLACK);
+				button.setFocusable(false);
+				button.setPreferredSize(new Dimension(220,220));
+				cheesePanel.add(button);
+			}
+			JScrollPane scroll = new JScrollPane(cheesePanel);
+			scroll.getVerticalScrollBar().setUnitIncrement(10);
+			menuPanel.add(scroll,BorderLayout.CENTER);
+			setVisible(true);
+		
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+	}
+	class toppingMouseListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			sortPanel.setVisible(false);
+			sortPanel2.setVisible(true);
+			menuPanel.removeAll();
+			toppingPanel.removeAll();
+			int i = 0;
+			toppingPanel.setBackground(Color.white);
+			toppingPanel.setLayout(new WrapLayout(WrapLayout.LEFT,25,25));
+			for(i=0;i<topping.topping.size();i++) {
+				JButton button = new JButton(topping.topping.get(i).pic);
+				button.setBackground(Color.BLACK);
+				button.setFocusable(false);
+				button.setPreferredSize(new Dimension(220,220));
+				toppingPanel.add(button);
+			}
+			JScrollPane scroll = new JScrollPane(toppingPanel);
+			scroll.getVerticalScrollBar().setUnitIncrement(10);
+			menuPanel.add(scroll,BorderLayout.CENTER);
+			setVisible(true);
+		
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+	}
+	
+	class sauceMouseListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			sortPanel.setVisible(false);
+			sortPanel2.setVisible(true);
+			menuPanel.removeAll();
+			saucePanel.removeAll();
+			int i = 0;
+			saucePanel.setBackground(Color.white);
+			saucePanel.setLayout(new WrapLayout(WrapLayout.LEFT,25,25));
+			for(i=0;i<sauce.sauce.size();i++) {
+				JButton button = new JButton(sauce.sauce.get(i).pic);
+				button.setBackground(Color.BLACK);
+				button.setFocusable(false);
+				button.setPreferredSize(new Dimension(220,220));
+				saucePanel.add(button);
+			}
+			JScrollPane scroll = new JScrollPane(saucePanel);
+			scroll.getVerticalScrollBar().setUnitIncrement(10);
+			menuPanel.add(scroll,BorderLayout.CENTER);
+			setVisible(true);
+		
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+	}
+	
+	class logoutMouseListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			managerPanel.setVisible(false);
+			orderPanel.setVisible(true);
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+		}
+		
+	}
+		
 	public static void main(String[] args) {
 		new Frame();
 	}
