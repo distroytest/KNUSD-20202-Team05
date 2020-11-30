@@ -9,4 +9,7 @@ public class Breadinfo {
 		this.name = name;
 		this.pic = pic;
 	}
+	public Breadinfo(String name) {
+		this.name = name;
+	}
 }

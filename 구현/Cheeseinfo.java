@@ -8,4 +8,8 @@ public class Cheeseinfo {
 		this.name = name;
 		this.pic = pic;
 	}
+
+	public Cheeseinfo(String name) {
+		this.name = name;
+	}
 }

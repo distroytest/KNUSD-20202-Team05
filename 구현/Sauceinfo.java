@@ -7,4 +7,7 @@ public class Sauceinfo {
 		this.name = name;
 		this.pic = pic;
 	}
+	public Sauceinfo(String name) {
+		this.name = name;
+	}
 }

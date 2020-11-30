@@ -12,6 +12,6 @@ public class Toppinginfo {
 	}
 	
 	public void selectTopping(String topping) {
-		name = topping;
+		this.name = topping;
 	}
 }
