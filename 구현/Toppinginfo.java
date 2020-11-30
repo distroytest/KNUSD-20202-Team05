@@ -7,4 +7,11 @@ public class Toppinginfo {
 		this.name = name;
 		this.pic = pic;
 	}
+	public Toppinginfo(String name) {
+		this.name = name;
+	}
+	
+	public void selectTopping(String topping) {
+		name = topping;
+	}
 }
