@@ -25,12 +25,11 @@ public class Cart extends JFrame {
 		menuName = menu;
 		this.price = price;
 	}
-	
 	public void uploadCart() {
 		JPanel cartComponent = new JPanel();
 		cartComponent.setLayout(new BorderLayout());
 		cartComponent.setBackground(Color.white);
-		cart = new JLabel("  "+this.menuName+"   " + this.price + "원    " + this.num+ " 개");
+		cart = new JLabel(String.format("%5s%8d원%5d개  ", menuName, this.price, this.num));
 		cart.setFont(new Font("맑은 고딕",Font.BOLD,18));
 		JPanel changeNum = new JPanel();
 		changeNum.setLayout(new GridLayout(2, 1));
@@ -43,7 +42,7 @@ public class Cart extends JFrame {
 		cartComponent.add(cart, BorderLayout.CENTER);
 		cartComponent.add(changeNum, BorderLayout.EAST);
 		allprice += this.price;
-		Frame2.Allprice.setText("     합계 :                    "+ allprice);
+		Frame2.Allprice.setText(" 합계 :                    "+ allprice);
 		Frame2.selectedMenu.add(cartComponent);
 		up.addMouseListener(new upMouseListener());
 		down.addMouseListener(new downMouseListener());
@@ -56,8 +55,8 @@ public class Cart extends JFrame {
 			num++;
 			nprice = num*price;
 			allprice += price;
-			cart.setText("  "+menuName+"   " + nprice + "원    " + num+ " 개");
-			Frame2.Allprice.setText("     합계 :                    "+ allprice);
+			cart.setText(String.format("%5s%8d원%5d개  ", menuName, nprice, num));
+			Frame2.Allprice.setText(" 합계 :                    "+ allprice);
 		}
 
 		@Override
@@ -86,8 +85,8 @@ public class Cart extends JFrame {
 				num--;
 				allprice -= price;
 				nprice = num*price;
-				cart.setText("  "+menuName+"   " +  nprice + "원    " + num+ " 개");
-				Frame2.Allprice.setText("     합계 :                    "+ allprice);
+				cart.setText(String.format("%5s%8d원%5d개  ", menuName, nprice, num));
+				Frame2.Allprice.setText(" 합계 :                    "+ allprice);
 			}
 		}
 
