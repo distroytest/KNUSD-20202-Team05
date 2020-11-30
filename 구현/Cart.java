@@ -1,0 +1,112 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class Cart extends JFrame {
+	private String menuName;
+	private int num = 1;
+	private int price;
+	private int nprice = 0;
+	static int allprice = 0;
+	JLabel cart;
+	
+	public Cart(String menu, int price) {
+		menuName = menu;
+		this.price = price;
+	}
+	
+	public void uploadCart() {
+		JPanel cartComponent = new JPanel();
+		cartComponent.setLayout(new BorderLayout());
+		cartComponent.setBackground(Color.white);
+		cart = new JLabel("  "+this.menuName+"   " + this.price + "원    " + this.num+ " 개");
+		cart.setFont(new Font("맑은 고딕",Font.BOLD,18));
+		JPanel changeNum = new JPanel();
+		changeNum.setLayout(new GridLayout(2, 1));
+		JButton up = new JButton("+");
+		JButton down = new JButton("-");
+		up.setBackground(new Color(246, 241, 123)); 
+		down.setBackground(new Color(246, 241, 123));;
+		changeNum.add(up);
+		changeNum.add(down);
+		cartComponent.add(cart, BorderLayout.CENTER);
+		cartComponent.add(changeNum, BorderLayout.EAST);
+		allprice += this.price;
+		Frame2.Allprice.setText("     합계 :                    "+ allprice);
+		Frame2.selectedMenu.add(cartComponent);
+		up.addMouseListener(new upMouseListener());
+		down.addMouseListener(new downMouseListener());
+	}
+	
+	class upMouseListener implements MouseListener {
+
+		@Override
+		public void mouseClicked(MouseEvent arg0) {
+			num++;
+			nprice = num*price;
+			allprice += price;
+			cart.setText("  "+menuName+"   " + nprice + "원    " + num+ " 개");
+			Frame2.Allprice.setText("     합계 :                    "+ allprice);
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent arg0) {
+		}
+
+		@Override
+		public void mouseExited(MouseEvent arg0) {		
+		}
+
+		@Override
+		public void mousePressed(MouseEvent arg0) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent arg0) {		
+		}
+		
+	}
+	
+	class downMouseListener implements MouseListener {
+
+		@Override
+		public void mouseClicked(MouseEvent arg0) {
+			if(num>0) {
+				num--;
+				allprice -= price;
+				nprice = num*price;
+				cart.setText("  "+menuName+"   " +  nprice + "원    " + num+ " 개");
+				Frame2.Allprice.setText("     합계 :                    "+ allprice);
+			}
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent arg0) {
+		}
+
+		@Override
+		public void mouseExited(MouseEvent arg0) {		
+		}
+
+		@Override
+		public void mousePressed(MouseEvent arg0) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent arg0) {		
+		}
+		
+	}
+	
+}
