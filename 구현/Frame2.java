@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 public class Frame extends JFrame{
 	Menu menu = new Menu();
 	//---------------------------------------------------------------------------------------------------
-	// »§ Ä¡Áî ÅäÇÎ ¼Ò½º Ãß°¡
+	// ë¹µ ì¹˜ì¦ˆ í† í•‘ ì†ŒìŠ¤ ì¶”ê°€
 	Bread bread = new Bread();
 	Cheese cheese = new Cheese();
 	Topping topping = new Topping();
@@ -42,11 +42,11 @@ public class Frame extends JFrame{
 	JPanel IDPWPanel = new JPanel();
 	JPanel topPanel = new JPanel();
 	JPanel topPanel1 = new JPanel();	
-	JPanel sortPanel = new JPanel();			// sortPanelÀº ¸®½º³Ê¿¡¼­ ÂüÁ¶¸¦ ¸øÇØ¼­ »ı¼ºÀÚ ÇÔ¼ö¿¡¼­ »©³ÂÀ½
+	JPanel sortPanel = new JPanel();			// sortPanelì€ ë¦¬ìŠ¤ë„ˆì—ì„œ ì°¸ì¡°ë¥¼ ëª»í•´ì„œ ìƒì„±ì í•¨ìˆ˜ì—ì„œ ë¹¼ëƒˆìŒ
 	JPanel sortPanel2 = new JPanel();
 	
 	//----------------------------------------------------------------------------------------------------------
-	// »§, Ä¡Áî, ÅäÇÎ, ¼Ò½º ÆĞ³Î Ãß°¡
+	// ë¹µ, ì¹˜ì¦ˆ, í† í•‘, ì†ŒìŠ¤ íŒ¨ë„ ì¶”ê°€
 	
 	JPanel breadPanel = new JPanel();
 	JPanel cheesePanel = new JPanel();
@@ -73,8 +73,8 @@ public class Frame extends JFrame{
 		loginPanel.setSize(1500,1000);
 		loginPanel.setBackground(new Color(117,228,126));
 		
-		txtID.setFont(new Font("¸¼Àº °íµñ",Font.PLAIN,30));
-		txtPW.setFont(new Font("¸¼Àº °íµñ",Font.PLAIN,30));
+		txtID.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.PLAIN,30));
+		txtPW.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.PLAIN,30));
 		
 		IDPWPanel.setSize(400, 180);
 		IDPWPanel.setLocation(550,320);
@@ -83,60 +83,60 @@ public class Frame extends JFrame{
 		
 		JLabel idLabel = new JLabel("ID");
 		JLabel pwLabel = new JLabel("PW");
-		JLabel sortLabel = new JLabel("ºĞ·ù");
-		JLabel menuLabel = new JLabel("¸Ş´º");
-		JLabel cartLabel = new JLabel("Àå¹Ù±¸´Ï");
+		JLabel sortLabel = new JLabel("ë¶„ë¥˜");
+		JLabel menuLabel = new JLabel("ë©”ë‰´");
+		JLabel cartLabel = new JLabel("ì¥ë°”êµ¬ë‹ˆ");
 		JLabel topLabel = new JLabel("SUBWAY");
 		JLabel topLabel1 = new JLabel("SUBWAY");
-		JButton loginButton = new JButton("·Î±×ÀÎ");
-		JButton orderButton = new JButton("ÁÖ¹®");
-		JButton cancelButton = new JButton("Ãë¼Ò");
-		JButton sandwich = new JButton("»÷µåÀ§Ä¡");
-		JButton salad = new JButton("»ø·¯µå");
-		JButton wrap = new JButton("·¦");
-		JButton side = new JButton("»çÀÌµå");
-		JButton drink = new JButton("À½·á");
-		JButton loginButton1 = new JButton("·Î±×ÀÎ");
-		JButton backButton = new JButton("µÚ·Î°¡±â");
+		JButton loginButton = new JButton("ë¡œê·¸ì¸");
+		JButton orderButton = new JButton("ì£¼ë¬¸");
+		JButton cancelButton = new JButton("ì·¨ì†Œ");
+		JButton sandwich = new JButton("ìƒŒë“œìœ„ì¹˜");
+		JButton salad = new JButton("ìƒëŸ¬ë“œ");
+		JButton wrap = new JButton("ë©");
+		JButton side = new JButton("ì‚¬ì´ë“œ");
+		JButton drink = new JButton("ìŒë£Œ");
+		JButton loginButton1 = new JButton("ë¡œê·¸ì¸");
+		JButton backButton = new JButton("ë’¤ë¡œê°€ê¸°");
 		
 		//-------------------------------------------------------------------------------------------------
-		// 2¹øÂ° ¼ÒÆ®ÆĞ³Î¿¡ ºÙÀÏ »§, Ä¡Áî, ÅäÇÎ, ¼Ò½º ¹öÆ°
-		JButton bread = new JButton("»§");
-		JButton cheese = new JButton("Ä¡Áî");
-		JButton topping = new JButton("ÅäÇÎ");
-		JButton sauce = new JButton("¼Ò½º");
+		// 2ë²ˆì§¸ ì†ŒíŠ¸íŒ¨ë„ì— ë¶™ì¼ ë¹µ, ì¹˜ì¦ˆ, í† í•‘, ì†ŒìŠ¤ ë²„íŠ¼
+		JButton bread = new JButton("ë¹µ");
+		JButton cheese = new JButton("ì¹˜ì¦ˆ");
+		JButton topping = new JButton("í† í•‘");
+		JButton sauce = new JButton("ì†ŒìŠ¤");
 		
 		
 		bread.setFocusable(false);
 		bread.setSize(150, 70);
 		bread.setLocation(25,20);
 		bread.setBackground(new Color(246, 241, 123));
-		bread.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		bread.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		cheese.setFocusable(false);
 		cheese.setSize(150, 70);
 		cheese.setLocation(25,126);
 		cheese.setBackground(new Color(246, 241, 123));
-		cheese.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		cheese.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		topping.setFocusable(false);
 		topping.setSize(150, 70);
 		topping.setLocation(25,232);
 		topping.setBackground(new Color(246, 241, 123));
-		topping.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		topping.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		sauce.setFocusable(false);
 		sauce.setSize(150, 70);
 		sauce.setLocation(25,338);
 		sauce.setBackground(new Color(246, 241, 123));
-		sauce.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		sauce.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		//--------------------------------------------------------------------------------------------------
 		
 		
-		idLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
-		pwLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
-		sortLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,40));
-		menuLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,40));
-		cartLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,40));
-		topLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
-		topLabel1.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,60));
+		idLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,60));
+		pwLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,60));
+		sortLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,40));
+		menuLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,40));
+		cartLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,40));
+		topLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,60));
+		topLabel1.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,60));
 		
 		idLabel.setSize(100,100);
 		idLabel.setLocation(400,300);
@@ -160,17 +160,17 @@ public class Frame extends JFrame{
 		orderButton.setSize(140,100);
 		orderButton.setLocation(1120,780);
 		orderButton.setBackground(Color.white);
-		orderButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,30));
+		orderButton.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,30));
 		cancelButton.setFocusable(false);
 		cancelButton.setSize(140,100);
 		cancelButton.setLocation(1280,780);
 		cancelButton.setBackground(Color.white);
-		cancelButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,30));
+		cancelButton.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,30));
 		loginButton1.setFocusable(false);
 		loginButton1.setSize(180,180);
 		loginButton1.setBackground(Color.WHITE);
 		loginButton1.setLocation(955,320);
-		loginButton1.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,30));
+		loginButton1.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,30));
 		backButton.setFocusable(false);
 		backButton.setSize(100,40);
 		backButton.setBackground(Color.WHITE);
@@ -180,27 +180,27 @@ public class Frame extends JFrame{
 		sandwich.setSize(150, 70);
 		sandwich.setLocation(25,20);
 		sandwich.setBackground(new Color(246, 241, 123));
-		sandwich.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		sandwich.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		salad.setFocusable(false);
 		salad.setSize(150, 70);
 		salad.setLocation(25,126);
 		salad.setBackground(new Color(246, 241, 123));
-		salad.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		salad.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		wrap.setFocusable(false);
 		wrap.setSize(150, 70);
 		wrap.setLocation(25,232);
 		wrap.setBackground(new Color(246, 241, 123));
-		wrap.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		wrap.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		side.setFocusable(false);
 		side.setSize(150, 70);
 		side.setLocation(25,338);
 		side.setBackground(new Color(246, 241, 123));
-		side.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		side.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		drink.setFocusable(false);
 		drink.setSize(150, 70);
 		drink.setLocation(25,444);
 		drink.setBackground(new Color(246, 241, 123));
-		drink.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		drink.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		
 		topPanel.setBackground(Color.WHITE);
 		topPanel1.setBackground(Color.WHITE);
@@ -237,8 +237,8 @@ public class Frame extends JFrame{
 		backButton.addMouseListener(new backMouseListener());
 		loginButton1.addMouseListener(new loginMouseListener1());
 		
-		//------------------------µÎ¹øÂ° ¼ÒÆ® ÆĞ³Î --------------------------------------------------
-		// »§, Ä¡Áî, ÅäÇÎ, ¼Ò½º ¹öÆ°¿¡ ¸®½º³Ê Ãß°¡ 	
+		//------------------------ë‘ë²ˆì§¸ ì†ŒíŠ¸ íŒ¨ë„ --------------------------------------------------
+		// ë¹µ, ì¹˜ì¦ˆ, í† í•‘, ì†ŒìŠ¤ ë²„íŠ¼ì— ë¦¬ìŠ¤ë„ˆ ì¶”ê°€ 	
 		bread.addMouseListener(new breadMouseListener());
 		cheese.addMouseListener(new cheeseMouseListener());
 		topping.addMouseListener(new toppingMouseListener());
@@ -268,7 +268,7 @@ public class Frame extends JFrame{
 		orderPanel.add(cancelButton);
 		
 		
-		///-------------------µÎ¹øÂ° ¼ÒÆ® ÆĞ³ÎÀ» ¿À´õÆĞ³Î¿¡ ºÙÀÓ  -----------------------------------------------------------
+		///-------------------ë‘ë²ˆì§¸ ì†ŒíŠ¸ íŒ¨ë„ì„ ì˜¤ë”íŒ¨ë„ì— ë¶™ì„  -----------------------------------------------------------
 		orderPanel.add(sortPanel2);
 		///---------------------------------------------------------------------------------
 		
@@ -286,7 +286,7 @@ public class Frame extends JFrame{
 		contentPane.add(loginPanel);
 		loginPanel.setVisible(false);
 		
-		//------------------  ÃÊ±âÈ­¸é »÷µåÀ§Ä¡·Î ÃÊ±âÈ­---------------------------------------------------------
+		//------------------  ì´ˆê¸°í™”ë©´ ìƒŒë“œìœ„ì¹˜ë¡œ ì´ˆê¸°í™”---------------------------------------------------------
 		menuPanel.removeAll();
 		sandwichPanel.removeAll();
 		int i = 0;
@@ -310,6 +310,24 @@ public class Frame extends JFrame{
 		
 		
 		//--------------------------------------------------------------------------------------------------------
+		
+		
+		
+		
+		//----------------------------------------------cart
+		cartPanel.setLayout(new BorderLayout());
+		JLabel category = new JLabel("        ë©”ë‰´            ê°€ê²©         ìˆ˜ëŸ‰");
+		Allprice = new JLabel("     í•©ê³„ :");
+		category.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.PLAIN ,15));
+		Allprice.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
+		selectedMenu.setLayout(new GridLayout(0,1));
+		selectedMenu.setBackground(Color.white);
+		JScrollPane cartscroll = new JScrollPane(selectedMenu, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		cartPanel.add(category, BorderLayout.NORTH);
+		cartPanel.add(Allprice, BorderLayout.SOUTH);
+		cartPanel.add(cartscroll, BorderLayout.CENTER);
+		//----------------------------------------------------------
+		
 		
 		setVisible(true);	
 	}
@@ -499,6 +517,13 @@ public class Frame extends JFrame{
 			scroll.getVerticalScrollBar().setUnitIncrement(10);
 			menuPanel.add(scroll,BorderLayout.CENTER);
 			setVisible(true);
+			
+			
+			//----------------------------------------------- ì¹´íŠ¸ë‹´ê¸° sample
+			Cart sample1 = new Cart(menu.drink.get(1).name, menu.drink.get(1).price);//get(1) -> Menuinfo listì—ì„œ në²ˆì§¸ ì œí’ˆ
+			// ì´ë¦„ ê¸¸ì–´ì§€ë©´ panel ê¸¸ì´ ë‹¬ë¼ì§€ë¯€ë¡œ ë©”ë‰´ë§ˆë‹¤ mouselistener í•¨ìˆ˜ì—ì„œ String ì¡°ì ˆí•˜ê¸° (5ì ì¶”ì²œ)
+			sample1.uploadCart();
+			//---------------------------------------------------------------
 		}
 
 		@Override
@@ -600,10 +625,10 @@ public class Frame extends JFrame{
 	}
 	
 //--------------------------------------------------------------------------------------------------------------------------------------
-// Ãß°¡·Î ÀÛ¼ºÇÑ ¸¶¿ì½º ¸®½º³Ê
-	class sandwichClickedMouseListener implements MouseListener{			// »÷µåÀ§Ä¡ ÆĞ³ÎÀÇ ¹öÆ°ÀÌ Å¬¸¯µÆÀ» ¶§ ¸®½º³Ê
-																			// clicked¸¦ µ¡ºÙÀÓ
-		@Override															// ¾Æ·¡´Â ±âÁ¸ ¹öÆ° ÇÔ¼öµé°ú µ¿ÀÏÇÑ ¸®½º³Ê, ¾Æ¸¶ ±âÁ¸ ¹öÆ°¿¡ sortPanel2.setVisible(false)¸¦ Ãß°¡ÇØ¾ß ÇÒÁöµµ?
+// ì¶”ê°€ë¡œ ì‘ì„±í•œ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ
+	class sandwichClickedMouseListener implements MouseListener{			// ìƒŒë“œìœ„ì¹˜ íŒ¨ë„ì˜ ë²„íŠ¼ì´ í´ë¦­ëì„ ë•Œ ë¦¬ìŠ¤ë„ˆ
+																			// clickedë¥¼ ë§ë¶™ì„
+		@Override															// ì•„ë˜ëŠ” ê¸°ì¡´ ë²„íŠ¼ í•¨ìˆ˜ë“¤ê³¼ ë™ì¼í•œ ë¦¬ìŠ¤ë„ˆ, ì•„ë§ˆ ê¸°ì¡´ ë²„íŠ¼ì— sortPanel2.setVisible(false)ë¥¼ ì¶”ê°€í•´ì•¼ í• ì§€ë„?
 		public void mouseClicked(MouseEvent e) {
 			sortPanel.setVisible(false);
 			sortPanel2.setVisible(true);
