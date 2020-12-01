@@ -15,7 +15,7 @@ public class Topping {
 		Toppinginfo onion = new Toppinginfo("양파", new ImageIcon("img/toponion.jpg"));
 		Toppinginfo pickle = new Toppinginfo("피클", new ImageIcon("img/toppickle.jpg"));
 		Toppinginfo pimang = new Toppinginfo("피망", new ImageIcon("img/toppimang.jpg"));
-		Toppinginfo selectno = new Toppinginfo("선택안함", new ImageIcon("img/selectno.jpg"));
+		Toppinginfo selectno = new Toppinginfo("토핑없음", new ImageIcon("img/selectno.jpg"));
 		
 		this.topping.add(tomato);
 		this.topping.add(cucumber);

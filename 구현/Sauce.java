@@ -21,7 +21,7 @@ public class Sauce {
 		Sauceinfo salt = new Sauceinfo("소금", new ImageIcon("img/saucesalt.jpg"));
 		Sauceinfo blackpepper = new Sauceinfo("후추", new ImageIcon("img/sauceblackpepper.jpg"));
 		Sauceinfo smokebbq = new Sauceinfo("스모크 바비큐", new ImageIcon("img/saucesmokebbq.jpg"));
-		Sauceinfo selectno = new Sauceinfo("선택안함", new ImageIcon("img/selectno.jpg"));
+		Sauceinfo selectno = new Sauceinfo("소스없음", new ImageIcon("img/selectno.jpg"));
 		
 		this.sauce.add(ranch);
 		this.sauce.add(mayonnaise);
