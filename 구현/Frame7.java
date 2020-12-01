@@ -1922,9 +1922,9 @@ public class Frame extends JFrame {
 				orderList += ("요청번호 : " + order.orderNumber);
 				orderList += ("\n=========================================================\n");
 				for(int i=0;i<order.sandwichList.size();i++) {
-					orderList += ("샌드위치 : "+ order.sandwichList.get(i).type + order.sandwichList.get(i).num + " 개\n");
-					orderList += ("빵 : " + order.sandwichList.get(i).breadType);
-					orderList += (order.sandwichList.get(i).breadSize + " cm\n");
+					orderList += ("샌드위치 : "+ order.sandwichList.get(i).type + " " +  order.sandwichList.get(i).num + "개\n");
+					orderList += ("빵 : " + order.sandwichList.get(i).breadType + " ");
+					orderList += (order.sandwichList.get(i).breadSize + "cm\n");
 					orderList += ("치즈 : " +order.sandwichList.get(i).cheeseType + "\n토핑 : ");
 					for(int j=0;j<order.sandwichList.get(i).toppings.size();j++) {
 						if(j!=order.sandwichList.get(i).toppings.size()-1) {
@@ -1946,21 +1946,22 @@ public class Frame extends JFrame {
 					orderList += (order.sandwichList.get(i).num * order.sandwichList.get(i).price + "원");
 					orderList += "\n=========================================================\n";
 				}
+				
 				for(int j=0;j<order.drinkList.size();j++) {
-					orderList += ("음료 : " + order.drinkList.get(j).name + order.drinkList.get(j).num + " 개\n");
-					orderList += (order.drinkList.get(j).num * order.drinkList.get(j).price + "원");
+					orderList += (order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "개\n");
+					orderList += (order.drinkList.get(j).num * order.drinkList.get(j).price + "원\n");
 				}
 				if(order.drinkList.size()!=0) {
 					orderList += "\n=========================================================\n";
 				}
 				for(int k=0;k<order.sideList.size();k++) {
-					orderList += ("사이드 : " + order.sideList.get(k).name + order.sideList.get(k).num + " 개\n");
-					orderList += (order.sideList.get(k).num * order.sideList.get(k).price + "원");
+					orderList += (order.sideList.get(k).name + " " + order.sideList.get(k).num + "개\n");
+					orderList += (order.sideList.get(k).num * order.sideList.get(k).price + "원\n");
 				}
 				if(order.sideList.size()!=0) {
 					orderList += "\n=========================================================\n";
 				}
-				orderList += ("\t\t\t\t 총 가격 : " + order.totalPrice + "원");
+				orderList += ("\t\t결제 금액 : " + order.totalPrice + "원");
 				
 				
 				
