@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Sandwich {
-	int pirce;
+	int price;
 	String type;
 	int breadSize;
 	String breadType;
@@ -12,14 +12,17 @@ public class Sandwich {
 	String drink;
 	String drinkSize;
 	String side;
+	int num;
 	
 	public Sandwich() {
 		this.toppings = new ArrayList<>();
 		this.sauces = new ArrayList<>();
+		this.num = 1;
 	}
 	
 	public void selectSandwich(Menuinfo menu) {
 		type = menu.name;
+		price = menu.price;
 	}
 	
 	public void getBread(Breadinfo bread) {
