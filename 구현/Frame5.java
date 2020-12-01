@@ -61,10 +61,6 @@ public class Frame extends JFrame {
 	JPanel cheesePanel = new JPanel();
 	JPanel toppingPanel = new JPanel();
 	JPanel saucePanel = new JPanel();
-	
-	
-	
-
 
 	// -------------------------------------------------------------------------------------------------------
 	// 관리자 패널 추가
@@ -238,19 +234,19 @@ public class Frame extends JFrame {
 		orderButton.setLocation(160, 570);
 		orderButton.setBackground(Color.white);
 		orderButton.setFont(new Font("맑은 고딕", Font.BOLD, 30));
-		
-		
 
 		cartPanel.setLayout(null);
 		cartPanel.setLocation(0, 120);
 		cartPanel.setSize(300, 430);
 		cartPanel.setBackground(Color.WHITE);
-		
-		JLabel allPrice  = new JLabel();		///
-		allPrice.setText(" 합계 :	                " + order.totalPrice);
-		allPrice.setSize(300,40);
+
+		JLabel allPrice = new JLabel(); ///
+		allPrice.setText(" 합계 :	           " + order.totalPrice);
+		allPrice.setSize(300, 40);
 		allPrice.setFont(new Font("맑은 고딕", Font.BOLD, 30));
-		allPrice.setLocation(0,390);
+		allPrice.setLocation(0, 390);
+		allPrice.setBackground(new Color(246, 241, 123));
+		allPrice.setOpaque(true);
 		cartPanel.add(allPrice);
 
 		cartFramePanel.setLayout(null);
@@ -339,12 +335,11 @@ public class Frame extends JFrame {
 		sandwichContentPanel.add(toppingTypeLabel);
 		sandwichContentPanel.add(sauceTypeLabel);
 		sandwichContentPanel.add(sandwichContentPanel1);
-		
+
 		sandwichContentPanel.setLocation(0, 120);
 		sandwichContentPanel.setSize(300, 430);
 		sandwichContentPanel.setBackground(Color.WHITE);
-		
-		
+
 		makeSandwichPanel.setLayout(null);
 		makeSandwichPanel.setBackground(new Color(117, 228, 126));
 		makeSandwichPanel.setSize(300, 700);
@@ -693,13 +688,24 @@ public class Frame extends JFrame {
 						makeSandwichPanel.setVisible(false);
 						menuPanel.removeAll();
 						sidePanel.removeAll();
-						Side side1 = new Side();
-						side1.selectSide(menuSide);
-						order.uploadSideToCart(side1);
 						int i = 0;
 						sidePanel.setBackground(Color.white);
 						sidePanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
-						updateCartContent();//=======================================================================
+						Side side1 = new Side();
+						side1.selectSide(menuSide);
+						order.uploadSideToCart(side1);
+						if (order.sideList.size() > 1) {
+							for (i = 0; i < order.sideList.size() - 1; i++) {
+								if (side1.name == order.sideList.get(i).name) {
+									order.sideList.remove(side1);
+									order.sideList.remove(order.sideList.get(i));
+									order.calculatePrice();
+									updateCartContent();
+								}
+							}
+						}
+						order.calculatePrice();
+						updateCartContent();// =======================================================================
 						for (i = 0; i < menu.side.size(); i++) {
 							JButton button = new JButton(menu.side.get(i).pic);
 							button.setBackground(Color.BLACK);
@@ -767,9 +773,20 @@ public class Frame extends JFrame {
 						Drink drink1 = new Drink();
 						drink1.selectDrink(menuDrink);
 						order.uploadDrinkToCart(drink1);
+						if (order.drinkList.size() > 1) {
+							for (int i = 0; i < order.drinkList.size() - 1; i++) {
+								if (drink1.name == order.drinkList.get(i).name) {
+									order.drinkList.remove(drink1);
+									order.drinkList.remove(order.drinkList.get(i));
+									order.calculatePrice();
+									updateCartContent();
+								}
+							}
+						}
 						int i = 0;
 						drinkPanel.setBackground(Color.white);
-						updateCartContent();//======================================================================
+						order.calculatePrice();
+						updateCartContent();// ======================================================================
 						drinkPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
 						for (i = 0; i < menu.drink.size(); i++) {
 							JButton button = new JButton(menu.drink.get(i).pic);
@@ -783,7 +800,7 @@ public class Frame extends JFrame {
 						scroll.getVerticalScrollBar().setUnitIncrement(10);
 						menuPanel.add(scroll, BorderLayout.CENTER);
 						setVisible(true);
-						
+
 					}
 				});
 				drinkPanel.add(button);
@@ -1244,6 +1261,7 @@ public class Frame extends JFrame {
 						if (sandwich.sauces.size() > 3) {
 							System.out.println("소스는 3개까지만 선택 가능합니다");
 							sandwich.sauces.remove(sauceinfo);
+							JOptionPane.showMessageDialog(null, "소스는 3개까지만 선택 가능합니다");
 						}
 						for (int i = 0; i < sandwich.sauces.size(); i++) {
 							System.out.println(sandwich.sauces.get(i).name);
@@ -1274,7 +1292,7 @@ public class Frame extends JFrame {
 			scroll.getVerticalScrollBar().setUnitIncrement(10);
 			menuPanel.add(scroll, BorderLayout.CENTER);
 			setVisible(true);
-			
+
 		}
 
 		@Override
@@ -1337,7 +1355,7 @@ public class Frame extends JFrame {
 						int i = 0;
 						breadPanel.setBackground(Color.white);
 						breadPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
-						updateCartContent();//====================================================================
+						updateCartContent();// ====================================================================
 						for (i = 0; i < bread.bread.size(); i++) {
 							JButton button = new JButton(bread.bread.get(i).pic);
 							button.setBackground(Color.BLACK);
@@ -1391,98 +1409,105 @@ public class Frame extends JFrame {
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
+			int check = 1;
 			if (sandwich.breadType == null) {
 				System.out.println("빵을 골라주세요");
+				check = 0;
 			}
 			if (sandwich.cheeseType == null) {
 				System.out.println("치즈를 골라주세요");
+				check = 0;
 			}
 			if (sandwich.toppings.size() == 0) {
 				System.out.println("토핑을 골라주세요");
+				check = 0;
 			}
 			if (sandwich.sauces.size() == 0) {
 				System.out.println("소스 및 시즈닝을 골라주세요");
+				check = 0;
 			}
-			if (sandwich.breadType != null // 토핑 소스 네임이 눌일 때 말고 사이즈가 0일때로 바꿔야함
-					&& sandwich.cheeseType != null && sandwich.sauces.size() != 0 && sandwich.toppings.size() != 0) {
-				System.out.println(sandwich.type);
-				System.out.println(sandwich.breadType);
-				System.out.println(sandwich.cheeseType);
-				int i;
-				for (i = 0; i < sandwich.sauces.size(); i++) {
-					System.out.println(sandwich.sauces.get(i).name);
-				}
-				for (i = 0; i < sandwich.toppings.size(); i++) {
-					System.out.println(sandwich.toppings.get(i).name);
-				}
-				//========================================
-				Sandwich sandwich1 = new Sandwich();
-				sandwich1.type = sandwich.type;
-				sandwich1.breadSize = sandwich.breadSize;
-				sandwich1.breadType = sandwich.breadType;
-				sandwich1.cheeseType = sandwich.cheeseType;
-				sandwich1.toppings = sandwich.toppings;
-				sandwich1.sauces = sandwich.sauces;
-				sandwich1.price = sandwich.price;
-				sandwich1.num = sandwich.num;
-				order.uploadSandwichToCart(sandwich1);
-				//=========================================
-				initSandwich();								// 초기화
-				getSandwichCotentForLabel();
-				updateCartContent();//====================================================================
-			}
-			sortPanel2.setVisible(false);
-			makeSandwichPanel.setVisible(false);
-			sortPanel.setVisible(true);
-			cartFramePanel.setVisible(true);
-			menuPanel.removeAll();
-			sandwichPanel.removeAll();
-			initSandwich();// 초기화
-			getSandwichCotentForLabel();
-			int i = 0;
-			sandwichPanel.setBackground(Color.white);
-			sandwichPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
-			for (i = 0; i < menu.sandwich.size(); i++) {
-				JButton button = new JButton(menu.sandwich.get(i).pic);
-				button.setBackground(Color.BLACK);
-				button.setFocusable(false);
-				button.setPreferredSize(new Dimension(220, 220));
-				Menuinfo menuSandwich = new Menuinfo(menu.sandwich.get(i).name, menu.sandwich.get(i).price);
-				button.addMouseListener(new MouseAdapter() {
-					@Override
-					public void mouseClicked(MouseEvent e) {
-						sortPanel.setVisible(false);
-						cartFramePanel.setVisible(false);
-						sortPanel2.setVisible(true);
-						makeSandwichPanel.setVisible(true);
-						menuPanel.removeAll();
-						breadPanel.removeAll();
-						sandwich.selectSandwich(menuSandwich); 
-						int i = 0;
-						breadPanel.setBackground(Color.white);
-						breadPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
-						for (i = 0; i < bread.bread.size(); i++) {
-							JButton button = new JButton(bread.bread.get(i).pic);
-							button.setBackground(Color.BLACK);
-							button.setFocusable(false);
-							button.setPreferredSize(new Dimension(220, 220));
-							breadPanel.add(button);
-							button.addMouseListener(new breadMouseListener());
-						}
-						JScrollPane scroll = new JScrollPane(breadPanel);
-						scroll.getVerticalScrollBar().setUnitIncrement(10);
-						menuPanel.add(scroll, BorderLayout.CENTER);
-						setVisible(true);
+			if (check != 0) {
+				if (sandwich.breadType != null // 토핑 소스 네임이 눌일 때 말고 사이즈가 0일때로 바꿔야함
+						&& sandwich.cheeseType != null && sandwich.sauces.size() != 0
+						&& sandwich.toppings.size() != 0) {
+					System.out.println(sandwich.type);
+					System.out.println(sandwich.breadType);
+					System.out.println(sandwich.cheeseType);
+					int i;
+					for (i = 0; i < sandwich.sauces.size(); i++) {
+						System.out.println(sandwich.sauces.get(i).name);
 					}
-				});
+					for (i = 0; i < sandwich.toppings.size(); i++) {
+						System.out.println(sandwich.toppings.get(i).name);
+					}
+					// ========================================
+					Sandwich sandwich1 = new Sandwich();
+					sandwich1.type = sandwich.type;
+					sandwich1.breadSize = sandwich.breadSize;
+					sandwich1.breadType = sandwich.breadType;
+					sandwich1.cheeseType = sandwich.cheeseType;
+					sandwich1.toppings = sandwich.toppings;
+					sandwich1.sauces = sandwich.sauces;
+					sandwich1.price = sandwich.price;
+					sandwich1.num = sandwich.num;
+					order.uploadSandwichToCart(sandwich1);
+					// =========================================
+					initSandwich(); // 초기화
+					getSandwichCotentForLabel();
+					updateCartContent();// ====================================================================
+				}
+				sortPanel2.setVisible(false);
+				makeSandwichPanel.setVisible(false);
+				sortPanel.setVisible(true);
+				cartFramePanel.setVisible(true);
+				menuPanel.removeAll();
+				sandwichPanel.removeAll();
+				initSandwich();// 초기화
+				getSandwichCotentForLabel();
+				int i = 0;
+				sandwichPanel.setBackground(Color.white);
+				sandwichPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
+				for (i = 0; i < menu.sandwich.size(); i++) {
+					JButton button = new JButton(menu.sandwich.get(i).pic);
+					button.setBackground(Color.BLACK);
+					button.setFocusable(false);
+					button.setPreferredSize(new Dimension(220, 220));
+					Menuinfo menuSandwich = new Menuinfo(menu.sandwich.get(i).name, menu.sandwich.get(i).price);
+					button.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseClicked(MouseEvent e) {
+							sortPanel.setVisible(false);
+							cartFramePanel.setVisible(false);
+							sortPanel2.setVisible(true);
+							makeSandwichPanel.setVisible(true);
+							menuPanel.removeAll();
+							breadPanel.removeAll();
+							sandwich.selectSandwich(menuSandwich);
+							int i = 0;
+							breadPanel.setBackground(Color.white);
+							breadPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
+							for (i = 0; i < bread.bread.size(); i++) {
+								JButton button = new JButton(bread.bread.get(i).pic);
+								button.setBackground(Color.BLACK);
+								button.setFocusable(false);
+								button.setPreferredSize(new Dimension(220, 220));
+								breadPanel.add(button);
+								button.addMouseListener(new breadMouseListener());
+							}
+							JScrollPane scroll = new JScrollPane(breadPanel);
+							scroll.getVerticalScrollBar().setUnitIncrement(10);
+							menuPanel.add(scroll, BorderLayout.CENTER);
+							setVisible(true);
+						}
+					});
 
-				sandwichPanel.add(button);
+					sandwichPanel.add(button);
+				}
+				JScrollPane scroll = new JScrollPane(sandwichPanel);
+				scroll.getVerticalScrollBar().setUnitIncrement(10);
+				menuPanel.add(scroll, BorderLayout.CENTER);
+				setVisible(true);
 			}
-			JScrollPane scroll = new JScrollPane(sandwichPanel);
-			scroll.getVerticalScrollBar().setUnitIncrement(10);
-			menuPanel.add(scroll, BorderLayout.CENTER);
-			setVisible(true);
-
 		}
 
 		@Override
@@ -1519,20 +1544,18 @@ public class Frame extends JFrame {
 		sandwich.cheeseType = null;
 	}
 
+	public void getSandwichCotentForLabel() { // 샌드위치 내용 UI에 나타내는 함수
 
-	public void getSandwichCotentForLabel() {					// 샌드위치 내용 UI에 나타내는 함수
-		
-		
 		sandwichContentPanel.remove(sandwichContentPanel1);
-		
+
 		JPanel sandwichContentPanel2 = new JPanel();
 		sandwichContentPanel2.setLayout(null);
 		sandwichContentPanel2.setLocation(100, 0);
 		sandwichContentPanel2.setSize(200, 430);
 		sandwichContentPanel2.setBackground(Color.WHITE);
-		
+
 		sandwichContentPanel.setVisible(false);
-		
+
 		String toppingcontent = "";
 		for (int i = 0; i < sandwich.toppings.size(); i++) {
 			toppingcontent += sandwich.toppings.get(i).name + " ";
@@ -1541,13 +1564,13 @@ public class Frame extends JFrame {
 		for (int i = 0; i < sandwich.sauces.size(); i++) {
 			saucecontent += sandwich.sauces.get(i).name + " ";
 		}
-		
+
 		JLabel breadSizeContentLabel = new JLabel(""); // 샌드위치 구성품 표시할 라벨
 		JLabel breadTypeContentLabel = new JLabel(sandwich.breadType);
 		JLabel cheeseTypeContentLabel = new JLabel(sandwich.cheeseType);
 		JLabel toppingTypeContentLabel = new JLabel(toppingcontent);
 		JLabel sauceTypeContentLabel = new JLabel(saucecontent);
-		
+
 		breadSizeContentLabel.setFont(new Font("맑은 고딕", Font.BOLD, 10));
 		breadSizeContentLabel.setSize(200, 86);
 		breadSizeContentLabel.setLocation(0, 0);
@@ -1578,58 +1601,57 @@ public class Frame extends JFrame {
 		sandwichContentPanel2.add(cheeseTypeContentLabel);
 		sandwichContentPanel2.add(toppingTypeContentLabel);
 		sandwichContentPanel2.add(sauceTypeContentLabel);
-		
+
 		sandwichContentPanel1 = sandwichContentPanel2;
 		sandwichContentPanel.add(sandwichContentPanel1);
 		sandwichContentPanel.setVisible(true);
 	}
-	
+
 	public void updateCartContent() {
 		cartPanel.setVisible(false);
 		cartPanel.removeAll();
 		int contentNum = 0;
-		for(int i =0;i<order.sandwichList.size();i++) {
+		for (int i = 0; i < order.sandwichList.size(); i++) {
 			JPanel cartContent = new JPanel();
 			int num = i;
 			cartContent.setLayout(null);
-			cartContent.setSize(300,40);
-			cartContent.setLocation(0,contentNum*40);
+			cartContent.setSize(300, 40);
+			cartContent.setLocation(0, contentNum * 40);
 			JLabel cartContentName = new JLabel();
 			cartContentName.setText(" " + order.sandwichList.get(i).type);
-			cartContentName.setSize(180,40);
+			cartContentName.setSize(180, 40);
 			cartContentName.setFont(new Font("맑은 고딕", Font.BOLD, 13));
 			JLabel cartContentNum = new JLabel();
 			cartContentNum.setText("" + order.sandwichList.get(i).num);
-			cartContentNum.setSize(40,40);
+			cartContentNum.setSize(40, 40);
 			cartContentNum.setLocation(180, 0);
 			cartContentNum.setFont(new Font("맑은 고딕", Font.BOLD, 15));
 			JButton addSelectedContentButton = new JButton("+");
-			addSelectedContentButton.setSize(40,40);
+			addSelectedContentButton.setSize(40, 40);
 			addSelectedContentButton.setLocation(220, 0);
 			addSelectedContentButton.setFont(new Font("맑은 고딕", Font.BOLD, 8));
 			addSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					order.sandwichList.get(num).num++;
 					order.calculatePrice();
-					updateCartContent();		
+					updateCartContent();
 				}
-			});	
+			});
 			JButton subSelectedContentButton = new JButton("-");
-			subSelectedContentButton.setSize(40,40);
+			subSelectedContentButton.setSize(40, 40);
 			subSelectedContentButton.setLocation(260, 0);
 			subSelectedContentButton.setFont(new Font("맑은 고딕", Font.BOLD, 15));
 			subSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					int num1 = order.sandwichList.get(num).num;
-					if(num1>1) {
+					if (num1 > 1) {
 						order.sandwichList.get(num).num--;
 						order.calculatePrice();
 						updateCartContent();
-					}
-					else {
+					} else {
 						System.out.println("더 이상 줄일 수 없습니다");
 					}
-					
+
 				}
 			});
 			cartContent.add(cartContentName);
@@ -1639,48 +1661,47 @@ public class Frame extends JFrame {
 			cartPanel.add(cartContent);
 			contentNum++;
 		}
-		for(int i =0;i<order.drinkList.size();i++) {
+		for (int i = 0; i < order.drinkList.size(); i++) {
 			JPanel cartContent = new JPanel();
 			int num = i;
 			cartContent.setLayout(null);
-			cartContent.setSize(300,40);
-			cartContent.setLocation(0,contentNum*40);
+			cartContent.setSize(300, 40);
+			cartContent.setLocation(0, contentNum * 40);
 			JLabel cartContentName = new JLabel();
 			cartContentName.setText(" " + order.drinkList.get(i).name);
-			cartContentName.setSize(180,40);
+			cartContentName.setSize(180, 40);
 			cartContentName.setFont(new Font("맑은 고딕", Font.BOLD, 13));
 			JLabel cartContentNum = new JLabel();
 			cartContentNum.setText("" + order.drinkList.get(i).num);
-			cartContentNum.setSize(40,40);
+			cartContentNum.setSize(40, 40);
 			cartContentNum.setLocation(180, 0);
 			cartContentNum.setFont(new Font("맑은 고딕", Font.BOLD, 15));
 			JButton addSelectedContentButton = new JButton("+");
-			addSelectedContentButton.setSize(40,40);
+			addSelectedContentButton.setSize(40, 40);
 			addSelectedContentButton.setLocation(220, 0);
 			addSelectedContentButton.setFont(new Font("맑은 고딕", Font.BOLD, 9));
 			addSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					order.drinkList.get(num).num++;
 					order.calculatePrice();
-					updateCartContent();		
+					updateCartContent();
 				}
-			});	
+			});
 			JButton subSelectedContentButton = new JButton("-");
-			subSelectedContentButton.setSize(40,40);
+			subSelectedContentButton.setSize(40, 40);
 			subSelectedContentButton.setLocation(260, 0);
 			subSelectedContentButton.setFont(new Font("맑은 고딕", Font.BOLD, 15));
 			subSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					int num1 = order.drinkList.get(num).num;
-					if(num1>1) {
+					if (num1 > 1) {
 						order.drinkList.get(num).num--;
 						order.calculatePrice();
 						updateCartContent();
-					}
-					else {
+					} else {
 						System.out.println("더 이상 줄일 수 없습니다");
 					}
-					
+
 				}
 			});
 			cartContent.add(cartContentName);
@@ -1690,48 +1711,47 @@ public class Frame extends JFrame {
 			cartPanel.add(cartContent);
 			contentNum++;
 		}
-		for(int i =0;i<order.sideList.size();i++) {
+		for (int i = 0; i < order.sideList.size(); i++) {
 			JPanel cartContent = new JPanel();
 			int num = i;
 			cartContent.setLayout(null);
-			cartContent.setSize(300,40);
-			cartContent.setLocation(0,contentNum*40);
+			cartContent.setSize(300, 40);
+			cartContent.setLocation(0, contentNum * 40);
 			JLabel cartContentName = new JLabel();
 			cartContentName.setText(" " + order.sideList.get(i).name);
-			cartContentName.setSize(180,40);
+			cartContentName.setSize(180, 40);
 			cartContentName.setFont(new Font("맑은 고딕", Font.BOLD, 13));
 			JLabel cartContentNum = new JLabel();
 			cartContentNum.setText("" + order.sideList.get(i).num);
-			cartContentNum.setSize(40,40);
+			cartContentNum.setSize(40, 40);
 			cartContentNum.setLocation(180, 0);
 			cartContentNum.setFont(new Font("맑은 고딕", Font.BOLD, 15));
 			JButton addSelectedContentButton = new JButton("+");
-			addSelectedContentButton.setSize(40,40);
+			addSelectedContentButton.setSize(40, 40);
 			addSelectedContentButton.setLocation(220, 0);
 			addSelectedContentButton.setFont(new Font("맑은 고딕", Font.BOLD, 8));
 			addSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					order.sideList.get(num).num++;
 					order.calculatePrice();
-					updateCartContent();		
+					updateCartContent();
 				}
-			});	
+			});
 			JButton subSelectedContentButton = new JButton("-");
-			subSelectedContentButton.setSize(40,40);
+			subSelectedContentButton.setSize(40, 40);
 			subSelectedContentButton.setLocation(260, 0);
 			subSelectedContentButton.setFont(new Font("맑은 고딕", Font.BOLD, 15));
 			subSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					int num1 = order.sideList.get(num).num;
-					if(num1>1) {
+					if (num1 > 1) {
 						order.sideList.get(num).num--;
 						order.calculatePrice();
 						updateCartContent();
-					}
-					else {
+					} else {
 						System.out.println("더 이상 줄일 수 없습니다");
 					}
-					
+
 				}
 			});
 			cartContent.add(cartContentName);
@@ -1741,20 +1761,17 @@ public class Frame extends JFrame {
 			cartPanel.add(cartContent);
 			contentNum++;
 		}
-		
-		
+
 		JLabel allPrice1 = new JLabel();
 		allPrice1.setText(" 합계 :	           " + order.totalPrice);
-		allPrice1.setSize(300,40);
+		allPrice1.setSize(300, 40);
 		allPrice1.setFont(new Font("맑은 고딕", Font.BOLD, 30));
-		allPrice1.setLocation(0,390);
+		allPrice1.setLocation(0, 390);
+		allPrice1.setBackground(new Color(246, 241, 123));
+		allPrice1.setOpaque(true);
 		cartPanel.add(allPrice1);
 		cartPanel.setVisible(true);
 	}
-	
-	
-		
-	
 
 	public static void main(String[] args) {
 		new Frame();
