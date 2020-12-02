@@ -1,0 +1,48 @@
+public void print() {
+		String orderList = "";
+		for (int b = 0; b < orderlist.orderlist.size(); b++) {
+			orderList += ("요청번호 : " + orderlist.orderlist.get(b).orderNumber);
+			orderList += ("\n=========================================================\n");
+			for (int i = 0; i < orderlist.orderlist.get(b).sandwichList.size(); i++) {
+				orderList += ("샌드위치 : " + orderlist.orderlist.get(b).sandwichList.get(i).type + " "
+						+ orderlist.orderlist.get(b).sandwichList.get(i).num + "개\n");
+				orderList += ("빵 : " + orderlist.orderlist.get(b).sandwichList.get(i).breadType + " ");
+				orderList += (orderlist.orderlist.get(b).sandwichList.get(i).breadSize + "cm\n");
+				orderList += ("치즈 : " + orderlist.orderlist.get(b).sandwichList.get(i).cheeseType + "\n토핑 : ");
+				for (int j = 0; j < orderlist.orderlist.get(b).sandwichList.get(i).toppings.size(); j++) {
+					if (j != orderlist.orderlist.get(b).sandwichList.get(i).toppings.size() - 1) {
+						orderList += (orderlist.orderlist.get(b).sandwichList.get(i).toppings.get(j).name + ", ");
+					} else {
+						orderList += (orderlist.orderlist.get(b).sandwichList.get(i).toppings.get(j).name);
+					}
+				}
+				orderList += "\n소스 및 시즈닝 : ";
+				for (int k = 0; k < orderlist.orderlist.get(b).sandwichList.get(i).sauces.size(); k++) {
+					if (k != orderlist.orderlist.get(b).sandwichList.get(i).sauces.size() - 1) {
+						orderList += (orderlist.orderlist.get(b).sandwichList.get(i).sauces.get(k).name + ", ");
+					} else {
+						orderList += (orderlist.orderlist.get(b).sandwichList.get(i).sauces.get(k).name + "\n");
+					}
+				}
+				orderList += (orderlist.orderlist.get(b).sandwichList.get(i).num * orderlist.orderlist.get(b).sandwichList.get(i).price + "원");
+				orderList += "\n=========================================================\n";
+			}
+
+			for (int j = 0; j < orderlist.orderlist.get(b).drinkList.size(); j++) {
+				orderList += (orderlist.orderlist.get(b).drinkList.get(j).name + " " + orderlist.orderlist.get(b).drinkList.get(j).num + "개\n");
+				orderList += (orderlist.orderlist.get(b).drinkList.get(j).num * orderlist.orderlist.get(b).drinkList.get(j).price + "원\n");
+			}
+			if (orderlist.orderlist.get(b).drinkList.size() != 0) {
+				orderList += "\n=========================================================\n";
+			}
+			for (int k = 0; k < orderlist.orderlist.get(b).sideList.size(); k++) {
+				orderList += (orderlist.orderlist.get(b).sideList.get(k).name + " " + orderlist.orderlist.get(b).sideList.get(k).num + "개\n");
+				orderList += (orderlist.orderlist.get(b).sideList.get(k).num * orderlist.orderlist.get(b).sideList.get(k).price + "원\n");
+			}
+			if (orderlist.orderlist.get(b).sideList.size() != 0) {
+				orderList += "\n=========================================================\n";
+			}
+			orderList += ("\t\t결제 금액 : " + orderlist.orderlist.get(b).totalPrice + "원\n");
+			System.out.println(orderList);
+		}
+	
