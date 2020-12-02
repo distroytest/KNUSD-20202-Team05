@@ -41,4 +41,19 @@ public class Sauce {
 		
 	}
 	
+	public void insertSauce(String name, ImageIcon pic) {
+		Sauceinfo newSauce = new Sauceinfo(name, pic);
+		this.sauce.add(newSauce);
+	}
+	
+	public void refineSauce(Sauceinfo sauceinfo,String name,ImageIcon pic) {
+		sauceinfo.name = name;
+		if(pic != null)
+			sauceinfo.pic = pic;
+	}
+	
+	public void deleteSauce(int i) {
+		sauce.remove(i);
+	}
+	
 }

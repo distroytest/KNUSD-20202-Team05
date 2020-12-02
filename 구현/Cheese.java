@@ -18,4 +18,18 @@ public class Cheese {
 		this.cheese.add(selectno);
 	}
 	
+	public void insertCheese(String name, ImageIcon pic) {
+		Cheeseinfo newCheese = new Cheeseinfo(name, pic);
+		this.cheese.add(newCheese);
+	}
+	
+	public void refineCheese(Cheeseinfo cheeseinfo,String name,ImageIcon pic) {
+		cheeseinfo.name = name;
+		if(pic != null)
+			cheeseinfo.pic = pic;
+	}
+	
+	public void deleteCheese(int i) {
+		cheese.remove(i);
+	}
 }

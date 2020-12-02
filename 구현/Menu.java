@@ -8,6 +8,7 @@ public class Menu {
 	ArrayList<Menuinfo> drink;
 	ArrayList<Menuinfo> side;
 	
+	
 	public Menu() {
 	
 	Menuinfo swMeatball = new Menuinfo("¹ÌÆ®º¼", 5200, new ImageIcon("img/swmeatball.jpg") );
@@ -61,6 +62,54 @@ public class Menu {
 	this.side.add(sideRaspberryCheeseCake);
 	this.side.add(sideDoubleChocochip);
 	this.side.add(sideChocochip);
+	}
+	
+	public void insertMenu(String sort,String name,int price, ImageIcon pic) {
+		Menuinfo newMenu = new Menuinfo(name, price, pic);
+		switch(sort) {
+		case "»÷µåÀ§Ä¡":
+			this.sandwich.add(newMenu);
+			break;
+		case "»ø·¯µå":
+			this.salad.add(newMenu);
+			break;
+		case "·¦":
+			this.wrap.add(newMenu);
+			break;
+		case "»çÀÌµå":
+			this.side.add(newMenu);
+			break;
+		case "À½·á":
+			this.drink.add(newMenu);
+			break;
+		}
+	}
+	
+	public void refineMenu(Menuinfo menuinfo,String name,int price, ImageIcon pic) {
+		menuinfo.name = name;
+		menuinfo.price = price;
+		if(pic != null)
+			menuinfo.pic = pic;
+	}
+	
+	public void deleteMenu(String sort, int i) {
+		switch(sort) {
+		case "»÷µåÀ§Ä¡":
+			this.sandwich.remove(i);
+			break;
+		case "»ø·¯µå":
+			this.salad.remove(i);
+			break;
+		case "·¦":
+			this.wrap.remove(i);
+			break;
+		case "»çÀÌµå":
+			this.side.remove(i);
+			break;
+		case "À½·á":
+			this.drink.remove(i);
+			break;
+		}
 	}
 }
 

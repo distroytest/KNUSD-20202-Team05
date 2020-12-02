@@ -28,6 +28,18 @@ public class Topping {
 		this.topping.add(selectno);
 	}
 	
+	public void insertTopping(String name, ImageIcon pic) {
+		Toppinginfo newTopping = new Toppinginfo(name, pic);
+		this.topping.add(newTopping);
+	}
 	
+	public void refineTopping(Toppinginfo toppinginfo,String name,ImageIcon pic) {
+		toppinginfo.name = name;
+		if(pic != null)
+			toppinginfo.pic = pic;
+	}
 	
+	public void deleteTopping(int i) {
+		topping.remove(i);
+	}
 }

@@ -23,10 +23,19 @@ public class Bread {
 		this.bread.add(flatbread);
 	}
 	
+	public void insertBread(String name, ImageIcon pic) {
+		Breadinfo newBread = new Breadinfo(name, pic);
+		this.bread.add(newBread);
+	}
 	
+	public void refineBread(Breadinfo breadinfo,String name,ImageIcon pic) {
+		breadinfo.name = name;
+		if(pic != null)
+			breadinfo.pic = pic;
+	}
 	
-	
-	
-	
+	public void deleteBread(int i) {
+		bread.remove(i);
+	}
 
 }
