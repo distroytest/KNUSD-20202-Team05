@@ -2504,6 +2504,11 @@ public class Frame extends JFrame {
 				txtImgName1.setText("");
 				txtPrice1.setEditable(true);
 				path = "";
+				tempBreadinfo = null;
+				tempSauceinfo = null;
+				tempCheeseinfo = null;
+				tempToppinginfo = null;
+				tempMenuinfo = null;
 				
 				if(scroll!=null)
 					refinePanel.remove(scroll);
@@ -3508,16 +3513,46 @@ public class Frame extends JFrame {
 					setVisible(true);
 					break;
 				}
+				tempBreadinfo = null;
+				tempSauceinfo = null;
+				tempCheeseinfo = null;
+				tempToppinginfo = null;
+				tempMenuinfo = null;
 			}
 				
 			}
 			
 //===================refine panel에서 수정버튼 클릭=========================================================================================================
 			class refineMouseListener1 implements MouseListener{
-
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(txtName1.getText().equals("")) {
+				int isEmpty = 0;
+				switch(selectedSort) {
+				case "빵":
+					if(tempBreadinfo == null)
+						isEmpty = 1;
+					break;
+				case "치즈":
+					if(tempCheeseinfo == null)
+						isEmpty = 1;
+					break;
+				case "토핑":
+					if(tempToppinginfo == null)
+						isEmpty = 1;
+					break;
+				case "소스":
+					if(tempSauceinfo == null)
+						isEmpty = 1;
+					break;
+				default:
+					if(tempMenuinfo == null)
+						isEmpty = 1;
+				}
+				
+				if(isEmpty == 1) {
+					JOptionPane.showMessageDialog(null, "메뉴를 선택하세요");
+				}
+				else if(txtName1.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "메뉴명을 입력하세요");
 				}
 				else if(txtPrice1.getText().equals("")) {
@@ -3849,6 +3884,11 @@ public class Frame extends JFrame {
 					txtPrice1.setText("");
 					txtImgName1.setText("");
 					path = "";
+					tempBreadinfo = null;
+					tempSauceinfo = null;
+					tempCheeseinfo = null;
+					tempToppinginfo = null;
+					tempMenuinfo = null;
 				}
 			}
 		
