@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-15T03:04:13.895Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="KcOAWFxN3qh9CR258BTp" version="14.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-15T06:53:54.262Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="QCAd9s0nEFviLoLPkM53" version="14.0.1" type="github">
   <diagram id="Rf4qBrpubOHbPNmQXItm" name="Page-1">
     <mxGraphModel dx="2889" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -137,7 +137,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xnOvPEAhY6df5-fV51rV-41" value="샌드위치 추가(String, ...)" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" source="xnOvPEAhY6df5-fV51rV-22" target="xnOvPEAhY6df5-fV51rV-10" edge="1">
+        <mxCell id="xnOvPEAhY6df5-fV51rV-41" value="샌드위치 추가(Sandwich)" style="html=1;verticalAlign=bottom;endArrow=block;" parent="1" source="xnOvPEAhY6df5-fV51rV-22" target="xnOvPEAhY6df5-fV51rV-10" edge="1">
           <mxGeometry x="-0.0826" width="80" relative="1" as="geometry">
             <mxPoint x="1715" y="546" as="sourcePoint" />
             <mxPoint x="780" y="540" as="targetPoint" />
