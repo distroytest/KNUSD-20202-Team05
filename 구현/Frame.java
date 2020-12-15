@@ -32,7 +32,7 @@ import javax.swing.border.Border;
 public class Frame extends JFrame {
 	static Menu menu = new Menu();
 	// ---------------------------------------------------------------------------------------------------
-	// »§ Ä¡Áî ÅäÇÎ ¼Ò½º Ãß°¡
+	// ë¹µ ì¹˜ì¦ˆ í† í•‘ ì†ŒìŠ¤ ì¶”ê°€
 	Bread bread = new Bread();
 	Cheese cheese = new Cheese();
 	Topping topping = new Topping();
@@ -50,11 +50,11 @@ public class Frame extends JFrame {
 	JPanel orderPanel = new JPanel();
 	JPanel menuPanel = new JPanel();
 
-	JPanel cartFramePanel = new JPanel(); // Àå¹Ù±¸´Ï ¶óº§ ¹× ¹öÆ° 2°³ Æ÷ÇÔÇÏ´Â ÆĞ³Î
+	JPanel cartFramePanel = new JPanel(); // ì¥ë°”êµ¬ë‹ˆ ë¼ë²¨ ë° ë²„íŠ¼ 2ê°œ í¬í•¨í•˜ëŠ” íŒ¨ë„
 	JPanel cartPanel = new JPanel();
 	JPanel makeSandwichPanel = new JPanel();
 	JPanel sandwichContentPanel = new JPanel();
-	JPanel sandwichContentPanel1 = new JPanel(); // Ãß°¡
+	JPanel sandwichContentPanel1 = new JPanel(); // ì¶”ê°€
 
 	JPanel loginPanel = new JPanel();
 	JPanel sandwichPanel = new JPanel();
@@ -75,29 +75,29 @@ public class Frame extends JFrame {
 	JPanel saucePanel = new JPanel();
 
 	// -------------------------------------------------------------------------------------------------------
-	// °ü¸®ÀÚ ÆĞ³Î Ãß°¡
-	String sortList[] = {"»÷µåÀ§Ä¡","»ø·¯µå","·¦","»çÀÌµå","À½·á","»§","Ä¡Áî","ÅäÇÎ","¼Ò½º"};
+	// ê´€ë¦¬ì íŒ¨ë„ ì¶”ê°€
+	String sortList[] = {"ìƒŒë“œìœ„ì¹˜","ìƒëŸ¬ë“œ","ë©","ì‚¬ì´ë“œ","ìŒë£Œ","ë¹µ","ì¹˜ì¦ˆ","í† í•‘","ì†ŒìŠ¤"};
 	int SelectedIndex = 0;
 	JPanel managerPanel = new JPanel();
 	JPanel topPanel2 = new JPanel();
-	JPanel sortPanel3 = new JPanel(); // ÃÊ±â
-	JPanel sortPanel4 = new JPanel(); // ¸Ş´º°ü¸® Å¬¸¯
-	JPanel sortPanel5 = new JPanel(); // ¸ÅÃâÇöÈ² Å¬¸¯
+	JPanel sortPanel3 = new JPanel(); // ì´ˆê¸°
+	JPanel sortPanel4 = new JPanel(); // ë©”ë‰´ê´€ë¦¬ í´ë¦­
+	JPanel sortPanel5 = new JPanel(); // ë§¤ì¶œí˜„í™© í´ë¦­
 	JPanel managePanel = new JPanel();
 	JPanel addPanel = new JPanel();
 	JPanel refinePanel = new JPanel();
 	JPanel deletePanel = new JPanel();
 	JPanel salesPanel = new JPanel();
 	JPanel topPanel3 = new JPanel();
-	//°ü¸®ÀÚ ¹öÆ°
-	JButton logoutButton = new JButton("·Î±×¾Æ¿ô");
-	JButton manageButton = new JButton("¸Ş´º°ü¸®");
-	JButton salesButton = new JButton("¸ÅÃâÇöÈ²");
-	JButton addButton = new JButton("¸Ş´ºÃß°¡");
-	JButton refineButton = new JButton("¸Ş´º¼öÁ¤");
-	JButton deleteButton = new JButton("¸Ş´º»èÁ¦");
-	JButton backButton1 = new JButton("µÚ·Î°¡±â");
-	JButton backButton2 = new JButton("µÚ·Î°¡±â");
+	//ê´€ë¦¬ì ë²„íŠ¼
+	JButton logoutButton = new JButton("ë¡œê·¸ì•„ì›ƒ");
+	JButton manageButton = new JButton("ë©”ë‰´ê´€ë¦¬");
+	JButton salesButton = new JButton("ë§¤ì¶œí˜„í™©");
+	JButton addButton = new JButton("ë©”ë‰´ì¶”ê°€");
+	JButton refineButton = new JButton("ë©”ë‰´ìˆ˜ì •");
+	JButton deleteButton = new JButton("ë©”ë‰´ì‚­ì œ");
+	JButton backButton1 = new JButton("ë’¤ë¡œê°€ê¸°");
+	JButton backButton2 = new JButton("ë’¤ë¡œê°€ê¸°");
 	//add panel
 	JComboBox<String> sortComboBox = new JComboBox<String>(sortList);
 	JTextField txtName = new JTextField(15); 
@@ -112,7 +112,7 @@ public class Frame extends JFrame {
 	JTextField txtPrice1 = new JTextField(10);
 	JTextField txtImgName1 = new JTextField(15);
 	JScrollPane scroll;
-	String selectedSort = "»÷µåÀ§Ä¡";
+	String selectedSort = "ìƒŒë“œìœ„ì¹˜";
 	Menuinfo tempMenuinfo;
 	Breadinfo tempBreadinfo;
 	Cheeseinfo tempCheeseinfo;
@@ -123,22 +123,22 @@ public class Frame extends JFrame {
 	JComboBox<String> sortComboBox2 = new JComboBox<String>(sortList);
 	JPanel menuListPanel1 = new JPanel();
 	//sales panel
-	JLabel salesLabel = new JLabel("ÃÑ ¸ÅÃâ");
+	JLabel salesLabel = new JLabel("ì´ ë§¤ì¶œ");
 	JTextArea salestxt1 = new JTextArea();
 	JTextArea salestxt2 = new JTextArea();
 	JScrollPane salesScroll1 = new JScrollPane(salestxt1);
 	JScrollPane salesScroll2 = new JScrollPane(salestxt2);
 	// -------------------------------------------------------------------------------------------------------
-	// °áÁ¦ ÆĞ³Î Ãß°¡ ==================================================================
+	// ê²°ì œ íŒ¨ë„ ì¶”ê°€ ==================================================================
 	// 1202
 	JPanel paymentPanel = new JPanel();
 	JPanel cashPanel = new JPanel();
 	JPanel cardPanel = new JPanel();
-	JLabel cashLabel = new JLabel("Çö±İ");
-	JLabel cardLabel = new JLabel("Ä«µå");
+	JLabel cashLabel = new JLabel("í˜„ê¸ˆ");
+	JLabel cardLabel = new JLabel("ì¹´ë“œ");
 	JButton cardButton = new JButton(new ImageIcon("img/card.jpg"));
 	JButton cashButton = new JButton(new ImageIcon("img/cash.jpg"));
-	JButton backToMenuButton = new JButton("µ¹¾Æ°¡±â");
+	JButton backToMenuButton = new JButton("ëŒì•„ê°€ê¸°");
 	JPanel paymentPanel1 = new JPanel();
 
 	// -------------------------------------------------------------------------------------------------------
@@ -161,8 +161,8 @@ public class Frame extends JFrame {
 		loginPanel.setSize(1500, 1000);
 		loginPanel.setBackground(new Color(117, 228, 126));
 
-		txtID.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 30));
-		txtPW.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 30));
+		txtID.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.PLAIN, 30));
+		txtPW.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.PLAIN, 30));
 
 		IDPWPanel.setSize(400, 180);
 		IDPWPanel.setLocation(550, 320);
@@ -171,31 +171,31 @@ public class Frame extends JFrame {
 
 		JLabel idLabel = new JLabel("ID");
 		JLabel pwLabel = new JLabel("PW");
-		JLabel sortLabel = new JLabel("ºĞ·ù");
-		JLabel menuLabel = new JLabel("¸Ş´º");
+		JLabel sortLabel = new JLabel("ë¶„ë¥˜");
+		JLabel menuLabel = new JLabel("ë©”ë‰´");
 		JLabel topLabel = new JLabel("SUBWAY");
 		JLabel topLabel1 = new JLabel("SUBWAY");
-		JButton loginButton = new JButton("·Î±×ÀÎ");
-		JButton sandwich = new JButton("»÷µåÀ§Ä¡");
-		JButton salad = new JButton("»ø·¯µå");
-		JButton wrap = new JButton("·¦");
-		JButton side = new JButton("»çÀÌµå");
-		JButton drink = new JButton("À½·á");
-		JButton loginButton1 = new JButton("·Î±×ÀÎ");
-		JButton backButton = new JButton("µÚ·Î°¡±â");
-		//----¸ÅÃâÇöÈ²------------------------------------------------------------------------------------------
+		JButton loginButton = new JButton("ë¡œê·¸ì¸");
+		JButton sandwich = new JButton("ìƒŒë“œìœ„ì¹˜");
+		JButton salad = new JButton("ìƒëŸ¬ë“œ");
+		JButton wrap = new JButton("ë©");
+		JButton side = new JButton("ì‚¬ì´ë“œ");
+		JButton drink = new JButton("ìŒë£Œ");
+		JButton loginButton1 = new JButton("ë¡œê·¸ì¸");
+		JButton backButton = new JButton("ë’¤ë¡œê°€ê¸°");
+		//----ë§¤ì¶œí˜„í™©------------------------------------------------------------------------------------------
 		
 		salesLabel.setPreferredSize(new Dimension(900,50));
-		salesLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,40));
+		salesLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,40));
 		salesLabel.setHorizontalAlignment(JLabel.CENTER);
 
 		salestxt1.setEditable(false);
 		salestxt2.setEditable(false);
 		Border border = BorderFactory.createLineBorder(Color.black);
 		salestxt1.setBorder(BorderFactory.createCompoundBorder(border,BorderFactory.createEmptyBorder(10, 10, 10, 10)));
-		salestxt1.setFont(new Font("¸»Àº °íµñ",Font.BOLD,20));
+		salestxt1.setFont(new Font("ë§ì€ ê³ ë”•",Font.BOLD,20));
 		salestxt2.setBorder(BorderFactory.createCompoundBorder(border,BorderFactory.createEmptyBorder(10, 10, 10, 10)));
-		salestxt2.setFont(new Font("¸»Àº °íµñ",Font.BOLD,20));
+		salestxt2.setFont(new Font("ë§ì€ ê³ ë”•",Font.BOLD,20));
 		salesScroll1.setPreferredSize(new Dimension(500,330));
 		salesScroll2.setPreferredSize(new Dimension(500,330));
 		
@@ -207,41 +207,41 @@ public class Frame extends JFrame {
 		salesPanel.add(salesScroll2);
 		//------------------------------------------------------------------------------------------------
 		// -------------------------------------------------------------------------------------------------
-		// 2¹øÂ° ¼ÒÆ®ÆĞ³Î¿¡ ºÙÀÏ »§, Ä¡Áî, ÅäÇÎ, ¼Ò½º ¹öÆ°
-		JButton bread = new JButton("»§");
-		JButton cheese = new JButton("Ä¡Áî");
-		JButton topping = new JButton("ÅäÇÎ");
-		JButton sauce = new JButton("¼Ò½º");
+		// 2ë²ˆì§¸ ì†ŒíŠ¸íŒ¨ë„ì— ë¶™ì¼ ë¹µ, ì¹˜ì¦ˆ, í† í•‘, ì†ŒìŠ¤ ë²„íŠ¼
+		JButton bread = new JButton("ë¹µ");
+		JButton cheese = new JButton("ì¹˜ì¦ˆ");
+		JButton topping = new JButton("í† í•‘");
+		JButton sauce = new JButton("ì†ŒìŠ¤");
 
 		bread.setFocusable(false);
 		bread.setSize(150, 70);
 		bread.setLocation(25, 20);
 		bread.setBackground(new Color(246, 241, 123));
-		bread.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		bread.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		cheese.setFocusable(false);
 		cheese.setSize(150, 70);
 		cheese.setLocation(25, 126);
 		cheese.setBackground(new Color(246, 241, 123));
-		cheese.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		cheese.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		topping.setFocusable(false);
 		topping.setSize(150, 70);
 		topping.setLocation(25, 232);
 		topping.setBackground(new Color(246, 241, 123));
-		topping.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		topping.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		sauce.setFocusable(false);
 		sauce.setSize(150, 70);
 		sauce.setLocation(25, 338);
 		sauce.setBackground(new Color(246, 241, 123));
-		sauce.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		sauce.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 
 		// --------------------------------------------------------------------------------------------------
 
-		idLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 60));
-		pwLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 60));
-		sortLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
-		menuLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
-		topLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 60));
-		topLabel1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 60));
+		idLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 60));
+		pwLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 60));
+		sortLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
+		menuLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
+		topLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 60));
+		topLabel1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 60));
 
 		idLabel.setSize(100, 100);
 		idLabel.setLocation(400, 300);
@@ -262,7 +262,7 @@ public class Frame extends JFrame {
 		loginButton1.setSize(180, 180);
 		loginButton1.setBackground(Color.WHITE);
 		loginButton1.setLocation(955, 320);
-		loginButton1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		loginButton1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		backButton.setFocusable(false);
 		backButton.setSize(100, 40);
 		backButton.setBackground(Color.WHITE);
@@ -272,55 +272,55 @@ public class Frame extends JFrame {
 		sandwich.setSize(150, 70);
 		sandwich.setLocation(25, 20);
 		sandwich.setBackground(new Color(246, 241, 123));
-		sandwich.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		sandwich.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		salad.setFocusable(false);
 		salad.setSize(150, 70);
 		salad.setLocation(25, 126);
 		salad.setBackground(new Color(246, 241, 123));
-		salad.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		salad.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		wrap.setFocusable(false);
 		wrap.setSize(150, 70);
 		wrap.setLocation(25, 232);
 		wrap.setBackground(new Color(246, 241, 123));
-		wrap.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		wrap.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		side.setFocusable(false);
 		side.setSize(150, 70);
 		side.setLocation(25, 338);
 		side.setBackground(new Color(246, 241, 123));
-		side.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		side.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		drink.setFocusable(false);
 		drink.setSize(150, 70);
 		drink.setLocation(25, 444);
 		drink.setBackground(new Color(246, 241, 123));
-		drink.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		drink.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 
 		topPanel.setBackground(Color.WHITE);
 		topPanel1.setBackground(Color.WHITE);
 		sortPanel.setBackground(Color.WHITE);
 		menuPanel.setBackground(Color.WHITE);
 
-// -------------------------------------- Àå¹Ù±¸´Ï UI	-------------------------------------------------//	
+// -------------------------------------- ì¥ë°”êµ¬ë‹ˆ UI	-------------------------------------------------//	
 
-		JLabel cartLabel = new JLabel("Àå¹Ù±¸´Ï");
-		cartLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
+		JLabel cartLabel = new JLabel("ì¥ë°”êµ¬ë‹ˆ");
+		cartLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
 		cartLabel.setSize(300, 100);
 		cartLabel.setLocation(0, 0);
 		cartLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		JButton cancelButton = new JButton("Ãë¼Ò");
+		JButton cancelButton = new JButton("ì·¨ì†Œ");
 		cancelButton.setFocusable(false);
 		cancelButton.setSize(140, 100);
 		cancelButton.setLocation(0, 570);
 		cancelButton.setBackground(Color.white);
-		cancelButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		cancelButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		cancelButton.addMouseListener(new cancelOrderMouseListener());
 
-		JButton orderButton = new JButton("ÁÖ¹®");
+		JButton orderButton = new JButton("ì£¼ë¬¸");
 		orderButton.setFocusable(false);
 		orderButton.setSize(140, 100);
 		orderButton.setLocation(160, 570);
 		orderButton.setBackground(Color.white);
-		orderButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		orderButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		orderButton.addMouseListener(new requestOrderMouseListener());
 
 		cartPanel.setLayout(null);
@@ -329,9 +329,9 @@ public class Frame extends JFrame {
 		cartPanel.setBackground(Color.WHITE);
 
 		JLabel allPrice = new JLabel(); ///
-		allPrice.setText(" ÇÕ°è :	           " + order.totalPrice);
+		allPrice.setText(" í•©ê³„ :	           " + order.totalPrice);
 		allPrice.setSize(300, 40);
-		allPrice.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		allPrice.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		allPrice.setLocation(0, 390);
 		allPrice.setBackground(new Color(246, 241, 123));
 		allPrice.setOpaque(true);
@@ -347,66 +347,66 @@ public class Frame extends JFrame {
 		cartFramePanel.add(orderButton);
 
 //-----------------------------------------------------------------------------------------------------//
-//------------------------------------  »÷µåÀ§Ä¡ ±¸¼º UI---------------------------------------------------//
+//------------------------------------  ìƒŒë“œìœ„ì¹˜ êµ¬ì„± UI---------------------------------------------------//
 
-		JLabel sandwichCotentLabel = new JLabel("±¸¼º");
-		sandwichCotentLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
+		JLabel sandwichCotentLabel = new JLabel("êµ¬ì„±");
+		sandwichCotentLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
 		sandwichCotentLabel.setSize(300, 100);
 		sandwichCotentLabel.setLocation(0, 0);
 		sandwichCotentLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		JButton cancelMakingSandwichButton = new JButton("Ãë¼Ò");
+		JButton cancelMakingSandwichButton = new JButton("ì·¨ì†Œ");
 		cancelMakingSandwichButton.setFocusable(false);
 		cancelMakingSandwichButton.setSize(140, 100);
 		cancelMakingSandwichButton.setLocation(0, 570);
 		cancelMakingSandwichButton.setBackground(Color.white);
-		cancelMakingSandwichButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		cancelMakingSandwichButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		cancelMakingSandwichButton.addMouseListener(new makeSandwichCancelListener());
 
-		JButton requestSandwichButton = new JButton("¿Ï·á");
+		JButton requestSandwichButton = new JButton("ì™„ë£Œ");
 		requestSandwichButton.setFocusable(false);
 		requestSandwichButton.setSize(140, 100);
 		requestSandwichButton.setLocation(160, 570);
 		requestSandwichButton.setBackground(Color.white);
-		requestSandwichButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
-		requestSandwichButton.addMouseListener(new completeMakingSandwichListener()); // ------------ Ãß°¡µÊ ---------
+		requestSandwichButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
+		requestSandwichButton.addMouseListener(new completeMakingSandwichListener()); // ------------ ì¶”ê°€ë¨ ---------
 
-		JLabel breadSizeLabel = new JLabel("»§ ±æÀÌ");
+		JLabel breadSizeLabel = new JLabel("ë¹µ ê¸¸ì´");
 		breadSizeLabel.setBackground(new Color(246, 241, 123));
 		breadSizeLabel.setOpaque(true);
-		breadSizeLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		breadSizeLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		breadSizeLabel.setSize(100, 86);
 		breadSizeLabel.setLocation(0, 0);
 		breadSizeLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		JLabel breadTypeLabel = new JLabel("»§");
+		JLabel breadTypeLabel = new JLabel("ë¹µ");
 		breadTypeLabel.setBackground(new Color(246, 241, 123));
 		breadTypeLabel.setOpaque(true);
-		breadTypeLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		breadTypeLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		breadTypeLabel.setSize(100, 86);
 		breadTypeLabel.setLocation(0, 86);
 		breadTypeLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		JLabel cheeseTypeLabel = new JLabel("Ä¡Áî");
+		JLabel cheeseTypeLabel = new JLabel("ì¹˜ì¦ˆ");
 		cheeseTypeLabel.setBackground(new Color(246, 241, 123));
 		cheeseTypeLabel.setOpaque(true);
-		cheeseTypeLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		cheeseTypeLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		cheeseTypeLabel.setSize(100, 86);
 		cheeseTypeLabel.setLocation(0, 172);
 		cheeseTypeLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		JLabel toppingTypeLabel = new JLabel("ÅäÇÎ");
+		JLabel toppingTypeLabel = new JLabel("í† í•‘");
 		toppingTypeLabel.setBackground(new Color(246, 241, 123));
 		toppingTypeLabel.setOpaque(true);
-		toppingTypeLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		toppingTypeLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		toppingTypeLabel.setSize(100, 86);
 		toppingTypeLabel.setLocation(0, 258);
 		toppingTypeLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		JLabel sauceTypeLabel = new JLabel("¼Ò½º");
+		JLabel sauceTypeLabel = new JLabel("ì†ŒìŠ¤");
 		sauceTypeLabel.setBackground(new Color(246, 241, 123));
 		sauceTypeLabel.setOpaque(true);
-		sauceTypeLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		sauceTypeLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		sauceTypeLabel.setSize(100, 86);
 		sauceTypeLabel.setLocation(0, 344);
 		sauceTypeLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -440,7 +440,7 @@ public class Frame extends JFrame {
 
 		getSandwichCotentForLabel();
 
-//-------------------------------------------------------------------------------------------¿©±â±îÁö------------	
+//-------------------------------------------------------------------------------------------ì—¬ê¸°ê¹Œì§€------------	
 
 		topPanel.setLocation(60, 100);
 		topPanel1.setLocation(60, 100);
@@ -505,80 +505,80 @@ public class Frame extends JFrame {
 		loginPanel.add(IDPWPanel);
 		loginPanel.add(topPanel1);
 
-		contentPane.add(paymentPanel); // °áÁ¦ ÆĞ³Î
+		contentPane.add(paymentPanel); // ê²°ì œ íŒ¨ë„
 		contentPane.add(orderPanel);
 		contentPane.add(loginPanel);
 		loginPanel.setVisible(false);
 
-		// -------------------------°ü¸®ÀÚ
-		// È­¸é----------------------------------------------------------------
+		// -------------------------ê´€ë¦¬ì
+		// í™”ë©´----------------------------------------------------------------
 		
 		JLabel topLabel2 = new JLabel("SUBWAY");
-		JLabel sortLabel1 = new JLabel("ºĞ·ù"); //sortPanel
-		JLabel manageLabel = new JLabel("°ü¸®");
+		JLabel sortLabel1 = new JLabel("ë¶„ë¥˜"); //sortPanel
+		JLabel manageLabel = new JLabel("ê´€ë¦¬");
 		//addPanel---------------------------
-		JLabel sortLabel2 = new JLabel("ºĞ·ù");
-		JLabel menuNameLabel = new JLabel("¸Ş´º¸í");
-		JLabel menuPriceLabel = new JLabel("°¡°İ");
-		JLabel menuImageLabel = new JLabel("ÀÌ¹ÌÁö");
-		JButton fileInsert = new JButton("Ã·ºÎÆÄÀÏ");
-		JButton insertButton = new JButton("Ãß°¡");
+		JLabel sortLabel2 = new JLabel("ë¶„ë¥˜");
+		JLabel menuNameLabel = new JLabel("ë©”ë‰´ëª…");
+		JLabel menuPriceLabel = new JLabel("ê°€ê²©");
+		JLabel menuImageLabel = new JLabel("ì´ë¯¸ì§€");
+		JButton fileInsert = new JButton("ì²¨ë¶€íŒŒì¼");
+		JButton insertButton = new JButton("ì¶”ê°€");
 		txtImgName.setEditable(false);
 		//------------------------------------------
 		//refinePanel-------------------------------
-		JLabel sortLabel3 = new JLabel("ºĞ·ù");
-		JLabel menuNameLabel1 = new JLabel("¸Ş´º¸í");
-		JLabel menuPriceLabel1 = new JLabel("°¡°İ");
-		JLabel menuImageLabel1 = new JLabel("ÀÌ¹ÌÁö");
-		JButton fileInsert1 = new JButton("Ã·ºÎÆÄÀÏ");
-		JButton refineButton1 = new JButton("¼öÁ¤");
+		JLabel sortLabel3 = new JLabel("ë¶„ë¥˜");
+		JLabel menuNameLabel1 = new JLabel("ë©”ë‰´ëª…");
+		JLabel menuPriceLabel1 = new JLabel("ê°€ê²©");
+		JLabel menuImageLabel1 = new JLabel("ì´ë¯¸ì§€");
+		JButton fileInsert1 = new JButton("ì²¨ë¶€íŒŒì¼");
+		JButton refineButton1 = new JButton("ìˆ˜ì •");
 		txtImgName1.setEditable(false);
 		//--------------------------------------------
 		//deletePanel---------------------------------
-		JLabel sortLabel4 = new JLabel("ºĞ·ù");
+		JLabel sortLabel4 = new JLabel("ë¶„ë¥˜");
 		//--------------------------------------------
 		sortLabel1.setSize(200, 100);
 		sortLabel1.setLocation(60, 210);
 		sortLabel1.setHorizontalAlignment(JLabel.CENTER);
-		sortLabel1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
+		sortLabel1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
 		manageLabel.setSize(1120, 100);
 		manageLabel.setLocation(300, 210);
 		manageLabel.setHorizontalAlignment(JLabel.CENTER);
-		manageLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
-		topLabel2.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 60));
+		manageLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
+		topLabel2.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 60));
 		//add panel
 		sortLabel2.setPreferredSize(new Dimension(70,100));
-		sortLabel2.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		sortLabel2.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		sortLabel2.setHorizontalAlignment(JLabel.CENTER);
 		menuNameLabel.setPreferredSize(new Dimension(70,100));
-		menuNameLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		menuNameLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		menuNameLabel.setHorizontalAlignment(JLabel.CENTER);
 		menuPriceLabel.setPreferredSize(new Dimension(70,100));
-		menuPriceLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		menuPriceLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		menuPriceLabel.setHorizontalAlignment(JLabel.CENTER);
 		menuImageLabel.setPreferredSize(new Dimension(70,100));
-		menuImageLabel.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		menuImageLabel.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		menuImageLabel.setHorizontalAlignment(JLabel.CENTER);
 		previewLabel.setOpaque(true);
 		previewLabel.setPreferredSize(new Dimension(300,300));
 		previewLabel.setBackground(Color.WHITE);
 		//refine panel
 		sortLabel3.setPreferredSize(new Dimension(70,100));
-		sortLabel3.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		sortLabel3.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		sortLabel3.setHorizontalAlignment(JLabel.CENTER);
 		menuNameLabel1.setPreferredSize(new Dimension(70,100));
-		menuNameLabel1.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		menuNameLabel1.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		menuNameLabel1.setHorizontalAlignment(JLabel.CENTER);
 		menuPriceLabel1.setPreferredSize(new Dimension(70,100));
-		menuPriceLabel1.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		menuPriceLabel1.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		menuPriceLabel1.setHorizontalAlignment(JLabel.CENTER);
 		menuImageLabel1.setPreferredSize(new Dimension(70,100));
-		menuImageLabel1.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		menuImageLabel1.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		menuImageLabel1.setHorizontalAlignment(JLabel.CENTER);
 		menuListPanel.setBackground(Color.BLACK);
 		//delete panel
 		sortLabel4.setPreferredSize(new Dimension(70,100));
-		sortLabel4.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		sortLabel4.setFont(new Font("ë§‘ì€ ê³ ë”•",Font.BOLD,20));
 		sortLabel4.setHorizontalAlignment(JLabel.CENTER);
 		menuListPanel1.setBackground(Color.BLACK);
 		
@@ -606,41 +606,41 @@ public class Frame extends JFrame {
 		manageButton.setFocusable(false);
 		manageButton.setPreferredSize(new Dimension(150, 70));
 		manageButton.setBackground(new Color(246, 241, 123));
-		manageButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		manageButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		manageButton.addMouseListener(new manageMouseListener());
 		salesButton.setFocusable(false);
 		salesButton.setPreferredSize(new Dimension(150, 70));
 		salesButton.setBackground(new Color(246, 241, 123));
-		salesButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		salesButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		salesButton.addMouseListener(new salesMouseListener());
 		addButton.setFocusable(false);
 		addButton.setPreferredSize(new Dimension(150, 70));
 		addButton.setBackground(new Color(246, 241, 123));
-		addButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		addButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		addButton.addMouseListener(new addMouseListener());
 		refineButton.setFocusable(false);
 		refineButton.setPreferredSize(new Dimension(150, 70));
 		refineButton.setBackground(new Color(246, 241, 123));
-		refineButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		refineButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		refineButton.setFocusable(false);
 		refineButton.setPreferredSize(new Dimension(150, 70));
 		refineButton.setBackground(new Color(246, 241, 123));
-		refineButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		refineButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		refineButton.addMouseListener(new refineMouseListener());
 		deleteButton.setFocusable(false);
 		deleteButton.setPreferredSize(new Dimension(150, 70));
 		deleteButton.setBackground(new Color(246, 241, 123));
-		deleteButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		deleteButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		deleteButton.addMouseListener(new deleteMouseListener());
 		backButton1.setFocusable(false);
 		backButton1.setPreferredSize(new Dimension(150, 70));
 		backButton1.setBackground(new Color(246, 241, 123));
-		backButton1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		backButton1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		backButton1.addMouseListener(new backMouseListener1());
 		backButton2.setFocusable(false);
 		backButton2.setPreferredSize(new Dimension(150, 70));
 		backButton2.setBackground(new Color(246, 241, 123));
-		backButton2.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		backButton2.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		backButton2.addMouseListener(new backMouseListener2());
 		//add panel
 		fileInsert.setFocusable(false);
@@ -734,7 +734,7 @@ public class Frame extends JFrame {
 		contentPane.add(managerPanel);
 		managerPanel.setVisible(false);
 		// --------------------------------------------------------------------------------------------------------
-//==============================   °áÁ¦ UI  =======================================================================
+//==============================   ê²°ì œ UI  =======================================================================
 
 		paymentPanel.setLayout(null);
 		paymentPanel.setSize(1500, 1000);
@@ -749,17 +749,17 @@ public class Frame extends JFrame {
 
 		cashLabel.setSize(500, 100);
 		cashLabel.setBackground(Color.white);
-		cashLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		cashLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		cashLabel.setHorizontalAlignment(JLabel.CENTER);
 		cashLabel.setLocation(0, 400);
 		cardLabel.setSize(500, 100);
 		cardLabel.setBackground(Color.white);
-		cardLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		cardLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		cardLabel.setLocation(0, 400);
 		cardLabel.setHorizontalAlignment(JLabel.CENTER);
 
 		backToMenuButton.setSize(250, 100);
-		backToMenuButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		backToMenuButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		backToMenuButton.setHorizontalAlignment(JLabel.CENTER);
 		backToMenuButton.setBackground(new Color(246, 241, 123));
 		backToMenuButton.setLocation(1125, 800);
@@ -772,13 +772,14 @@ public class Frame extends JFrame {
 		cardButton.setSize(500, 400);
 		cardButton.setLocation(0, 0);
 		cardButton.setBackground(Color.black);
+		cardButton.addMouseListener(new payByCardMouseListener());
 
 		topPanel3.setLocation(60, 100);
 		topPanel3.setSize(1360, 100);
 		topPanel3.setBackground(Color.white);
 
 		JLabel topLabel3 = new JLabel("SUBWAY");
-		topLabel3.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 60));
+		topLabel3.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 60));
 
 		paymentPanel1.setSize(750, 1000);
 		paymentPanel1.setLocation(375, 0);
@@ -799,8 +800,8 @@ public class Frame extends JFrame {
 
 //==========================================================================================================		
 
-		// ------------------ ÃÊ±âÈ­¸é »÷µåÀ§Ä¡·Î
-		// ÃÊ±âÈ­---------------------------------------------------------
+		// ------------------ ì´ˆê¸°í™”ë©´ ìƒŒë“œìœ„ì¹˜ë¡œ
+		// ì´ˆê¸°í™”---------------------------------------------------------
 		menuPanel.removeAll();
 		sandwichPanel.removeAll();
 		int i = 0;
@@ -1177,7 +1178,7 @@ public class Frame extends JFrame {
 				managerPanel.setVisible(true);
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "·Î±×ÀÎ ½ÇÆĞ");
+				JOptionPane.showMessageDialog(null, "ë¡œê·¸ì¸ ì‹¤íŒ¨");
 			}
 			txtID.setText("");
 			txtPW.setText("");
@@ -1226,7 +1227,7 @@ public class Frame extends JFrame {
 			txtPrice1.setText("");
 			txtImgName1.setText("");
 			path = "";
-			selectedSort = "»÷µåÀ§Ä¡";
+			selectedSort = "ìƒŒë“œìœ„ì¹˜";
 			sortComboBox.setSelectedIndex(0);
 			sortComboBox1.setSelectedIndex(0);
 			sortComboBox2.setSelectedIndex(0);
@@ -1357,7 +1358,7 @@ public class Frame extends JFrame {
 		}
 
 	}
-// ============================================================== Ä¡Áî ¸¶¿ì½º ¸®½º³Ê ===========================================
+// ============================================================== ì¹˜ì¦ˆ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ ===========================================
 	class cheeseMouseListener implements MouseListener {
 
 		@Override
@@ -1437,7 +1438,7 @@ public class Frame extends JFrame {
 
 		}
 	}
-// ========================================================= ÅäÇÎ ¸¶¿ì½º ¸®½º³Ê =====================================================
+// ========================================================= í† í•‘ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ =====================================================
 	class toppingMouseListener implements MouseListener {
 
 		@Override
@@ -1466,16 +1467,16 @@ public class Frame extends JFrame {
 						makeSandwichPanel.setVisible(true);
 						menuPanel.removeAll();
 						toppingPanel.removeAll();
-//-------------------------------------------------------------------------------------- ÅäÇÎ Á¦ÇÑ »çÇ× ±¸Çö  ---------------------	
+//-------------------------------------------------------------------------------------- í† í•‘ ì œí•œ ì‚¬í•­ êµ¬í˜„  ---------------------	
 						if (sandwich.toppings.size() == 0) {
 							sandwich.getTopping(toppinginfo);
-						} else if (sandwich.toppings.size() != 0 && sandwich.toppings.get(0).name != "ÅäÇÎ¾øÀ½") {
+						} else if (sandwich.toppings.size() != 0 && sandwich.toppings.get(0).name != "í† í•‘ì—†ìŒ") {
 							sandwich.getTopping(toppinginfo);
-						} else if (sandwich.toppings.size() != 0 && sandwich.toppings.get(0).name == "ÅäÇÎ¾øÀ½") {
+						} else if (sandwich.toppings.size() != 0 && sandwich.toppings.get(0).name == "í† í•‘ì—†ìŒ") {
 							sandwich.toppings.clear();
 							sandwich.getTopping(toppinginfo);
 						}
-						if (toppinginfo.name == "ÅäÇÎ¾øÀ½") {
+						if (toppinginfo.name == "í† í•‘ì—†ìŒ") {
 							sandwich.toppings.clear();
 							sandwich.getTopping(toppinginfo);
 						}
@@ -1539,7 +1540,7 @@ public class Frame extends JFrame {
 
 		}
 	}
-//===================================================================== ¼Ò½º ¸¶¿ì½º ¸®½º³Ê ===========================================
+//===================================================================== ì†ŒìŠ¤ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ ===========================================
 	class sauceMouseListener implements MouseListener {
 
 		@Override
@@ -1568,16 +1569,16 @@ public class Frame extends JFrame {
 						makeSandwichPanel.setVisible(true);
 						menuPanel.removeAll();
 						saucePanel.removeAll();
-//-------------------------------------------------------------------------------------- ¼Ò½º Á¦ÇÑ »çÇ× ±¸Çö -------------------------	
+//-------------------------------------------------------------------------------------- ì†ŒìŠ¤ ì œí•œ ì‚¬í•­ êµ¬í˜„ -------------------------	
 						if (sandwich.sauces.size() == 0) {
 							sandwich.getSauce(sauceinfo);
-						} else if (sandwich.sauces.size() != 0 && sandwich.sauces.get(0).name != "¼Ò½º¾øÀ½") {
+						} else if (sandwich.sauces.size() != 0 && sandwich.sauces.get(0).name != "ì†ŒìŠ¤ì—†ìŒ") {
 							sandwich.getSauce(sauceinfo);
-						} else if (sandwich.sauces.size() != 0 && sandwich.sauces.get(0).name == "¼Ò½º¾øÀ½") {
+						} else if (sandwich.sauces.size() != 0 && sandwich.sauces.get(0).name == "ì†ŒìŠ¤ì—†ìŒ") {
 							sandwich.sauces.clear();
 							sandwich.getSauce(sauceinfo);
 						}
-						if (sauceinfo.name == "¼Ò½º¾øÀ½") {
+						if (sauceinfo.name == "ì†ŒìŠ¤ì—†ìŒ") {
 							sandwich.sauces.clear();
 							sandwich.getSauce(sauceinfo);
 						}
@@ -1591,10 +1592,10 @@ public class Frame extends JFrame {
 						}
 						if (sandwich.sauces.size() > 3) {
 							sandwich.sauces.remove(sauceinfo);
-							JOptionPane.showMessageDialog(null, "¼Ò½º´Â 3°³±îÁö¸¸ ¼±ÅÃ °¡´ÉÇÕ´Ï´Ù");
+							JOptionPane.showMessageDialog(null, "ì†ŒìŠ¤ëŠ” 3ê°œê¹Œì§€ë§Œ ì„ íƒ ê°€ëŠ¥í•©ë‹ˆë‹¤");
 						}
 						getSandwichCotentForLabel();///////////////////////
-//------------------------------------------------------------------------------------------¿©±â±îÁö-------------------------------					
+//------------------------------------------------------------------------------------------ì—¬ê¸°ê¹Œì§€-------------------------------					
 
 						int i;
 						saucePanel.setBackground(Color.white);
@@ -1645,7 +1646,7 @@ public class Frame extends JFrame {
 
 		}
 	}
-//================================================= »÷µåÀ§Ä¡ ±¸¼º UI¿¡¼­ Ãë¼Ò ¹öÆ° ¸¶¿ì½º ¸®½º³Ê ==============================================
+//================================================= ìƒŒë“œìœ„ì¹˜ êµ¬ì„± UIì—ì„œ ì·¨ì†Œ ë²„íŠ¼ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ ==============================================
 	class makeSandwichCancelListener implements MouseListener {
 
 		@Override
@@ -1653,17 +1654,17 @@ public class Frame extends JFrame {
 			// TODO Auto-generated method stub
 			
 			
-			int result = JOptionPane.showConfirmDialog(null, "ÁÖ¹®À» Ãë¼ÒÇÏ½Ã°Ú½Àˆ‘±î?\n\n", null, JOptionPane.YES_NO_OPTION,
+			int result = JOptionPane.showConfirmDialog(null, "ì£¼ë¬¸ì„ ì·¨ì†Œí•˜ì‹œê² ìŠµÂˆÂ‘ê¹Œ?\n\n", null, JOptionPane.YES_NO_OPTION,
 					JOptionPane.QUESTION_MESSAGE);
 			if (result == JOptionPane.YES_OPTION) {
-				JOptionPane.showMessageDialog(null, "ÁÖ¹®ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù");
+				JOptionPane.showMessageDialog(null, "ì£¼ë¬¸ì´ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤");
 				sortPanel2.setVisible(false);
 				makeSandwichPanel.setVisible(false);
 				sortPanel.setVisible(true);
 				cartFramePanel.setVisible(true);
 				menuPanel.removeAll();
 				sandwichPanel.removeAll();
-				initSandwich();// ÃÊ±âÈ­
+				initSandwich();// ì´ˆê¸°í™”
 				getSandwichCotentForLabel();
 				int i = 0;
 				sandwichPanel.setBackground(Color.white);
@@ -1683,7 +1684,7 @@ public class Frame extends JFrame {
 							makeSandwichPanel.setVisible(true);
 							menuPanel.removeAll();
 							breadPanel.removeAll();
-							sandwich.selectSandwich(menuSandwich); // ----------------------------- syso »èÁ¦ÇÒ°Í
+							sandwich.selectSandwich(menuSandwich); // ----------------------------- syso ì‚­ì œí• ê²ƒ
 							int i = 0;
 							breadPanel.setBackground(Color.white);
 							breadPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
@@ -1742,42 +1743,42 @@ public class Frame extends JFrame {
 		}
 
 	}
-// ================================================ »÷µåÀ§Ä¡ ±¸¼º UI¿¡¼­ ¿Ï·á¸¦ ´­·¶À» ¶§ ¸¶¿ì½º ¸®½º³Ê ===========================================
+// ================================================ ìƒŒë“œìœ„ì¹˜ êµ¬ì„± UIì—ì„œ ì™„ë£Œë¥¼ ëˆŒë €ì„ ë•Œ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ ===========================================
 	class completeMakingSandwichListener implements MouseListener { 
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			int check = 1;
 			if (sandwich.breadType == null) {
-				JOptionPane.showMessageDialog(null, "»§À» °ñ¶óÁÖ¼¼¿ä");
+				JOptionPane.showMessageDialog(null, "ë¹µì„ ê³¨ë¼ì£¼ì„¸ìš”");
 				check = 0;
 			}
 			if (check != 0 && sandwich.cheeseType == null) {
-				JOptionPane.showMessageDialog(null, "Ä¡Áî¸¦ °ñ¶óÁÖ¼¼¿ä");
+				JOptionPane.showMessageDialog(null, "ì¹˜ì¦ˆë¥¼ ê³¨ë¼ì£¼ì„¸ìš”");
 				check = 0;
 			}
 			if (check != 0 && sandwich.toppings.size() == 0) {
-				JOptionPane.showMessageDialog(null, "ÅäÇÎÀ» °ñ¶óÁÖ¼¼¿ä");
+				JOptionPane.showMessageDialog(null, "í† í•‘ì„ ê³¨ë¼ì£¼ì„¸ìš”");
 				check = 0;
 			}
 			if (check != 0 && sandwich.sauces.size() == 0) {
-				JOptionPane.showMessageDialog(null, "¼Ò½º ¹× ½ÃÁî´×À» °ñ¶óÁÖ¼¼¿ä");
+				JOptionPane.showMessageDialog(null, "ì†ŒìŠ¤ ë° ì‹œì¦ˆë‹ì„ ê³¨ë¼ì£¼ì„¸ìš”");
 				check = 0;
 			}
 			if (check != 0) {
-				if (sandwich.breadType != null // ÅäÇÎ ¼Ò½º ³×ÀÓÀÌ ´­ÀÏ ¶§ ¸»°í »çÀÌÁî°¡ 0ÀÏ¶§·Î ¹Ù²ã¾ßÇÔ
+				if (sandwich.breadType != null // í† í•‘ ì†ŒìŠ¤ ë„¤ì„ì´ ëˆŒì¼ ë•Œ ë§ê³  ì‚¬ì´ì¦ˆê°€ 0ì¼ë•Œë¡œ ë°”ê¿”ì•¼í•¨
 						&& sandwich.cheeseType != null && sandwich.sauces.size() != 0
 						&& sandwich.toppings.size() != 0) {	
-					sandwich.calculateCost(); // °¡°İ °è»ê
+					sandwich.calculateCost(); // ê°€ê²© ê³„ì‚°
 					if(sandwich.breadSize!=30)
 						sandwich.breadSize = 15;
 					String orderList = "";
 					orderList += ("=========================================================\n");
 				
-						orderList += ("»÷µåÀ§Ä¡ : "+ sandwich.type + "\n");
-						orderList += ("»§ : " + sandwich.breadType + " ");
+						orderList += ("ìƒŒë“œìœ„ì¹˜ : "+ sandwich.type + "\n");
+						orderList += ("ë¹µ : " + sandwich.breadType + " ");
 						orderList += (sandwich.breadSize + "cm\n");
-						orderList += ("Ä¡Áî : " +sandwich.cheeseType + "\nÅäÇÎ : ");
+						orderList += ("ì¹˜ì¦ˆ : " +sandwich.cheeseType + "\ní† í•‘ : ");
 						for(int j=0;j<sandwich.toppings.size();j++) {
 							if(j!=sandwich.toppings.size()-1) {
 								orderList += (sandwich.toppings.get(j).name + ", ");
@@ -1786,7 +1787,7 @@ public class Frame extends JFrame {
 								orderList += (sandwich.toppings.get(j).name);
 							}
 						}
-						orderList += "\n¼Ò½º ¹× ½ÃÁî´× : ";
+						orderList += "\nì†ŒìŠ¤ ë° ì‹œì¦ˆë‹ : ";
 						for(int k=0;k<sandwich.sauces.size();k++) {
 							if(k!=sandwich.sauces.size()-1) {
 								orderList += (sandwich.sauces.get(k).name + ", ");
@@ -1796,9 +1797,9 @@ public class Frame extends JFrame {
 							}
 						}
 						orderList += "=========================================================\n";
-						orderList += "°¡°İ : " + sandwich.price + "¿ø\n";
+						orderList += "ê°€ê²© : " + sandwich.price + "ì›\n";
 						
-						int result = JOptionPane.showConfirmDialog(null, "ÀÌ´ë·Î ÁÖ¹®ÇÏ½Ã°Ú½À´Ï±î?\n" + orderList, null, JOptionPane.YES_NO_OPTION,
+						int result = JOptionPane.showConfirmDialog(null, "ì´ëŒ€ë¡œ ì£¼ë¬¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n" + orderList, null, JOptionPane.YES_NO_OPTION,
 								JOptionPane.QUESTION_MESSAGE);
 						if (result == JOptionPane.YES_OPTION) {
 							Sandwich sandwich1 = new Sandwich();
@@ -1822,7 +1823,7 @@ public class Frame extends JFrame {
 				
 				}
 				// =========================================
-				initSandwich(); // ÃÊ±âÈ­
+				initSandwich(); // ì´ˆê¸°í™”
 				getSandwichCotentForLabel();
 				updateCartContent();// ====================================================================
 				sortPanel2.setVisible(false);
@@ -1902,15 +1903,15 @@ public class Frame extends JFrame {
 		}
 
 	}
-//===================================================== »÷µåÀ§Ä¡ ÃÊ±âÈ­ ÇÔ¼ö ========================================================
-	public void initSandwich() { // »÷µåÀ§Ä¡ ±¸¼º ¼º°ø ½Ã Ä«Æ®¿¡ ³Ö°í ÃÊ±âÈ­ µÊ =============================================================
+//===================================================== ìƒŒë“œìœ„ì¹˜ ì´ˆê¸°í™” í•¨ìˆ˜ ========================================================
+	public void initSandwich() { // ìƒŒë“œìœ„ì¹˜ êµ¬ì„± ì„±ê³µ ì‹œ ì¹´íŠ¸ì— ë„£ê³  ì´ˆê¸°í™” ë¨ =============================================================
 		sandwich.sauces.clear();
 		sandwich.toppings.clear();
 		sandwich.breadType = null;
 		sandwich.breadSize = 0;
 		sandwich.cheeseType = null;
 	}
-// ============================================= »÷µåÀ§Ä¡ ±¸¼ºÇ°À» ¾÷µ¥ÀÌÆ® ÇØÁÖ´Â ÇÔ¼ö =====================================================
+// ============================================= ìƒŒë“œìœ„ì¹˜ êµ¬ì„±í’ˆì„ ì—…ë°ì´íŠ¸ í•´ì£¼ëŠ” í•¨ìˆ˜ =====================================================
 	public void getSandwichCotentForLabel() { 
 
 		sandwichContentPanel.remove(sandwichContentPanel1);
@@ -1975,22 +1976,22 @@ public class Frame extends JFrame {
 		});
 		group.add(breadSizeContent[0]);
 		group.add(breadSizeContent[1]);
-		breadTypeContentLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		breadTypeContentLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		breadTypeContentLabel.setSize(200, 86);
 		breadTypeContentLabel.setLocation(0, 86);
 		breadTypeContentLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		cheeseTypeContentLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		cheeseTypeContentLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		cheeseTypeContentLabel.setSize(200, 86);
 		cheeseTypeContentLabel.setLocation(0, 172);
 		cheeseTypeContentLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		toppingTypeContentLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 8));
+		toppingTypeContentLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 8));
 		toppingTypeContentLabel.setSize(200, 86);
 		toppingTypeContentLabel.setLocation(0, 258);
 		toppingTypeContentLabel.setHorizontalAlignment(JLabel.CENTER);
 
-		sauceTypeContentLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 10));
+		sauceTypeContentLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 10));
 		sauceTypeContentLabel.setSize(200, 86);
 		sauceTypeContentLabel.setLocation(0, 344);
 		sauceTypeContentLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -2006,7 +2007,7 @@ public class Frame extends JFrame {
 		sandwichContentPanel.add(sandwichContentPanel1);
 		sandwichContentPanel.setVisible(true);
 	}
-// ================================================= Àå¹Ù±¸´Ï¸¦ ¾÷µ¥ÀÌÆ® ÇØÁÖ´Â ÇÔ¼ö =======================================================
+// ================================================= ì¥ë°”êµ¬ë‹ˆë¥¼ ì—…ë°ì´íŠ¸ í•´ì£¼ëŠ” í•¨ìˆ˜ =======================================================
 	public void updateCartContent() {
 		cartPanel.setVisible(false);
 		cartPanel.removeAll();
@@ -2020,16 +2021,16 @@ public class Frame extends JFrame {
 			JLabel cartContentName = new JLabel();
 			cartContentName.setText(" " + order.sandwichList.get(i).type);
 			cartContentName.setSize(180, 40);
-			cartContentName.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 13));
+			cartContentName.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 13));
 			JLabel cartContentNum = new JLabel();
 			cartContentNum.setText("" + order.sandwichList.get(i).num);
 			cartContentNum.setSize(40, 40);
 			cartContentNum.setLocation(180, 0);
-			cartContentNum.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+			cartContentNum.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 15));
 			JButton addSelectedContentButton = new JButton(new ImageIcon("img/plus.png"));
 			addSelectedContentButton.setSize(27, 30);
 			addSelectedContentButton.setLocation(210, 0);
-			addSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			addSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			addSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					order.sandwichList.get(num).num++;
@@ -2040,7 +2041,7 @@ public class Frame extends JFrame {
 			JButton subSelectedContentButton = new JButton(new ImageIcon("img/minus.png"));
 			subSelectedContentButton.setSize(27, 30);
 			subSelectedContentButton.setLocation(240, 0);
-			subSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			subSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			subSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					int num1 = order.sandwichList.get(num).num;
@@ -2057,10 +2058,10 @@ public class Frame extends JFrame {
 			JButton deleteSelectedContentButton = new JButton(new ImageIcon("img/delete.png"));
 			deleteSelectedContentButton.setSize(27, 30);
 			deleteSelectedContentButton.setLocation(270, 0);
-			deleteSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			deleteSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			deleteSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
-					int result = JOptionPane.showConfirmDialog(null, "¼±ÅÃÇÑ ¸Ş´º¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?\n\n", null, JOptionPane.YES_NO_OPTION,
+					int result = JOptionPane.showConfirmDialog(null, "ì„ íƒí•œ ë©”ë‰´ë¥¼ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n\n", null, JOptionPane.YES_NO_OPTION,
 							JOptionPane.QUESTION_MESSAGE);
 					if (result == JOptionPane.YES_OPTION) {
 						order.sandwichList.remove(num);
@@ -2086,16 +2087,16 @@ public class Frame extends JFrame {
 			JLabel cartContentName = new JLabel();
 			cartContentName.setText(" " + order.drinkList.get(i).name);
 			cartContentName.setSize(180, 40);
-			cartContentName.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 13));
+			cartContentName.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 13));
 			JLabel cartContentNum = new JLabel();
 			cartContentNum.setText("" + order.drinkList.get(i).num);
 			cartContentNum.setSize(40, 40);
 			cartContentNum.setLocation(180, 0);
-			cartContentNum.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+			cartContentNum.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 15));
 			JButton addSelectedContentButton = new JButton(new ImageIcon("img/plus.png"));
 			addSelectedContentButton.setSize(27, 30);
 			addSelectedContentButton.setLocation(210, 0);
-			addSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			addSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			addSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					order.drinkList.get(num).num++;
@@ -2106,7 +2107,7 @@ public class Frame extends JFrame {
 			JButton subSelectedContentButton = new JButton(new ImageIcon("img/minus.png"));
 			subSelectedContentButton.setSize(27, 30);
 			subSelectedContentButton.setLocation(240, 0);
-			subSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			subSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			subSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					int num1 = order.drinkList.get(num).num;
@@ -2120,10 +2121,10 @@ public class Frame extends JFrame {
 			JButton deleteSelectedContentButton = new JButton(new ImageIcon("img/delete.png"));
 			deleteSelectedContentButton.setSize(27, 30);
 			deleteSelectedContentButton.setLocation(270, 0);
-			deleteSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			deleteSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			deleteSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
-					int result = JOptionPane.showConfirmDialog(null, "¼±ÅÃÇÑ ¸Ş´º¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?\n\n", null, JOptionPane.YES_NO_OPTION,
+					int result = JOptionPane.showConfirmDialog(null, "ì„ íƒí•œ ë©”ë‰´ë¥¼ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n\n", null, JOptionPane.YES_NO_OPTION,
 							JOptionPane.QUESTION_MESSAGE);
 					if (result == JOptionPane.YES_OPTION) {
 						order.drinkList.remove(num);
@@ -2149,16 +2150,16 @@ public class Frame extends JFrame {
 			JLabel cartContentName = new JLabel();
 			cartContentName.setText(" " + order.sideList.get(i).name);
 			cartContentName.setSize(180, 40);
-			cartContentName.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 13));
+			cartContentName.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 13));
 			JLabel cartContentNum = new JLabel();
 			cartContentNum.setText("" + order.sideList.get(i).num);
 			cartContentNum.setSize(40, 40);
 			cartContentNum.setLocation(180, 0);
-			cartContentNum.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+			cartContentNum.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 15));
 			JButton addSelectedContentButton = new JButton(new ImageIcon("img/plus.png"));
 			addSelectedContentButton.setSize(27, 30);
 			addSelectedContentButton.setLocation(210, 0);
-			addSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			addSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			addSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					order.sideList.get(num).num++;
@@ -2169,7 +2170,7 @@ public class Frame extends JFrame {
 			JButton subSelectedContentButton = new JButton(new ImageIcon("img/minus.png"));
 			subSelectedContentButton.setSize(27, 30);
 			subSelectedContentButton.setLocation(240, 0);
-			subSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			subSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			subSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
 					int num1 = order.sideList.get(num).num;
@@ -2183,10 +2184,10 @@ public class Frame extends JFrame {
 			JButton deleteSelectedContentButton = new JButton(new ImageIcon("img/delete.png"));
 			deleteSelectedContentButton.setSize(27, 30);
 			deleteSelectedContentButton.setLocation(270, 0);
-			deleteSelectedContentButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 9));
+			deleteSelectedContentButton.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 9));
 			deleteSelectedContentButton.addMouseListener(new MouseAdapter() {
 				public void mouseClicked(MouseEvent e) {
-					int result = JOptionPane.showConfirmDialog(null, "¼±ÅÃÇÑ ¸Ş´º¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?\n\n", null, JOptionPane.YES_NO_OPTION,
+					int result = JOptionPane.showConfirmDialog(null, "ì„ íƒí•œ ë©”ë‰´ë¥¼ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n\n", null, JOptionPane.YES_NO_OPTION,
 							JOptionPane.QUESTION_MESSAGE);
 					if (result == JOptionPane.YES_OPTION) {
 						order.sideList.remove(num);
@@ -2205,24 +2206,24 @@ public class Frame extends JFrame {
 		}
 
 		JLabel allPrice1 = new JLabel();
-		allPrice1.setText(" ÇÕ°è :	           " + order.totalPrice);
+		allPrice1.setText(" í•©ê³„ :	           " + order.totalPrice);
 		allPrice1.setSize(300, 40);
-		allPrice1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		allPrice1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		allPrice1.setLocation(0, 390);
 		allPrice1.setBackground(new Color(246, 241, 123));
 		allPrice1.setOpaque(true);
 		cartPanel.add(allPrice1);
 		cartPanel.setVisible(true);
 	}
-// =============================================================== ¸Ş´º È­¸é¿¡¼­ Ãë¼Ò ¹öÆ° ¸¶¿ì½º ¸®½º³Ê ====================================
-	class cancelOrderMouseListener implements MouseListener {	// Ä«Æ®¸¦ ÃÊ±âÈ­ ÇØÁÜ ================================================
+// =============================================================== ë©”ë‰´ í™”ë©´ì—ì„œ ì·¨ì†Œ ë²„íŠ¼ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ ====================================
+	class cancelOrderMouseListener implements MouseListener {	// ì¹´íŠ¸ë¥¼ ì´ˆê¸°í™” í•´ì¤Œ ================================================
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			// TODO Auto-generated method stub
 			if (order.sandwichList.size() != 0 || order.drinkList.size() != 0 || order.sideList.size() != 0) {
 				
 				
-				int result = JOptionPane.showConfirmDialog(null, "ÁÖ¹®À» Ãë¼ÒÇÏ½Ã°Ú½À´Ï±î?\n\n", null, JOptionPane.YES_NO_OPTION,
+				int result = JOptionPane.showConfirmDialog(null, "ì£¼ë¬¸ì„ ì·¨ì†Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n\n", null, JOptionPane.YES_NO_OPTION,
 						JOptionPane.QUESTION_MESSAGE);
 				if (result == JOptionPane.YES_OPTION) {
 					order.sandwichList.clear();
@@ -2230,7 +2231,7 @@ public class Frame extends JFrame {
 					order.drinkList.clear();
 					order.calculatePrice();
 					updateCartContent();
-					JOptionPane.showMessageDialog(null, "ÁÖ¹®ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù");
+					JOptionPane.showMessageDialog(null, "ì£¼ë¬¸ì´ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤");
 				}
 			}
 		}
@@ -2260,8 +2261,8 @@ public class Frame extends JFrame {
 		}
 
 	}
-// ======================================================== ÁÖ¹® ¹öÆ° ´­·¶À» ¶§ÀÇ ¸®½º³Ê ==============================================
-	class requestOrderMouseListener implements MouseListener {	// ÁÖ¹® ³»¿ªµµ Ãâ·ÂÇØÁÜ =============================================
+// ======================================================== ì£¼ë¬¸ ë²„íŠ¼ ëˆŒë €ì„ ë•Œì˜ ë¦¬ìŠ¤ë„ˆ ==============================================
+	class requestOrderMouseListener implements MouseListener {	// ì£¼ë¬¸ ë‚´ì—­ë„ ì¶œë ¥í•´ì¤Œ =============================================
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
@@ -2273,10 +2274,10 @@ public class Frame extends JFrame {
 				
 				orderList += ("\n=========================================================\n");
 				for(int i=0;i<order.sandwichList.size();i++) {
-					orderList += ("»÷µåÀ§Ä¡ : "+ order.sandwichList.get(i).type + " " +  order.sandwichList.get(i).num + "°³\n");
-					orderList += ("»§ : " + order.sandwichList.get(i).breadType + " ");
+					orderList += ("ìƒŒë“œìœ„ì¹˜ : "+ order.sandwichList.get(i).type + " " +  order.sandwichList.get(i).num + "ê°œ\n");
+					orderList += ("ë¹µ : " + order.sandwichList.get(i).breadType + " ");
 					orderList += (order.sandwichList.get(i).breadSize + "cm\n");
-					orderList += ("Ä¡Áî : " +order.sandwichList.get(i).cheeseType + "\nÅäÇÎ : ");
+					orderList += ("ì¹˜ì¦ˆ : " +order.sandwichList.get(i).cheeseType + "\ní† í•‘ : ");
 					for(int j=0;j<order.sandwichList.get(i).toppings.size();j++) {
 						if(j!=order.sandwichList.get(i).toppings.size()-1) {
 							orderList += (order.sandwichList.get(i).toppings.get(j).name + ", ");
@@ -2285,7 +2286,7 @@ public class Frame extends JFrame {
 							orderList += (order.sandwichList.get(i).toppings.get(j).name);
 						}
 					}
-					orderList += "\n¼Ò½º ¹× ½ÃÁî´× : ";
+					orderList += "\nì†ŒìŠ¤ ë° ì‹œì¦ˆë‹ : ";
 					for(int k=0;k<order.sandwichList.get(i).sauces.size();k++) {
 						if(k!=order.sandwichList.get(i).sauces.size()-1) {
 							orderList += (order.sandwichList.get(i).sauces.get(k).name + ", ");
@@ -2294,29 +2295,29 @@ public class Frame extends JFrame {
 							orderList += (order.sandwichList.get(i).sauces.get(k).name + "\n");
 						}
 					}
-					orderList += (order.sandwichList.get(i).num * order.sandwichList.get(i).price + "¿ø");
+					orderList += (order.sandwichList.get(i).num * order.sandwichList.get(i).price + "ì›");
 					orderList += "\n=========================================================\n";
 				}
 				
 				for(int j=0;j<order.drinkList.size();j++) {
-					orderList += (order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "°³\n");
-					orderList += (order.drinkList.get(j).num * order.drinkList.get(j).price + "¿ø");
+					orderList += (order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "ê°œ\n");
+					orderList += (order.drinkList.get(j).num * order.drinkList.get(j).price + "ì›");
 				}
 				if(order.drinkList.size()!=0) {
 					orderList += "\n=========================================================\n";
 				}
 				for(int k=0;k<order.sideList.size();k++) {
-					orderList += (order.sideList.get(k).name + " " + order.sideList.get(k).num + "°³\n");
-					orderList += (order.sideList.get(k).num * order.sideList.get(k).price + "¿ø");
+					orderList += (order.sideList.get(k).name + " " + order.sideList.get(k).num + "ê°œ\n");
+					orderList += (order.sideList.get(k).num * order.sideList.get(k).price + "ì›");
 				}
 				if(order.sideList.size()!=0) {
 					orderList += "\n=========================================================\n";
 				}
-				orderList += ("\t\t°áÁ¦ ±İ¾× : " + order.totalPrice + "¿ø");
+				orderList += ("\t\tê²°ì œ ê¸ˆì•¡ : " + order.totalPrice + "ì›");
 				
 				
 				
-				int result = JOptionPane.showConfirmDialog(null, "ÁÖ¹®ÇÏ½Ã°Ú½À´Ï±î?" + orderList, null, JOptionPane.YES_NO_OPTION,
+				int result = JOptionPane.showConfirmDialog(null, "ì£¼ë¬¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ?" + orderList, null, JOptionPane.YES_NO_OPTION,
 						JOptionPane.QUESTION_MESSAGE);
 				if (result == JOptionPane.YES_OPTION) {
 					orderPanel.setVisible(false);
@@ -2350,8 +2351,8 @@ public class Frame extends JFrame {
 		}
 
 	}
-//=================================================== °áÁ¦ÇÏ´Ù ¸Ş´º·Î µ¹¾Æ°¥ ¶§ÀÇ ¸¶¿ì½º ¸®½º³Ê =========================================
-	class backToMenuMouseListener implements MouseListener {		// º°°Å ¾øÀ½ ===============================================
+//=================================================== ê²°ì œí•˜ë‹¤ ë©”ë‰´ë¡œ ëŒì•„ê°ˆ ë•Œì˜ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ =========================================
+	class backToMenuMouseListener implements MouseListener {		// ë³„ê±° ì—†ìŒ ===============================================
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
@@ -2385,34 +2386,35 @@ public class Frame extends JFrame {
 		}
 
 	}
-// ============================================================ Çö±İ °áÁ¦ ¸¶¿ì½º ¸®½º³Ê =================================================
+// ============================================================ í˜„ê¸ˆ ê²°ì œ ë§ˆìš°ìŠ¤ ë¦¬ìŠ¤ë„ˆ =================================================
 	class payByCashMouseListener implements MouseListener {			
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			// TODO Auto-generated method stub
 			String money = null;
-			int result = JOptionPane.showConfirmDialog(paymentPanel1, "°áÁ¦¸¦ ÁøÇàÇÏ½Ã°Ú½À´Ï±î?", "°áÁ¦Ã¢", JOptionPane.YES_NO_OPTION,
+			int result = JOptionPane.showConfirmDialog(paymentPanel1, "ê²°ì œë¥¼ ì§„í–‰í•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ê²°ì œì°½", JOptionPane.YES_NO_OPTION,
 					JOptionPane.QUESTION_MESSAGE);
 			if (result == JOptionPane.YES_OPTION) {
-				money = JOptionPane.showInputDialog("Çö±İÀ» ÅõÀÔÇØÁÖ¼¼¿ä");
+				money = JOptionPane.showInputDialog("í˜„ê¸ˆì„ íˆ¬ì…í•´ì£¼ì„¸ìš”");
 			}
 			if(money != null) {
 				int money1 = Integer.parseInt(money);
 				if(money1>=order.totalPrice) {
-					JOptionPane.showMessageDialog(null, "°áÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù");
+					JOptionPane.showMessageDialog(null, "ê²°ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤");
 					if(money1-order.totalPrice != 0)
-						JOptionPane.showMessageDialog(null, "°Å½º¸§µ· " + (money1 - order.totalPrice) + "¿øÀ» ¹Ş¾ÆÁÖ½Ê½Ã¿À");
+						JOptionPane.showMessageDialog(null, "ê±°ìŠ¤ë¦„ëˆ " + (money1 - order.totalPrice) + "ì›ì„ ë°›ì•„ì£¼ì‹­ì‹œì˜¤");
 					
+					order.payment = "í˜„ê¸ˆ";
 					order.orderNumber = orderNum;
 					String orderList = "";
-					orderList += ("ÁÖ¹®¹øÈ£ : " + orderNum++);
+					orderList += ("ì£¼ë¬¸ë²ˆí˜¸ : " + orderNum++);
 					orderList += ("\n=========================================================\n");
 					for(int i=0;i<order.sandwichList.size();i++) {
-						orderList += ("»÷µåÀ§Ä¡ : "+ order.sandwichList.get(i).type + " " +  order.sandwichList.get(i).num + "°³\n");
-						orderList += ("»§ : " + order.sandwichList.get(i).breadType + " ");
+						orderList += ("ìƒŒë“œìœ„ì¹˜ : "+ order.sandwichList.get(i).type + " " +  order.sandwichList.get(i).num + "ê°œ\n");
+						orderList += ("ë¹µ : " + order.sandwichList.get(i).breadType + " ");
 						orderList += (order.sandwichList.get(i).breadSize + "cm\n");
-						orderList += ("Ä¡Áî : " +order.sandwichList.get(i).cheeseType + "\nÅäÇÎ : ");
+						orderList += ("ì¹˜ì¦ˆ : " +order.sandwichList.get(i).cheeseType + "\ní† í•‘ : ");
 						for(int j=0;j<order.sandwichList.get(i).toppings.size();j++) {
 							if(j!=order.sandwichList.get(i).toppings.size()-1) {
 								orderList += (order.sandwichList.get(i).toppings.get(j).name + ", ");
@@ -2421,7 +2423,7 @@ public class Frame extends JFrame {
 								orderList += (order.sandwichList.get(i).toppings.get(j).name);
 							}
 						}
-						orderList += "\n¼Ò½º ¹× ½ÃÁî´× : ";
+						orderList += "\nì†ŒìŠ¤ ë° ì‹œì¦ˆë‹ : ";
 						for(int k=0;k<order.sandwichList.get(i).sauces.size();k++) {
 							if(k!=order.sandwichList.get(i).sauces.size()-1) {
 								orderList += (order.sandwichList.get(i).sauces.get(k).name + ", ");
@@ -2430,25 +2432,26 @@ public class Frame extends JFrame {
 								orderList += (order.sandwichList.get(i).sauces.get(k).name + "\n");
 							}
 						}
-						orderList += (order.sandwichList.get(i).num * order.sandwichList.get(i).price + "¿ø");
+						orderList += (order.sandwichList.get(i).num * order.sandwichList.get(i).price + "ì›");
 						orderList += "\n=========================================================\n";
 					}
 					
 					for(int j=0;j<order.drinkList.size();j++) {
-						orderList += (order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "°³\n");
-						orderList += (order.drinkList.get(j).num * order.drinkList.get(j).price + "¿ø");
+						orderList += (order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "ê°œ\n");
+						orderList += (order.drinkList.get(j).num * order.drinkList.get(j).price + "ì›");
 					}
 					if(order.drinkList.size()!=0) {
 						orderList += "\n=========================================================\n";
 					}
 					for(int k=0;k<order.sideList.size();k++) {
-						orderList += (order.sideList.get(k).name + " " + order.sideList.get(k).num + "°³\n");
-						orderList += (order.sideList.get(k).num * order.sideList.get(k).price + "¿ø");
+						orderList += (order.sideList.get(k).name + " " + order.sideList.get(k).num + "ê°œ\n");
+						orderList += (order.sideList.get(k).num * order.sideList.get(k).price + "ì›");
 					}
 					if(order.sideList.size()!=0) {
 						orderList += "\n=========================================================\n";
 					}
-					orderList += ("\t\t°áÁ¦ ±İ¾× : " + order.totalPrice + "¿ø");
+					orderList += ("\t\tê²°ì œ ê¸ˆì•¡ : " + order.totalPrice + "ì›");
+					orderList += ("\nê²°ì œ ë°©ì‹ : " + order.payment);
 					JOptionPane.showMessageDialog(null, orderList);
 					
 					
@@ -2474,11 +2477,11 @@ public class Frame extends JFrame {
 					completedOrder.totalPrice = order.totalPrice;
 					completedOrder.orderNumber = order.orderNumber;
 					orderlist.orderlist.add(completedOrder);
-					initOrder();				// order ÃÊ±âÈ­
-					updateCartContent();		// Àå¹Ù±¸´Ï UI ÃÊ±âÈ­
+					initOrder();				// order ì´ˆê¸°í™”
+					updateCartContent();		// ì¥ë°”êµ¬ë‹ˆ UI ì´ˆê¸°í™”
 				}
 				else {
-					JOptionPane.showMessageDialog(null, "±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù. µ·ÀÌ ¹İÈ¯µË´Ï´Ù.");
+					JOptionPane.showMessageDialog(null, "ê¸ˆì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤. ëˆì´ ë°˜í™˜ë©ë‹ˆë‹¤.");
 				}
 			}
 		}
@@ -2508,15 +2511,137 @@ public class Frame extends JFrame {
 		}
 
 	}
+//============================================================================================================================
+	class payByCardMouseListener implements MouseListener {			
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			String money = null;
+			int result = JOptionPane.showConfirmDialog(paymentPanel1, "ê²°ì œë¥¼ ì§„í–‰í•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ê²°ì œì°½", JOptionPane.YES_NO_OPTION,
+					JOptionPane.QUESTION_MESSAGE);
+			if (result == JOptionPane.YES_OPTION) {
+				JOptionPane.showMessageDialog(null, "ì¹´ë“œë¥¼ ë„£ì–´ì£¼ì„¸ìš”");
+			}
+			
+				
+				
+					JOptionPane.showMessageDialog(null, "ê²°ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤");
+					
+					order.payment = "ì¹´ë“œ";
+					order.orderNumber = orderNum;
+					String orderList = "";
+					orderList += ("ì£¼ë¬¸ë²ˆí˜¸ : " + orderNum++);
+					orderList += ("\n=========================================================\n");
+					for(int i=0;i<order.sandwichList.size();i++) {
+						orderList += ("ìƒŒë“œìœ„ì¹˜ : "+ order.sandwichList.get(i).type + " " +  order.sandwichList.get(i).num + "ê°œ\n");
+						orderList += ("ë¹µ : " + order.sandwichList.get(i).breadType + " ");
+						orderList += (order.sandwichList.get(i).breadSize + "cm\n");
+						orderList += ("ì¹˜ì¦ˆ : " +order.sandwichList.get(i).cheeseType + "\ní† í•‘ : ");
+						for(int j=0;j<order.sandwichList.get(i).toppings.size();j++) {
+							if(j!=order.sandwichList.get(i).toppings.size()-1) {
+								orderList += (order.sandwichList.get(i).toppings.get(j).name + ", ");
+							}
+							else {
+								orderList += (order.sandwichList.get(i).toppings.get(j).name);
+							}
+						}
+						orderList += "\nì†ŒìŠ¤ ë° ì‹œì¦ˆë‹ : ";
+						for(int k=0;k<order.sandwichList.get(i).sauces.size();k++) {
+							if(k!=order.sandwichList.get(i).sauces.size()-1) {
+								orderList += (order.sandwichList.get(i).sauces.get(k).name + ", ");
+							}
+							else {
+								orderList += (order.sandwichList.get(i).sauces.get(k).name + "\n");
+							}
+						}
+						orderList += (order.sandwichList.get(i).num * order.sandwichList.get(i).price + "ì›");
+						orderList += "\n=========================================================\n";
+					}
+					
+					for(int j=0;j<order.drinkList.size();j++) {
+						orderList += (order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "ê°œ\n");
+						orderList += (order.drinkList.get(j).num * order.drinkList.get(j).price + "ì›");
+					}
+					if(order.drinkList.size()!=0) {
+						orderList += "\n=========================================================\n";
+					}
+					for(int k=0;k<order.sideList.size();k++) {
+						orderList += (order.sideList.get(k).name + " " + order.sideList.get(k).num + "ê°œ\n");
+						orderList += (order.sideList.get(k).num * order.sideList.get(k).price + "ì›");
+					}
+					if(order.sideList.size()!=0) {
+						orderList += "\n=========================================================\n";
+					}
+					orderList += ("\t\tê²°ì œ ê¸ˆì•¡ : " + order.totalPrice + "ì›");
+					orderList += ("\nê²°ì œ ë°©ì‹ : " + order.payment);
+					JOptionPane.showMessageDialog(null, orderList);
+					
+					
+					
+					
+					
+					orderPanel.setVisible(true);
+					paymentPanel.setVisible(false);
+					Order completedOrder = new Order();
+					//completedOrder.drinkList = order.drinkList;
+					//completedOrder.sandwichList = order.sandwichList;
+					//completedOrder.sideList = order.sideList;
+					
+					for(int i=0;i<order.drinkList.size();i++) {
+						completedOrder.drinkList.add(order.drinkList.get(i));
+					}
+					for(int j=0;j<order.sandwichList.size();j++) {
+						completedOrder.sandwichList.add(order.sandwichList.get(j));
+					}
+					for(int k=0;k<order.sideList.size();k++) {
+						completedOrder.sideList.add(order.sideList.get(k));
+					}
+					completedOrder.totalPrice = order.totalPrice;
+					completedOrder.orderNumber = order.orderNumber;
+					orderlist.orderlist.add(completedOrder);
+					initOrder();				// order ì´ˆê¸°í™”
+					updateCartContent();		// ì¥ë°”êµ¬ë‹ˆ UI ì´ˆê¸°í™”
+				
+			
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+
+		}
+
+	}
+	
+	
 //============================================================================================================================	
-	private void initOrder() {					// ÁÖ¹® ³»¿ª ÃÊ±âÈ­ ÇÔ¼ö 
-		order.drinkList.clear();				// °áÁ¦ ¼º°ø ÈÄ ¸ÅÃâ³»¿ª¿¡ µé¾î°£ ÈÄ ÃÊ±âÈ­ µÊ
+	private void initOrder() {					// ì£¼ë¬¸ ë‚´ì—­ ì´ˆê¸°í™” í•¨ìˆ˜ 
+		order.drinkList.clear();				// ê²°ì œ ì„±ê³µ í›„ ë§¤ì¶œë‚´ì—­ì— ë“¤ì–´ê°„ í›„ ì´ˆê¸°í™” ë¨
 		order.sandwichList.clear();
 		order.sideList.clear();
 		order.totalPrice = 0;
 	}
 //=====================================================================================================================
-//====================¸Ş´º°ü¸® ¹öÆ° Å¬¸¯==========================================================================================
+//====================ë©”ë‰´ê´€ë¦¬ ë²„íŠ¼ í´ë¦­==========================================================================================
 	class manageMouseListener implements MouseListener{
 
 	@Override
@@ -2547,7 +2672,7 @@ public class Frame extends JFrame {
 		
 	}
 //==============================================================================================================================
-//====================¸ÅÃâÇöÈ² ¹öÆ° Å¬¸¯==========================================================================================
+//====================ë§¤ì¶œí˜„í™© ë²„íŠ¼ í´ë¦­==========================================================================================
 		class salesMouseListener implements MouseListener{
 
 		@Override
@@ -2560,17 +2685,17 @@ public class Frame extends JFrame {
 			
 			salestxt1.setText("");
 			salestxt2.setText("");
-			//¿ŞÂÊ text(ÁÖ¹®º°)
+			//ì™¼ìª½ text(ì£¼ë¬¸ë³„)
 			for(int i=0;i<orderlist.orderlist.size();i++) {
 				Order order = orderlist.orderlist.get(i);
 
-				salestxt1.append("ÁÖ¹®¹øÈ£ : "+order.orderNumber+"\n");
+				salestxt1.append("ì£¼ë¬¸ë²ˆí˜¸ : "+order.orderNumber+"\n");
 				for(int j=0;j<order.sandwichList.size();j++) {
 					Sandwich sw = order.sandwichList.get(j);
-					salestxt1.append("»÷µåÀ§Ä¡ : " + sw.type + "\n");
-					salestxt1.append("»§ : " + sw.breadType + "");
+					salestxt1.append("ìƒŒë“œìœ„ì¹˜ : " + sw.type + "\n");
+					salestxt1.append("ë¹µ : " + sw.breadType + "");
 					salestxt1.append(sw.breadSize+"cm\n");
-					salestxt1.append("Ä¡Áî : "+sw.cheeseType+"\nÅäÇÎ : ");
+					salestxt1.append("ì¹˜ì¦ˆ : "+sw.cheeseType+"\ní† í•‘ : ");
 					for(int k=0;k<sw.toppings.size();k++) {
 						if(k!=sw.toppings.size()-1) {
 							salestxt1.append(sw.toppings.get(k).name + ", ");
@@ -2579,7 +2704,7 @@ public class Frame extends JFrame {
 							salestxt1.append(sw.toppings.get(k).name);
 						}
 					}
-					salestxt1.append("\n¼Ò½º ¹× ½ÃÁî´× : ");
+					salestxt1.append("\nì†ŒìŠ¤ ë° ì‹œì¦ˆë‹ : ");
 					for(int k=0;k<sw.sauces.size();k++) {
 						if(k!=sw.sauces.size()-1) {
 							salestxt1.append(sw.sauces.get(k).name + ", ");
@@ -2590,17 +2715,17 @@ public class Frame extends JFrame {
 					}
 				}
 				for(int j=0;j<order.drinkList.size();j++) {
-					salestxt1.append(order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "°³\n");
+					salestxt1.append(order.drinkList.get(j).name + " " + order.drinkList.get(j).num + "ê°œ\n");
 				}
 				for(int k=0;k<order.sideList.size();k++) {
-					salestxt1.append(order.sideList.get(k).name + " " + order.sideList.get(k).num + "°³\n");
+					salestxt1.append(order.sideList.get(k).name + " " + order.sideList.get(k).num + "ê°œ\n");
 				}
-				salestxt1.append("°áÁ¦ ±İ¾× : " + order.totalPrice + "¿ø\n");
+				salestxt1.append("ê²°ì œ ê¸ˆì•¡ : " + order.totalPrice + "ì›\n");
 				salestxt1.append("======================================\n");
 				totalPrice+=order.totalPrice;
 			}
 			
-			//¿À¸¥ÂÊ text(Ç°¸ñº°)
+			//ì˜¤ë¥¸ìª½ text(í’ˆëª©ë³„)
 			for(int i=0;i<menu.sandwich.size();i++) {
 				int num = 0;
 				String name = menu.sandwich.get(i).name;
@@ -2614,7 +2739,7 @@ public class Frame extends JFrame {
 					}
 				}
 				if(num>0) {
-					salestxt2.append(name + " " +num+"°³\n");
+					salestxt2.append(name + " " +num+"ê°œ\n");
 				}
 			}
 			
@@ -2636,17 +2761,17 @@ public class Frame extends JFrame {
 					}
 				}
 				if(num1>0) {
-					salestxt2.append(name + "15cm " +num1+"°³\n");
+					salestxt2.append(name + "15cm " +num1+"ê°œ\n");
 				}
 				if(num2>0) {
-					salestxt2.append(name + "30cm " +num2+"°³\n");
+					salestxt2.append(name + "30cm " +num2+"ê°œ\n");
 				}
 			}
 			
 			for(int i=0;i<cheese.cheese.size();i++) {
 				int num = 0;
 				String name = cheese.cheese.get(i).name;
-				if(name.equals("Ä¡Áî¾øÀ½"))
+				if(name.equals("ì¹˜ì¦ˆì—†ìŒ"))
 					continue;
 				for(int j=0;j<orderlist.orderlist.size();j++) {
 					Order order = orderlist.orderlist.get(j);
@@ -2658,14 +2783,14 @@ public class Frame extends JFrame {
 					}
 				}
 				if(num>0) {
-					salestxt2.append(name + " "+num+"°³\n");
+					salestxt2.append(name + " "+num+"ê°œ\n");
 				}
 			}
 			
 			for(int i=0;i<topping.topping.size();i++) {
 				int num = 0;
 				String name = topping.topping.get(i).name;
-				if(name.equals("ÅäÇÎ¾øÀ½"))
+				if(name.equals("í† í•‘ì—†ìŒ"))
 					continue;
 				for(int j=0;j<orderlist.orderlist.size();j++) {
 					Order order = orderlist.orderlist.get(j);
@@ -2680,7 +2805,7 @@ public class Frame extends JFrame {
 					}
 				}
 				if(num>0) {
-					salestxt2.append(name + " "+num+"°³\n");
+					salestxt2.append(name + " "+num+"ê°œ\n");
 				}
 			}
 			
@@ -2700,7 +2825,7 @@ public class Frame extends JFrame {
 					}
 				}
 				if(num>0) {
-					salestxt2.append(name + " "+num+"°³\n");
+					salestxt2.append(name + " "+num+"ê°œ\n");
 				}
 			}
 			
@@ -2717,7 +2842,7 @@ public class Frame extends JFrame {
 					}
 				}
 				if(num>0) {
-					salestxt2.append(name + " " +num+"°³\n");
+					salestxt2.append(name + " " +num+"ê°œ\n");
 				}
 			}
 			
@@ -2734,12 +2859,12 @@ public class Frame extends JFrame {
 					}
 				}
 				if(num>0) {
-					salestxt2.append(name + " " +num+"°³\n");
+					salestxt2.append(name + " " +num+"ê°œ\n");
 				}
 			}
 			
 			
-			salesLabel.setText("ÃÑ ¸ÅÃâ : "+totalPrice+"¿ø");
+			salesLabel.setText("ì´ ë§¤ì¶œ : "+totalPrice+"ì›");
 		}
 
 		@Override
@@ -2760,7 +2885,7 @@ public class Frame extends JFrame {
 			
 		}
 		//==============================================================================================================================
-		//=======================¸Ş´º°ü¸®¿¡¼­ µÚ·Î°¡±â ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================ë©”ë‰´ê´€ë¦¬ì—ì„œ ë’¤ë¡œê°€ê¸° ë²„íŠ¼ í´ë¦­===============================================================================================
 			class backMouseListener1 implements MouseListener{
 
 			@Override
@@ -2774,7 +2899,7 @@ public class Frame extends JFrame {
 				addPanel.setVisible(false);
 				refinePanel.setVisible(false);
 				deletePanel.setVisible(false);
-				selectedSort = "»÷µåÀ§Ä¡";
+				selectedSort = "ìƒŒë“œìœ„ì¹˜";
 				SelectedIndex = 0;
 				sortComboBox.setSelectedIndex(0);
 				sortComboBox1.setSelectedIndex(0);
@@ -2799,7 +2924,7 @@ public class Frame extends JFrame {
 				
 			}
 		//==============================================================================================================================
-		//=======================¸ÅÃâÇöÈ²¿¡¼­ µÚ·Î°¡±â ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================ë§¤ì¶œí˜„í™©ì—ì„œ ë’¤ë¡œê°€ê¸° ë²„íŠ¼ í´ë¦­===============================================================================================
 				class backMouseListener2 implements MouseListener{
 
 				@Override
@@ -2828,7 +2953,7 @@ public class Frame extends JFrame {
 					
 				}
 		//==============================================================================================================================
-		//=======================¸Ş´ºÃß°¡ ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================ë©”ë‰´ì¶”ê°€ ë²„íŠ¼ í´ë¦­===============================================================================================
 					class addMouseListener implements MouseListener{
 
 					@Override
@@ -2862,7 +2987,7 @@ public class Frame extends JFrame {
 						
 					}
 		//==============================================================================================================================
-		//=======================¸Ş´º¼öÁ¤ ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================ë©”ë‰´ìˆ˜ì • ë²„íŠ¼ í´ë¦­===============================================================================================
 					class refineMouseListener implements MouseListener{
 
 					@Override
@@ -2871,7 +2996,7 @@ public class Frame extends JFrame {
 						refinePanel.setVisible(true);
 						deletePanel.setVisible(false);
 						sortComboBox1.setSelectedIndex(0);
-						selectedSort = "»÷µåÀ§Ä¡";
+						selectedSort = "ìƒŒë“œìœ„ì¹˜";
 						txtName1.setText("");
 						txtPrice1.setText("");
 						txtImgName1.setText("");
@@ -2933,10 +3058,10 @@ public class Frame extends JFrame {
 						
 					}
 		//==============================================================================================================================
-					//»èÁ¦½Ã »õ·Î°íÄ§ 
+					//ì‚­ì œì‹œ ìƒˆë¡œê³ ì¹¨ 
 					public void refresh() {
 						switch(selectedSort) {
-						case "»÷µåÀ§Ä¡":
+						case "ìƒŒë“œìœ„ì¹˜":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -2950,7 +3075,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<menu.sandwich.size();i++) {
 												if(menuinfo.name.equals(menu.sandwich.get(i).name) == true) {
@@ -3012,7 +3137,7 @@ public class Frame extends JFrame {
 							menuPanel.add(scroll, BorderLayout.CENTER);
 							setVisible(true);
 							break;
-						case "»ø·¯µå":
+						case "ìƒëŸ¬ë“œ":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -3026,7 +3151,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<menu.salad.size();i++) {
 												if(menuinfo.name.equals(menu.salad.get(i).name) == true) {
@@ -3046,7 +3171,7 @@ public class Frame extends JFrame {
 							deletePanel.add(scroll1);
 							setVisible(true);
 							break;
-						case "·¦":
+						case "ë©":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -3060,7 +3185,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<menu.wrap.size();i++) {
 												if(menuinfo.name.equals(menu.wrap.get(i).name) == true) {
@@ -3079,7 +3204,7 @@ public class Frame extends JFrame {
 							deletePanel.add(scroll1);
 							setVisible(true);
 							break;
-						case "»çÀÌµå":
+						case "ì‚¬ì´ë“œ":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -3093,7 +3218,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<menu.side.size();i++) {
 												if(menuinfo.name.equals(menu.side.get(i).name) == true) {
@@ -3113,7 +3238,7 @@ public class Frame extends JFrame {
 							deletePanel.add(scroll1);
 							setVisible(true);
 							break;
-						case "À½·á":
+						case "ìŒë£Œ":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -3127,7 +3252,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<menu.drink.size();i++) {
 												if(menuinfo.name.equals(menu.drink.get(i).name) == true) {
@@ -3147,7 +3272,7 @@ public class Frame extends JFrame {
 							deletePanel.add(scroll1);
 							setVisible(true);
 							break;
-						case "»§":
+						case "ë¹µ":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3167,7 +3292,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<bread.bread.size();i++) {
 												if(breadinfo.name.equals(bread.bread.get(i).name) == true) {
@@ -3187,7 +3312,7 @@ public class Frame extends JFrame {
 							deletePanel.add(scroll1);
 							setVisible(true);
 							break;
-						case "Ä¡Áî":
+						case "ì¹˜ì¦ˆ":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -3201,7 +3326,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<cheese.cheese.size();i++) {
 												if(cheeseinfo.name.equals(cheese.cheese.get(i).name) == true) {
@@ -3221,7 +3346,7 @@ public class Frame extends JFrame {
 							deletePanel.add(scroll1);
 							setVisible(true);
 							break;
-						case "ÅäÇÎ":
+						case "í† í•‘":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -3235,7 +3360,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<topping.topping.size();i++) {
 												if(toppinginfo.name.equals(topping.topping.get(i).name) == true) {
@@ -3255,7 +3380,7 @@ public class Frame extends JFrame {
 							deletePanel.add(scroll1);
 							setVisible(true);
 							break;
-						case "¼Ò½º":
+						case "ì†ŒìŠ¤":
 							if(scroll1!=null)
 								deletePanel.remove(scroll1);
 							menuListPanel1.removeAll();
@@ -3269,7 +3394,7 @@ public class Frame extends JFrame {
 								button.addMouseListener(new MouseAdapter() {
 									@Override
 									public void mouseClicked(MouseEvent e) {
-										int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+										int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 										if(result == 0) {
 											for(int i=0;i<sauce.sauce.size();i++) {
 												if(sauceinfo.name.equals(sauce.sauce.get(i).name) == true) {
@@ -3291,7 +3416,7 @@ public class Frame extends JFrame {
 							break;
 						}
 					}
-		//=======================¸Ş´º»èÁ¦ ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================ë©”ë‰´ì‚­ì œ ë²„íŠ¼ í´ë¦­===============================================================================================
 					class deleteMouseListener implements MouseListener{
 
 					@Override
@@ -3300,7 +3425,7 @@ public class Frame extends JFrame {
 						refinePanel.setVisible(false);
 						deletePanel.setVisible(true);
 						
-						selectedSort = "»÷µåÀ§Ä¡";
+						selectedSort = "ìƒŒë“œìœ„ì¹˜";
 						sortComboBox2.setSelectedIndex(0);
 						
 						if(scroll1!=null)
@@ -3316,7 +3441,7 @@ public class Frame extends JFrame {
 							button.addMouseListener(new MouseAdapter() {
 								@Override
 								public void mouseClicked(MouseEvent e) {
-									int result = JOptionPane.showConfirmDialog(null, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦",JOptionPane.OK_CANCEL_OPTION);
+									int result = JOptionPane.showConfirmDialog(null, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ",JOptionPane.OK_CANCEL_OPTION);
 									if(result == 0) {
 										for(int i=0;i<menu.sandwich.size();i++) {
 											if(menuinfo.name.equals(menu.sandwich.get(i).name) == true) {
@@ -3355,7 +3480,7 @@ public class Frame extends JFrame {
 						
 					}
 		//==============================================================================================================================
-		//=======================addPanel¿¡¼­ Ã·ºÎÆÄÀÏ ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================addPanelì—ì„œ ì²¨ë¶€íŒŒì¼ ë²„íŠ¼ í´ë¦­===============================================================================================
 					class filelInsertMouseListener implements MouseListener{
 
 					@Override
@@ -3389,50 +3514,50 @@ public class Frame extends JFrame {
 						
 					}
 		//==============================================================================================================================
-					public boolean isNumberic(String s) { //¼ıÀÚ ÆÇº° ÇÔ¼ö
+					public boolean isNumberic(String s) { //ìˆ«ì íŒë³„ í•¨ìˆ˜
 						try {
 					     	Double.parseDouble(s);
 					    	return true;
-					    } catch(NumberFormatException e) {  //¹®ÀÚ¿­ÀÌ ³ªÅ¸³»´Â ¼ıÀÚ¿Í ÀÏÄ¡ÇÏÁö ¾Ê´Â Å¸ÀÔÀÇ ¼ıÀÚ·Î º¯È¯ ½Ã ¹ß»ı
+					    } catch(NumberFormatException e) {  //ë¬¸ìì—´ì´ ë‚˜íƒ€ë‚´ëŠ” ìˆ«ìì™€ ì¼ì¹˜í•˜ì§€ ì•ŠëŠ” íƒ€ì…ì˜ ìˆ«ìë¡œ ë³€í™˜ ì‹œ ë°œìƒ
 					    	return false;
 					    }
 					}
-		//=======================addPanel¿¡¼­ Ãß°¡ ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================addPanelì—ì„œ ì¶”ê°€ ë²„íŠ¼ í´ë¦­===============================================================================================
 					class insertMouseListener implements MouseListener{
 						
 					@Override
 					public void mouseClicked(MouseEvent e) {
 						if(txtName.getText().equals("")) {
-							JOptionPane.showMessageDialog(null, "¸Ş´º¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+							JOptionPane.showMessageDialog(null, "ë©”ë‰´ëª…ì„ ì…ë ¥í•˜ì„¸ìš”");
 						}
 						else if(txtPrice.getText().equals("")) {
-							JOptionPane.showMessageDialog(null, "°¡°İÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+							JOptionPane.showMessageDialog(null, "ê°€ê²©ì„ ì…ë ¥í•˜ì„¸ìš”");
 						}
 						else if(isNumberic(txtPrice.getText()) == false) {
-							JOptionPane.showMessageDialog(null, "°¡°İÀÌ ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù");
+							JOptionPane.showMessageDialog(null, "ê°€ê²©ì´ ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤");
 						}
 						else if(txtImgName.getText().equals("")) {
-							JOptionPane.showMessageDialog(null, "ÀÌ¹ÌÁö¸¦ Ãß°¡ÇÏ¼¼¿ä");
+							JOptionPane.showMessageDialog(null, "ì´ë¯¸ì§€ë¥¼ ì¶”ê°€í•˜ì„¸ìš”");
 						}
 						else {
 							switch(sortList[sortComboBox.getSelectedIndex()]){
-							case "»§":
+							case "ë¹µ":
 								bread.insertBread(txtName.getText(), new ImageIcon(path));
 								break;
-							case "Ä¡Áî":
+							case "ì¹˜ì¦ˆ":
 								cheese.insertCheese(txtName.getText(), new ImageIcon(path));
 								break;
-							case "ÅäÇÎ":
+							case "í† í•‘":
 								topping.insertTopping(txtName.getText(), new ImageIcon(path));
 								break;
-							case "¼Ò½º":
+							case "ì†ŒìŠ¤":
 								sauce.insertSauce(txtName.getText(), new ImageIcon(path));
 								break;
 							default:
 								menu.insertMenu(sortList[sortComboBox.getSelectedIndex()], txtName.getText(), Integer.parseInt(txtPrice.getText()), new ImageIcon(path));
 							
 							}
-							JOptionPane.showMessageDialog(null, "¸Ş´º°¡ Ãß°¡µÇ¾ú½À´Ï´Ù");
+							JOptionPane.showMessageDialog(null, "ë©”ë‰´ê°€ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤");
 							sortComboBox.setSelectedIndex(0);
 							txtName.setText("");
 							txtPrice.setText("");
@@ -3504,7 +3629,7 @@ public class Frame extends JFrame {
 						
 					}
 		//==============================================================================================================================
-		//=======================refinePanel¿¡¼­ Ã·ºÎÆÄÀÏ ¹öÆ° Å¬¸¯===============================================================================================
+		//=======================refinePanelì—ì„œ ì²¨ë¶€íŒŒì¼ ë²„íŠ¼ í´ë¦­===============================================================================================
 					class filelInsertMouseListener1 implements MouseListener{
 
 					@Override
@@ -3535,7 +3660,7 @@ public class Frame extends JFrame {
 					}
 						
 					}
-		//==============refine panel combobox º¯°æ½Ã===================================================================================================
+		//==============refine panel combobox ë³€ê²½ì‹œ===================================================================================================
 					class sortComboboxItemListener implements ItemListener{
 
 					@Override
@@ -3544,7 +3669,7 @@ public class Frame extends JFrame {
 							selectedSort = (String) e.getItem();
 						}
 						switch(selectedSort) {
-						case "»÷µåÀ§Ä¡":
+						case "ìƒŒë“œìœ„ì¹˜":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3582,7 +3707,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "»ø·¯µå":
+						case "ìƒëŸ¬ë“œ":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3620,7 +3745,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "·¦":
+						case "ë©":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3657,7 +3782,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "»çÀÌµå":
+						case "ì‚¬ì´ë“œ":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3695,7 +3820,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "À½·á":
+						case "ìŒë£Œ":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3733,7 +3858,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "»§":
+						case "ë¹µ":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3771,7 +3896,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "Ä¡Áî":
+						case "ì¹˜ì¦ˆ":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3809,7 +3934,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "ÅäÇÎ":
+						case "í† í•‘":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3847,7 +3972,7 @@ public class Frame extends JFrame {
 							refinePanel.add(scroll);
 							setVisible(true);
 							break;
-						case "¼Ò½º":
+						case "ì†ŒìŠ¤":
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -3895,25 +4020,25 @@ public class Frame extends JFrame {
 						
 					}
 					
-		//===================refine panel¿¡¼­ ¼öÁ¤¹öÆ° Å¬¸¯=========================================================================================================
+		//===================refine panelì—ì„œ ìˆ˜ì •ë²„íŠ¼ í´ë¦­=========================================================================================================
 					class refineMouseListener1 implements MouseListener{
 					@Override
 					public void mouseClicked(MouseEvent e) {
 						int isEmpty = 0;
 						switch(selectedSort) {
-						case "»§":
+						case "ë¹µ":
 							if(tempBreadinfo == null)
 								isEmpty = 1;
 							break;
-						case "Ä¡Áî":
+						case "ì¹˜ì¦ˆ":
 							if(tempCheeseinfo == null)
 								isEmpty = 1;
 							break;
-						case "ÅäÇÎ":
+						case "í† í•‘":
 							if(tempToppinginfo == null)
 								isEmpty = 1;
 							break;
-						case "¼Ò½º":
+						case "ì†ŒìŠ¤":
 							if(tempSauceinfo == null)
 								isEmpty = 1;
 							break;
@@ -3923,20 +4048,20 @@ public class Frame extends JFrame {
 						}
 						
 						if(isEmpty == 1) {
-							JOptionPane.showMessageDialog(null, "¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä");
+							JOptionPane.showMessageDialog(null, "ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”");
 						}
 						else if(txtName1.getText().equals("")) {
-							JOptionPane.showMessageDialog(null, "¸Ş´º¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+							JOptionPane.showMessageDialog(null, "ë©”ë‰´ëª…ì„ ì…ë ¥í•˜ì„¸ìš”");
 						}
 						else if(txtPrice1.getText().equals("")) {
-							JOptionPane.showMessageDialog(null, "°¡°İÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+							JOptionPane.showMessageDialog(null, "ê°€ê²©ì„ ì…ë ¥í•˜ì„¸ìš”");
 						}
 						else if(isNumberic(txtPrice1.getText()) == false) {
-							JOptionPane.showMessageDialog(null, "°¡°İÀÌ ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù");
+							JOptionPane.showMessageDialog(null, "ê°€ê²©ì´ ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤");
 						}
 						else {
 							switch(selectedSort){
-							case "»§":
+							case "ë¹µ":
 								if(txtImgName1.getText().equals(""))
 									bread.refineBread(tempBreadinfo,txtName1.getText(), null);
 								else
@@ -3972,7 +4097,7 @@ public class Frame extends JFrame {
 								refinePanel.add(scroll);
 								setVisible(true);
 								break;
-							case "Ä¡Áî":
+							case "ì¹˜ì¦ˆ":
 								if(txtImgName1.getText().equals(""))
 									cheese.refineCheese(tempCheeseinfo,txtName1.getText(), null);
 								else
@@ -4008,7 +4133,7 @@ public class Frame extends JFrame {
 								refinePanel.add(scroll);
 								setVisible(true);
 								break;
-							case "ÅäÇÎ":
+							case "í† í•‘":
 								if(txtImgName1.getText().equals(""))
 									topping.refineTopping(tempToppinginfo,txtName1.getText(), null);
 								else
@@ -4044,7 +4169,7 @@ public class Frame extends JFrame {
 								refinePanel.add(scroll);
 								setVisible(true);
 								break;
-							case "¼Ò½º":
+							case "ì†ŒìŠ¤":
 								if(txtImgName1.getText().equals(""))
 									sauce.refineSauce(tempSauceinfo,txtName1.getText(), null);
 								else
@@ -4090,7 +4215,7 @@ public class Frame extends JFrame {
 								menuListPanel.removeAll();
 								menuListPanel.setLayout(new WrapLayout(WrapLayout.LEFT, 25, 25));
 								switch(selectedSort) {
-								case "»÷µåÀ§Ä¡":
+								case "ìƒŒë“œìœ„ì¹˜":
 									for (int i = 0; i < menu.sandwich.size(); i++) {
 										JButton button = new JButton(menu.sandwich.get(i).pic);
 										button.setBackground(Color.BLACK);
@@ -4156,7 +4281,7 @@ public class Frame extends JFrame {
 									menuPanel.add(scroll3, BorderLayout.CENTER);
 									setVisible(true);
 									break;
-								case "»ø·¯µå":
+								case "ìƒëŸ¬ë“œ":
 									for (int i = 0; i < menu.salad.size(); i++) {
 										JButton button = new JButton(menu.salad.get(i).pic);
 										button.setBackground(Color.BLACK);
@@ -4179,7 +4304,7 @@ public class Frame extends JFrame {
 										
 									}
 									break;
-								case "·¦":
+								case "ë©":
 									for (int i = 0; i < menu.wrap.size(); i++) {
 										JButton button = new JButton(menu.wrap.get(i).pic);
 										button.setBackground(Color.BLACK);
@@ -4201,7 +4326,7 @@ public class Frame extends JFrame {
 										menuListPanel.add(button);
 									}
 									break;
-								case "»çÀÌµå":
+								case "ì‚¬ì´ë“œ":
 									for (int i = 0; i < menu.side.size(); i++) {
 										JButton button = new JButton(menu.side.get(i).pic);
 										button.setBackground(Color.BLACK);
@@ -4224,7 +4349,7 @@ public class Frame extends JFrame {
 										
 									}
 									break;
-								case "À½·á":
+								case "ìŒë£Œ":
 									for (int i = 0; i < menu.drink.size(); i++) {
 										JButton button = new JButton(menu.drink.get(i).pic);
 										button.setBackground(Color.BLACK);
@@ -4252,7 +4377,7 @@ public class Frame extends JFrame {
 								refinePanel.add(scroll);
 								setVisible(true);
 							}
-							JOptionPane.showMessageDialog(null, "¸Ş´º°¡ ¼öÁ¤µÇ¾ú½À´Ï´Ù");
+							JOptionPane.showMessageDialog(null, "ë©”ë‰´ê°€ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤");
 							txtName1.setText("");
 							txtPrice1.setText("");
 							txtImgName1.setText("");
@@ -4285,7 +4410,7 @@ public class Frame extends JFrame {
 		//==============================================================================================================================
 
 
-		//==============delete panel combobox º¯°æ½Ã===================================================================================================
+		//==============delete panel combobox ë³€ê²½ì‹œ===================================================================================================
 					class sortComboboxItemListener1 implements ItemListener{
 
 					@Override
