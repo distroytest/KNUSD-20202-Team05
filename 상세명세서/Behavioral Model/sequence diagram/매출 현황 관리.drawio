@@ -1,25 +1,25 @@
-<mxfile host="app.diagrams.net" modified="2020-11-15T14:30:40.475Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="H8HJMXiptt5XopvxSEjy" version="13.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-16T16:14:24.885Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="sAYIcYyLvGoiQxRrWu1m" version="14.0.1" type="github">
   <diagram id="Wuo-hazpU9WmYOUMt79S" name="Page-1">
-    <mxGraphModel dx="2302" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="689" dy="1079" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="FP87DcHSXn8VrHamHmnh-1" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-1" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="100" y="150" width="20" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="FP87DcHSXn8VrHamHmnh-1">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="FP87DcHSXn8VrHamHmnh-1" vertex="1">
           <mxGeometry x="5" y="70" width="10" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-2" value="Manager" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-2" value="Manager" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="90" y="190" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-4" value=":매출현황 컨트롤러" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-4" value=":OrderList" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="270" y="150" width="100" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="FP87DcHSXn8VrHamHmnh-4">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="FP87DcHSXn8VrHamHmnh-4" vertex="1">
           <mxGeometry x="45" y="70" width="10" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.2;entryY=0.236;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="FP87DcHSXn8VrHamHmnh-3" target="FP87DcHSXn8VrHamHmnh-5">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.2;entryY=0.236;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="FP87DcHSXn8VrHamHmnh-3" target="FP87DcHSXn8VrHamHmnh-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="200" y="246" />
@@ -27,7 +27,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FP87DcHSXn8VrHamHmnh-5" target="FP87DcHSXn8VrHamHmnh-1">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="FP87DcHSXn8VrHamHmnh-5" target="FP87DcHSXn8VrHamHmnh-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="280" y="300" />
@@ -35,14 +35,14 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-9" value="매출 현황 출력" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-9" value="매출 현황 출력" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="130" y="270" width="110" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-10" value="print()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="FP87DcHSXn8VrHamHmnh-10" value="print()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="160" y="220" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="FP87DcHSXn8VrHamHmnh-11" value="매출 현황 관리" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry y="110" width="430" height="320" as="geometry" />
+        <mxCell id="FP87DcHSXn8VrHamHmnh-11" value="매출 현황 관리" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="100" width="430" height="320" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
