@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-18T08:44:43.951Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="y4s2BsP14Jpm-REB4FvG" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-18T08:48:47.947Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="2WHPFTMMr_eUEdnT8PH5" version="14.0.5" type="github">
   <diagram id="A6fvi8bu3X2XwePiwcYn" name="Page-1">
     <mxGraphModel dx="2889" dy="2266" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -688,16 +688,13 @@
         <mxCell id="rMF9UJl8UGHNbneHGESr-322" value="[매출 현황 보기]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1220" y="210" width="100" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="rMF9UJl8UGHNbneHGESr-326" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="zzgxUIhAPejvBJm3Cmai-6" target="rMF9UJl8UGHNbneHGESr-325" edge="1">
+        <mxCell id="rMF9UJl8UGHNbneHGESr-326" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rMF9UJl8UGHNbneHGESr-324" target="rMF9UJl8UGHNbneHGESr-325" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1112" y="2055" />
             </Array>
-            <mxPoint x="1112" y="1110" as="sourcePoint" />
+            <mxPoint x="1112" y="1050" as="sourcePoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="zzgxUIhAPejvBJm3Cmai-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rMF9UJl8UGHNbneHGESr-324" target="zzgxUIhAPejvBJm3Cmai-6">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="rMF9UJl8UGHNbneHGESr-324" value="" style="rhombus;" parent="1" vertex="1">
           <mxGeometry x="1082" y="910" width="60" height="55" as="geometry" />
@@ -710,23 +707,6 @@
         </mxCell>
         <mxCell id="rMF9UJl8UGHNbneHGESr-327" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="710" y="2140" width="50" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="zzgxUIhAPejvBJm3Cmai-1" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="zzgxUIhAPejvBJm3Cmai-6">
-          <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="1010" y="1025" as="sourcePoint" />
-            <mxPoint x="1100" y="185" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1082" y="1025" />
-              <mxPoint x="780" y="1025" />
-              <mxPoint x="780" y="185" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="zzgxUIhAPejvBJm3Cmai-4" value="[ 추가 조작 ]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="956" y="970" width="70" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="zzgxUIhAPejvBJm3Cmai-6" value="" style="rhombus;" vertex="1" parent="1">
-          <mxGeometry x="1082" y="995" width="60" height="55" as="geometry" />
         </mxCell>
         <mxCell id="zzgxUIhAPejvBJm3Cmai-8" value="" style="rhombus;" vertex="1" parent="1">
           <mxGeometry x="229" y="1180" width="30" height="30" as="geometry" />
